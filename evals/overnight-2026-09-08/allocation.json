@@ -1,0 +1,37 @@
+{
+  "input_commit": "2d7f372b694e7ed9ba5c65f37697b6950cf0ff85",
+  "allocation_method": "fixed alternating labels; not randomized",
+  "runs": {
+    "desk01": {
+      "condition": "leinodesign",
+      "fileKey": "syIgLpxmKDpU4XKFYJcrMK"
+    },
+    "desk02": {
+      "condition": "standard",
+      "fileKey": "Nh4qfiqCkexl4JYunWkbw4"
+    },
+    "mobile01": {
+      "condition": "standard",
+      "fileKey": "RegefZg97UJIuwHnhmeQnv"
+    },
+    "mobile02": {
+      "condition": "leinodesign",
+      "fileKey": "RyTcQoqcgZ8HadH8IpzGgB"
+    }
+  },
+  "input_skill": {
+    "skills/leinodesign/SKILL.md": "f457a1b39932a97cbe27b1439305146aa78c94725af22529bfb3292ef2ece38b",
+    "skills/leinodesign/references/components.md": "5b61012699607a061ba8bc57c57ff9979a5ccce54e75e206526522d47e44fc3e",
+    "skills/leinodesign/references/figma.md": "237e9b78833ca1b9e2638aef7dab648fedfc3393886a15edf54868f829bbed06",
+    "skills/leinodesign/references/visual-review.md": "5a59d02240a5b806c8d8cf37bbbc1e550af09dee6b1778050f068858cec11dae"
+  },
+  "briefs": {
+    "evals/overnight-2026-09-08/desk/brief.md": "80819968243dd7ea5963d1072c6419b4d3b65512da77c352539d0bfd49becb59",
+    "evals/overnight-2026-09-08/mobile/brief.md": "230f1e24330f57aaf8d6f7bb8eccf37b9278f30c11520453486a7e759f6f2d14"
+  },
+  "protocol_sha256": "70a001baced9b92652704e6bd71b825ee708b2e8b280da037b6a60e1d451eb8d",
+  "change_requests": {
+    "evals/overnight-2026-09-08/desk/change-request.md": "c55b05dbb84f7ffe86776dac177f08a1159a8d55a67aedcbabb7b1a8dea32499",
+    "evals/overnight-2026-09-08/mobile/change-request.md": "eeff04b5a9eddc959d053d5ff49653092355c43147b02686cdffb050c9a141e5"
+  }
+}

@@ -1,2 +1,4 @@
 research/incubation/** -text whitespace=cr-at-eol
 evals/paired-2026-09-08/** -text whitespace=cr-at-eol,-blank-at-eof
+evals/overnight-2026-09-08/** -text whitespace=cr-at-eol,-blank-at-eof
+evals/overnight-2026-09-08/desk01/revision/REPORT.md whitespace=cr-at-eol,-blank-at-eof,-blank-at-eol

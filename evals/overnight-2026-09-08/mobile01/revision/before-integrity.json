@@ -1,0 +1,42 @@
+[
+  {
+    "Name": "01-selection-14.png",
+    "MatchesInitial": true
+  },
+  {
+    "Name": "01-selection-18.png",
+    "MatchesInitial": true
+  },
+  {
+    "Name": "01-selection.png",
+    "MatchesInitial": true
+  },
+  {
+    "Name": "01-voice.png",
+    "MatchesInitial": true
+  },
+  {
+    "Name": "02-contacts.png",
+    "MatchesInitial": true
+  },
+  {
+    "Name": "02-invalid-input.png",
+    "MatchesInitial": true
+  },
+  {
+    "Name": "02-phone-error.png",
+    "MatchesInitial": true
+  },
+  {
+    "Name": "03-review.png",
+    "MatchesInitial": true
+  },
+  {
+    "Name": "04-success.png",
+    "MatchesInitial": true
+  },
+  {
+    "Name": "figma-manifest.json",
+    "MatchesInitial": true
+  }
+]

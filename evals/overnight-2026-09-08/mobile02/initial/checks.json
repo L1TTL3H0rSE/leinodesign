@@ -1,0 +1,606 @@
+{
+  "checkedUTC": "2026-09-08 01:48:21 UTC",
+  "structure": {
+    "checks": [
+      {
+        "branch": "main",
+        "state": "selection",
+        "id": "5:2",
+        "failures": [],
+        "textCount": 19
+      },
+      {
+        "branch": "main",
+        "state": "contacts",
+        "id": "5:45",
+        "failures": [],
+        "textCount": 14
+      },
+      {
+        "branch": "main",
+        "state": "invalid",
+        "id": "8:28",
+        "failures": [],
+        "textCount": 14
+      },
+      {
+        "branch": "main",
+        "state": "error",
+        "id": "8:62",
+        "failures": [],
+        "textCount": 15
+      },
+      {
+        "branch": "main",
+        "state": "review",
+        "id": "9:56",
+        "failures": [],
+        "textCount": 18
+      },
+      {
+        "branch": "main",
+        "state": "success",
+        "id": "9:90",
+        "failures": [],
+        "textCount": 13
+      },
+      {
+        "branch": "at14",
+        "state": "selection",
+        "id": "10:60",
+        "failures": [],
+        "textCount": 19
+      },
+      {
+        "branch": "at14",
+        "state": "contacts",
+        "id": "10:99",
+        "failures": [],
+        "textCount": 14
+      },
+      {
+        "branch": "at14",
+        "state": "invalid",
+        "id": "10:133",
+        "failures": [],
+        "textCount": 14
+      },
+      {
+        "branch": "at14",
+        "state": "error",
+        "id": "10:167",
+        "failures": [],
+        "textCount": 15
+      },
+      {
+        "branch": "at14",
+        "state": "review",
+        "id": "10:201",
+        "failures": [],
+        "textCount": 18
+      },
+      {
+        "branch": "at14",
+        "state": "success",
+        "id": "10:233",
+        "failures": [],
+        "textCount": 13
+      },
+      {
+        "branch": "at18",
+        "state": "selection",
+        "id": "10:259",
+        "failures": [],
+        "textCount": 19
+      },
+      {
+        "branch": "at18",
+        "state": "contacts",
+        "id": "10:298",
+        "failures": [],
+        "textCount": 14
+      },
+      {
+        "branch": "at18",
+        "state": "invalid",
+        "id": "10:332",
+        "failures": [],
+        "textCount": 14
+      },
+      {
+        "branch": "at18",
+        "state": "error",
+        "id": "10:366",
+        "failures": [],
+        "textCount": 15
+      },
+      {
+        "branch": "at18",
+        "state": "review",
+        "id": "10:400",
+        "failures": [],
+        "textCount": 18
+      },
+      {
+        "branch": "at18",
+        "state": "success",
+        "id": "10:432",
+        "failures": [],
+        "textCount": 13
+      }
+    ],
+    "pass": true,
+    "flows": [
+      {
+        "nodeId": "5:2",
+        "name": "Запись в студию"
+      },
+      {
+        "nodeId": "8:28",
+        "name": "Исправление телефона"
+      }
+    ]
+  },
+  "consumerEditing": {
+    "createdNodeIds": [
+      "15:182",
+      "15:183",
+      "15:184",
+      "15:185",
+      "15:186",
+      "15:187",
+      "15:189",
+      "15:191",
+      "15:196",
+      "15:201",
+      "15:210"
+    ],
+    "mutatedNodeIds": [
+      "3:27",
+      "4:2",
+      "4:13"
+    ],
+    "probeId": "15:182",
+    "before": [
+      {
+        "id": "3:27",
+        "gap": 0
+      },
+      {
+        "id": "4:2",
+        "gap": 8
+      },
+      {
+        "id": "4:13",
+        "gap": 12
+      }
+    ],
+    "afterMasterChange": [
+      {
+        "id": "15:187",
+        "masterId": "3:27",
+        "width": 284,
+        "gap": 12,
+        "props": {
+          "Label#3:3": {
+            "type": "TEXT",
+            "value": "Подтвердить"
+          },
+          "Style": {
+            "value": "Primary",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        },
+        "text": [
+          {
+            "text": "Подтвердить",
+            "width": 108,
+            "height": 24
+          }
+        ]
+      },
+      {
+        "id": "15:189",
+        "masterId": "3:27",
+        "width": 284,
+        "gap": 12,
+        "props": {
+          "Label#3:3": {
+            "type": "TEXT",
+            "value": "Вернуться"
+          },
+          "Style": {
+            "value": "Primary",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        },
+        "text": [
+          {
+            "text": "Вернуться",
+            "width": 85,
+            "height": 24
+          }
+        ]
+      },
+      {
+        "id": "15:191",
+        "masterId": "4:2",
+        "width": 284,
+        "gap": 12,
+        "props": {
+          "Show helper#4:11": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Helper#4:10": {
+            "type": "TEXT",
+            "value": "Уточните детали."
+          },
+          "Value#4:9": {
+            "type": "TEXT",
+            "value": "Нужен второй микрофон и отдельные дорожки для каждого участника."
+          },
+          "Label#4:8": {
+            "type": "TEXT",
+            "value": "Комментарий"
+          },
+          "State": {
+            "value": "Default",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        },
+        "text": [
+          {
+            "text": "Комментарий",
+            "width": 284,
+            "height": 18
+          },
+          {
+            "text": "Нужен второй микрофон и отдельные дорожки для каждого участника.",
+            "width": 260,
+            "height": 72
+          }
+        ]
+      },
+      {
+        "id": "15:196",
+        "masterId": "4:2",
+        "width": 284,
+        "gap": 12,
+        "props": {
+          "Show helper#4:11": {
+            "type": "BOOLEAN",
+            "value": false
+          },
+          "Helper#4:10": {
+            "type": "TEXT",
+            "value": ""
+          },
+          "Value#4:9": {
+            "type": "TEXT",
+            "value": "Борис"
+          },
+          "Label#4:8": {
+            "type": "TEXT",
+            "value": "Имя"
+          },
+          "State": {
+            "value": "Default",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        },
+        "text": [
+          {
+            "text": "Имя",
+            "width": 284,
+            "height": 18
+          },
+          {
+            "text": "Борис",
+            "width": 260,
+            "height": 24
+          }
+        ]
+      },
+      {
+        "id": "15:201",
+        "masterId": "4:18",
+        "width": 284,
+        "gap": 12,
+        "props": {
+          "Details#4:17": {
+            "type": "TEXT",
+            "value": "90 минут · 2 700 ₽"
+          },
+          "Title#4:16": {
+            "type": "TEXT",
+            "value": "Разговор с гостем"
+          },
+          "Selected": {
+            "value": "Yes",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        },
+        "text": [
+          {
+            "text": "●",
+            "width": 17,
+            "height": 24
+          },
+          {
+            "text": "Разговор с гостем",
+            "width": 223,
+            "height": 24
+          },
+          {
+            "text": "90 минут · 2 700 ₽",
+            "width": 223,
+            "height": 18
+          }
+        ]
+      },
+      {
+        "id": "15:210",
+        "masterId": "4:13",
+        "width": 284,
+        "gap": 12,
+        "props": {
+          "Details#4:17": {
+            "type": "TEXT",
+            "value": "30 минут · 1 000 ₽"
+          },
+          "Title#4:16": {
+            "type": "TEXT",
+            "value": "Запись голоса"
+          },
+          "Selected": {
+            "value": "No",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        },
+        "text": [
+          {
+            "text": "○",
+            "width": 17,
+            "height": 24
+          },
+          {
+            "text": "Запись голоса",
+            "width": 223,
+            "height": 24
+          },
+          {
+            "text": "30 минут · 1 000 ₽",
+            "width": 223,
+            "height": 18
+          }
+        ]
+      }
+    ],
+    "restored": [
+      {
+        "id": "3:27",
+        "gap": 0
+      },
+      {
+        "id": "4:2",
+        "gap": 8
+      },
+      {
+        "id": "4:13",
+        "gap": 12
+      }
+    ],
+    "expected": "Both same-master consumers receive gap 12 while content overrides remain independent; long value wraps; width determined by two equal columns; switched input and choice retain text."
+  },
+  "resizeAndServicePropagation": {
+    "createdNodeIds": [],
+    "mutatedNodeIds": [
+      "15:182",
+      "4:13",
+      "4:2",
+      "15:201",
+      "15:210"
+    ],
+    "beforeWidth": 640,
+    "afterWidth": 560,
+    "propagated": [
+      {
+        "id": "15:201",
+        "master": "4:13",
+        "gap": 16,
+        "props": {
+          "Details#4:17": {
+            "type": "TEXT",
+            "value": "90 минут · 2 700 ₽"
+          },
+          "Title#4:16": {
+            "type": "TEXT",
+            "value": "Разговор с гостем"
+          },
+          "Selected": {
+            "value": "No",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        }
+      },
+      {
+        "id": "15:210",
+        "master": "4:13",
+        "gap": 16,
+        "props": {
+          "Details#4:17": {
+            "type": "TEXT",
+            "value": "30 минут · 1 000 ₽"
+          },
+          "Title#4:16": {
+            "type": "TEXT",
+            "value": "Запись голоса"
+          },
+          "Selected": {
+            "value": "No",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        }
+      }
+    ],
+    "narrow": [
+      {
+        "id": "15:187",
+        "width": 244,
+        "text": [
+          {
+            "text": "Подтвердить",
+            "width": 108,
+            "height": 24
+          }
+        ]
+      },
+      {
+        "id": "15:191",
+        "width": 244,
+        "text": [
+          {
+            "text": "Комментарий",
+            "width": 244,
+            "height": 18
+          },
+          {
+            "text": "Нужен второй микрофон и отдельные дорожки для каждого участника.",
+            "width": 220,
+            "height": 72
+          }
+        ]
+      },
+      {
+        "id": "15:201",
+        "width": 244,
+        "text": [
+          {
+            "text": "●",
+            "width": 17,
+            "height": 24
+          },
+          {
+            "text": "Разговор с гостем",
+            "width": 183,
+            "height": 24
+          },
+          {
+            "text": "90 минут · 2 700 ₽",
+            "width": 183,
+            "height": 18
+          }
+        ]
+      },
+      {
+        "id": "15:189",
+        "width": 244,
+        "text": [
+          {
+            "text": "Вернуться",
+            "width": 85,
+            "height": 24
+          }
+        ]
+      },
+      {
+        "id": "15:196",
+        "width": 244,
+        "text": [
+          {
+            "text": "Имя",
+            "width": 244,
+            "height": 18
+          },
+          {
+            "text": "Борис",
+            "width": 220,
+            "height": 24
+          }
+        ]
+      },
+      {
+        "id": "15:210",
+        "width": 244,
+        "text": [
+          {
+            "text": "○",
+            "width": 17,
+            "height": 24
+          },
+          {
+            "text": "Запись голоса",
+            "width": 183,
+            "height": 24
+          },
+          {
+            "text": "30 минут · 1 000 ₽",
+            "width": 183,
+            "height": 18
+          }
+        ]
+      }
+    ]
+  },
+  "negativeControl": {
+    "createdNodeIds": [],
+    "mutatedNodeIds": [
+      "21:248"
+    ],
+    "probeId": "21:234",
+    "positive": {
+      "pass": true,
+      "phoneCorrect": true,
+      "namePreserved": true,
+      "commentPreserved": true
+    },
+    "negative": {
+      "pass": false,
+      "phoneCorrect": false,
+      "namePreserved": true,
+      "commentPreserved": true
+    },
+    "restored": {
+      "pass": true,
+      "phoneCorrect": true,
+      "namePreserved": true,
+      "commentPreserved": true
+    }
+  },
+  "contrast": {
+    "inkPaper": 14.50764018791397,
+    "mutedPaper": 5.300138437694984,
+    "primarySurface": 7.170164368863233,
+    "primaryTint": 6.037961572077094,
+    "errorPaper": 5.976726587776068
+  },
+  "player": {
+    "browser": "Own Chrome session; 1920x900 browser viewport; 390x844 frame shown at 100 percent",
+    "verifiedRoutes": [
+      "5:2 → 5:45 → 9:56",
+      "9:56 → 5:2 preserves 16:00",
+      "5:45 → 8:28 → 8:62 → 5:45 → 9:56 → 9:90",
+      "9:56 → 5:45 via Изменить контакты",
+      "5:2 → 10:60 → 10:99 → 10:60 preserves 14:00",
+      "10:60 → 5:2"
+    ],
+    "renderingLimitation": "Some navigation captures showed black/partial unchanged areas. Reload and complete screenshot verified error and success; continuous visual rendering across all transitions is unknown.",
+    "notRun": [
+      "Full 18:00 branch in player",
+      "Full 14:00 confirmation in player",
+      "Voice-choice route in player",
+      "Real user usability test",
+      "Keyboard/screen-reader operation",
+      "Application or external booking implementation"
+    ]
+  }
+}

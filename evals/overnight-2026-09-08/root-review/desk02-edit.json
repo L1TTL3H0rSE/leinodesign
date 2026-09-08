@@ -1,0 +1,603 @@
+{
+  "before": {
+    "master": {
+      "id": "3:29",
+      "paddingTop": 0,
+      "boundVariables": {
+        "itemSpacing": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:3:17"
+        },
+        "paddingLeft": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:3:18"
+        },
+        "paddingRight": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:3:18"
+        },
+        "topLeftRadius": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:3:19"
+        },
+        "topRightRadius": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:3:19"
+        },
+        "bottomLeftRadius": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:3:19"
+        },
+        "bottomRightRadius": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:3:19"
+        },
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3:4"
+          }
+        ],
+        "strokes": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3:7"
+          }
+        ]
+      }
+    },
+    "consumers": [
+      {
+        "id": "3:66",
+        "props": {
+          "Текст#3:4": {
+            "type": "TEXT",
+            "value": "Высокий + критический   2"
+          },
+          "Style": {
+            "value": "Secondary",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        },
+        "paddingTop": 0,
+        "width": 212,
+        "height": 40,
+        "boundVariables": {
+          "itemSpacing": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3:17"
+          },
+          "paddingLeft": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3:18"
+          },
+          "paddingRight": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3:18"
+          },
+          "topLeftRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3:19"
+          },
+          "topRightRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3:19"
+          },
+          "bottomLeftRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3:19"
+          },
+          "bottomRightRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3:19"
+          },
+          "fills": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:3:4"
+            }
+          ],
+          "strokes": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:3:7"
+            }
+          ]
+        },
+        "texts": [
+          {
+            "id": "I3:66;3:30",
+            "text": "Высокий + критический   2",
+            "width": 180,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:3:5"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "5:33",
+        "props": {
+          "Текст#3:4": {
+            "type": "TEXT",
+            "value": "Высокий + критический   2"
+          },
+          "Style": {
+            "value": "Secondary",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        },
+        "paddingTop": 0,
+        "width": 212,
+        "height": 40,
+        "boundVariables": {
+          "itemSpacing": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3:17"
+          },
+          "paddingLeft": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3:18"
+          },
+          "paddingRight": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3:18"
+          },
+          "topLeftRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3:19"
+          },
+          "topRightRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3:19"
+          },
+          "bottomLeftRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3:19"
+          },
+          "bottomRightRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3:19"
+          },
+          "fills": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:3:4"
+            }
+          ],
+          "strokes": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:3:7"
+            }
+          ]
+        },
+        "texts": [
+          {
+            "id": "I5:33;3:30",
+            "text": "Высокий + критический   2",
+            "width": 180,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:3:5"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "changed": {
+    "master": {
+      "id": "3:29",
+      "paddingTop": 4,
+      "boundVariables": {
+        "itemSpacing": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:3:17"
+        },
+        "paddingLeft": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:3:18"
+        },
+        "paddingRight": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:3:18"
+        },
+        "topLeftRadius": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:3:19"
+        },
+        "topRightRadius": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:3:19"
+        },
+        "bottomLeftRadius": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:3:19"
+        },
+        "bottomRightRadius": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:3:19"
+        },
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3:4"
+          }
+        ],
+        "strokes": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3:7"
+          }
+        ]
+      }
+    },
+    "consumers": [
+      {
+        "id": "3:66",
+        "props": {
+          "Текст#3:4": {
+            "type": "TEXT",
+            "value": "Проба — срочные"
+          },
+          "Style": {
+            "value": "Secondary",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        },
+        "paddingTop": 4,
+        "width": 149,
+        "height": 40,
+        "boundVariables": {
+          "itemSpacing": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3:17"
+          },
+          "paddingLeft": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3:18"
+          },
+          "paddingRight": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3:18"
+          },
+          "topLeftRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3:19"
+          },
+          "topRightRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3:19"
+          },
+          "bottomLeftRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3:19"
+          },
+          "bottomRightRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3:19"
+          },
+          "fills": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:3:4"
+            }
+          ],
+          "strokes": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:3:7"
+            }
+          ]
+        },
+        "texts": [
+          {
+            "id": "I3:66;3:30",
+            "text": "Проба — срочные",
+            "width": 117,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:3:5"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "5:33",
+        "props": {
+          "Текст#3:4": {
+            "type": "TEXT",
+            "value": "Высокий + критический   2"
+          },
+          "Style": {
+            "value": "Secondary",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        },
+        "paddingTop": 4,
+        "width": 212,
+        "height": 40,
+        "boundVariables": {
+          "itemSpacing": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3:17"
+          },
+          "paddingLeft": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3:18"
+          },
+          "paddingRight": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3:18"
+          },
+          "topLeftRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3:19"
+          },
+          "topRightRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3:19"
+          },
+          "bottomLeftRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3:19"
+          },
+          "bottomRightRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3:19"
+          },
+          "fills": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:3:4"
+            }
+          ],
+          "strokes": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:3:7"
+            }
+          ]
+        },
+        "texts": [
+          {
+            "id": "I5:33;3:30",
+            "text": "Высокий + критический   2",
+            "width": 180,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:3:5"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "restored": {
+    "master": {
+      "id": "3:29",
+      "paddingTop": 0,
+      "boundVariables": {
+        "itemSpacing": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:3:17"
+        },
+        "paddingLeft": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:3:18"
+        },
+        "paddingRight": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:3:18"
+        },
+        "topLeftRadius": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:3:19"
+        },
+        "topRightRadius": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:3:19"
+        },
+        "bottomLeftRadius": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:3:19"
+        },
+        "bottomRightRadius": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:3:19"
+        },
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3:4"
+          }
+        ],
+        "strokes": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3:7"
+          }
+        ]
+      }
+    },
+    "consumers": [
+      {
+        "id": "3:66",
+        "props": {
+          "Текст#3:4": {
+            "type": "TEXT",
+            "value": "Высокий + критический   2"
+          },
+          "Style": {
+            "value": "Secondary",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        },
+        "paddingTop": 0,
+        "width": 212,
+        "height": 40,
+        "boundVariables": {
+          "itemSpacing": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3:17"
+          },
+          "paddingLeft": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3:18"
+          },
+          "paddingRight": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3:18"
+          },
+          "topLeftRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3:19"
+          },
+          "topRightRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3:19"
+          },
+          "bottomLeftRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3:19"
+          },
+          "bottomRightRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3:19"
+          },
+          "fills": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:3:4"
+            }
+          ],
+          "strokes": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:3:7"
+            }
+          ]
+        },
+        "texts": [
+          {
+            "id": "I3:66;3:30",
+            "text": "Высокий + критический   2",
+            "width": 180,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:3:5"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "5:33",
+        "props": {
+          "Текст#3:4": {
+            "type": "TEXT",
+            "value": "Высокий + критический   2"
+          },
+          "Style": {
+            "value": "Secondary",
+            "type": "VARIANT",
+            "boundVariables": {}
+          }
+        },
+        "paddingTop": 0,
+        "width": 212,
+        "height": 40,
+        "boundVariables": {
+          "itemSpacing": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3:17"
+          },
+          "paddingLeft": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3:18"
+          },
+          "paddingRight": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3:18"
+          },
+          "topLeftRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3:19"
+          },
+          "topRightRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3:19"
+          },
+          "bottomLeftRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3:19"
+          },
+          "bottomRightRadius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:3:19"
+          },
+          "fills": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:3:4"
+            }
+          ],
+          "strokes": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:3:7"
+            }
+          ]
+        },
+        "texts": [
+          {
+            "id": "I5:33;3:30",
+            "text": "Высокий + критический   2",
+            "width": 180,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:3:5"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "exactRestoration": true
+}

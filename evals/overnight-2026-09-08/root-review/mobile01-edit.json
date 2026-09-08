@@ -1,0 +1,312 @@
+{
+  "before": {
+    "master": {
+      "id": "4:23",
+      "paddingTop": 0,
+      "boundVariables": {}
+    },
+    "consumers": [
+      {
+        "id": "4:81",
+        "props": {
+          "Значение#4:2": {
+            "type": "TEXT",
+            "value": "Анна Миронова"
+          },
+          "Метка#4:1": {
+            "type": "TEXT",
+            "value": "Имя"
+          }
+        },
+        "paddingTop": 0,
+        "width": 350,
+        "height": 78,
+        "boundVariables": {},
+        "texts": [
+          {
+            "id": "I4:81;4:24",
+            "text": "Имя",
+            "width": 28,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:4:5"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I4:81;4:26",
+            "text": "Анна Миронова",
+            "width": 322,
+            "height": 24,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:4:5"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "4:85",
+        "props": {
+          "Значение#4:2": {
+            "type": "TEXT",
+            "value": "+7 900 123-45-67"
+          },
+          "Метка#4:1": {
+            "type": "TEXT",
+            "value": "Телефон"
+          }
+        },
+        "paddingTop": 0,
+        "width": 350,
+        "height": 78,
+        "boundVariables": {},
+        "texts": [
+          {
+            "id": "I4:85;4:24",
+            "text": "Телефон",
+            "width": 61,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:4:5"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I4:85;4:26",
+            "text": "+7 900 123-45-67",
+            "width": 322,
+            "height": 24,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:4:5"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "changed": {
+    "master": {
+      "id": "4:23",
+      "paddingTop": 4,
+      "boundVariables": {}
+    },
+    "consumers": [
+      {
+        "id": "4:81",
+        "props": {
+          "Значение#4:2": {
+            "type": "TEXT",
+            "value": "Проба: Мария"
+          },
+          "Метка#4:1": {
+            "type": "TEXT",
+            "value": "Имя"
+          }
+        },
+        "paddingTop": 4,
+        "width": 350,
+        "height": 82,
+        "boundVariables": {},
+        "texts": [
+          {
+            "id": "I4:81;4:24",
+            "text": "Имя",
+            "width": 28,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:4:5"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I4:81;4:26",
+            "text": "Проба: Мария",
+            "width": 322,
+            "height": 24,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:4:5"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "4:85",
+        "props": {
+          "Значение#4:2": {
+            "type": "TEXT",
+            "value": "+7 900 123-45-67"
+          },
+          "Метка#4:1": {
+            "type": "TEXT",
+            "value": "Телефон"
+          }
+        },
+        "paddingTop": 4,
+        "width": 350,
+        "height": 82,
+        "boundVariables": {},
+        "texts": [
+          {
+            "id": "I4:85;4:24",
+            "text": "Телефон",
+            "width": 61,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:4:5"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I4:85;4:26",
+            "text": "+7 900 123-45-67",
+            "width": 322,
+            "height": 24,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:4:5"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "restored": {
+    "master": {
+      "id": "4:23",
+      "paddingTop": 0,
+      "boundVariables": {}
+    },
+    "consumers": [
+      {
+        "id": "4:81",
+        "props": {
+          "Значение#4:2": {
+            "type": "TEXT",
+            "value": "Анна Миронова"
+          },
+          "Метка#4:1": {
+            "type": "TEXT",
+            "value": "Имя"
+          }
+        },
+        "paddingTop": 0,
+        "width": 350,
+        "height": 78,
+        "boundVariables": {},
+        "texts": [
+          {
+            "id": "I4:81;4:24",
+            "text": "Имя",
+            "width": 28,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:4:5"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I4:81;4:26",
+            "text": "Анна Миронова",
+            "width": 322,
+            "height": 24,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:4:5"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "4:85",
+        "props": {
+          "Значение#4:2": {
+            "type": "TEXT",
+            "value": "+7 900 123-45-67"
+          },
+          "Метка#4:1": {
+            "type": "TEXT",
+            "value": "Телефон"
+          }
+        },
+        "paddingTop": 0,
+        "width": 350,
+        "height": 78,
+        "boundVariables": {},
+        "texts": [
+          {
+            "id": "I4:85;4:24",
+            "text": "Телефон",
+            "width": 61,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:4:5"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I4:85;4:26",
+            "text": "+7 900 123-45-67",
+            "width": 322,
+            "height": 24,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:4:5"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "exactRestoration": true
+}

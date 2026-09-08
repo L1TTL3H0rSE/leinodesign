@@ -1,0 +1,797 @@
+{
+  "startedUtc": "2026-09-08 01:31:11 UTC",
+  "endedUtc": "2026-09-08 01:41:16 UTC",
+  "fileKey": "Nh4qfiqCkexl4JYunWkbw4",
+  "pageId": "0:1",
+  "criticalBadgeId": "17:356",
+  "desktopStart": "7:34",
+  "compactStart": "19:684",
+  "frames": {
+    "desktop_all_q_0": "3:25",
+    "desktop_all_q_1": "7:34",
+    "desktop_all_q_2": "7:182",
+    "desktop_high_q_0": "7:330",
+    "desktop_high_q_1": "7:482",
+    "desktop_high_q_2": "7:634",
+    "desktop_all_d_0": "5:16",
+    "desktop_all_d_1": "8:80",
+    "desktop_all_d_2": "8:274",
+    "desktop_high_d_0": "8:468",
+    "desktop_high_d_1": "8:649",
+    "desktop_high_d_2": "8:837",
+    "desktop_all_e_0_0": "9:146",
+    "desktop_all_e_0_1": "9:349",
+    "desktop_all_e_0_2": "9:552",
+    "desktop_all_e_1_1": "9:755",
+    "desktop_all_e_1_2": "9:961",
+    "desktop_all_e_2_1": "9:1167",
+    "desktop_all_e_2_2": "9:1373",
+    "desktop_high_e_0_0": "9:1579",
+    "desktop_high_e_0_1": "9:1706",
+    "desktop_high_e_0_2": "9:1833",
+    "desktop_high_e_1_1": "9:1960",
+    "desktop_high_e_1_2": "9:2090",
+    "desktop_high_e_2_1": "9:2220",
+    "desktop_high_e_2_2": "9:2350",
+    "compact_all_q_1": "19:356",
+    "compact_all_q_2": "19:520",
+    "compact_high_q_1": "19:684",
+    "compact_high_q_2": "19:768",
+    "compact_all_d_1": "19:852",
+    "compact_all_d_2": "19:1048",
+    "compact_high_d_1": "19:1244",
+    "compact_high_d_2": "19:1360",
+    "compact_all_e_1_1": "19:1492",
+    "compact_all_e_1_2": "19:1691",
+    "compact_all_e_2_1": "19:1890",
+    "compact_all_e_2_2": "19:2089",
+    "compact_high_e_1_1": "20:528",
+    "compact_high_e_1_2": "20:647",
+    "compact_high_e_2_1": "20:766",
+    "compact_high_e_2_2": "20:885"
+  },
+  "audit": {
+    "issues": [],
+    "summary": [
+      {
+        "key": "desktop_all_q_0",
+        "id": "3:25",
+        "width": 1440,
+        "height": 960,
+        "rows": 6
+      },
+      {
+        "key": "desktop_all_q_1",
+        "id": "7:34",
+        "width": 1440,
+        "height": 960,
+        "rows": 6
+      },
+      {
+        "key": "desktop_all_q_2",
+        "id": "7:182",
+        "width": 1440,
+        "height": 960,
+        "rows": 6
+      },
+      {
+        "key": "desktop_high_q_0",
+        "id": "7:330",
+        "width": 1440,
+        "height": 960,
+        "rows": 2
+      },
+      {
+        "key": "desktop_high_q_1",
+        "id": "7:482",
+        "width": 1440,
+        "height": 960,
+        "rows": 2
+      },
+      {
+        "key": "desktop_high_q_2",
+        "id": "7:634",
+        "width": 1440,
+        "height": 960,
+        "rows": 2
+      },
+      {
+        "key": "desktop_all_d_0",
+        "id": "5:16",
+        "width": 1440,
+        "height": 960,
+        "rows": 6
+      },
+      {
+        "key": "desktop_all_d_1",
+        "id": "8:80",
+        "width": 1440,
+        "height": 960,
+        "rows": 6
+      },
+      {
+        "key": "desktop_all_d_2",
+        "id": "8:274",
+        "width": 1440,
+        "height": 960,
+        "rows": 6
+      },
+      {
+        "key": "desktop_high_d_0",
+        "id": "8:468",
+        "width": 1440,
+        "height": 960,
+        "rows": 2
+      },
+      {
+        "key": "desktop_high_d_1",
+        "id": "8:649",
+        "width": 1440,
+        "height": 960,
+        "rows": 2
+      },
+      {
+        "key": "desktop_high_d_2",
+        "id": "8:837",
+        "width": 1440,
+        "height": 960,
+        "rows": 2
+      },
+      {
+        "key": "desktop_all_e_0_0",
+        "id": "9:146",
+        "width": 1440,
+        "height": 960,
+        "rows": 6
+      },
+      {
+        "key": "desktop_all_e_0_1",
+        "id": "9:349",
+        "width": 1440,
+        "height": 960,
+        "rows": 6
+      },
+      {
+        "key": "desktop_all_e_0_2",
+        "id": "9:552",
+        "width": 1440,
+        "height": 960,
+        "rows": 6
+      },
+      {
+        "key": "desktop_all_e_1_1",
+        "id": "9:755",
+        "width": 1440,
+        "height": 960,
+        "rows": 6
+      },
+      {
+        "key": "desktop_all_e_1_2",
+        "id": "9:961",
+        "width": 1440,
+        "height": 960,
+        "rows": 6
+      },
+      {
+        "key": "desktop_all_e_2_1",
+        "id": "9:1167",
+        "width": 1440,
+        "height": 960,
+        "rows": 6
+      },
+      {
+        "key": "desktop_all_e_2_2",
+        "id": "9:1373",
+        "width": 1440,
+        "height": 960,
+        "rows": 6
+      },
+      {
+        "key": "desktop_high_e_0_0",
+        "id": "9:1579",
+        "width": 1440,
+        "height": 960,
+        "rows": 2
+      },
+      {
+        "key": "desktop_high_e_0_1",
+        "id": "9:1706",
+        "width": 1440,
+        "height": 960,
+        "rows": 2
+      },
+      {
+        "key": "desktop_high_e_0_2",
+        "id": "9:1833",
+        "width": 1440,
+        "height": 960,
+        "rows": 2
+      },
+      {
+        "key": "desktop_high_e_1_1",
+        "id": "9:1960",
+        "width": 1440,
+        "height": 960,
+        "rows": 2
+      },
+      {
+        "key": "desktop_high_e_1_2",
+        "id": "9:2090",
+        "width": 1440,
+        "height": 960,
+        "rows": 2
+      },
+      {
+        "key": "desktop_high_e_2_1",
+        "id": "9:2220",
+        "width": 1440,
+        "height": 960,
+        "rows": 2
+      },
+      {
+        "key": "desktop_high_e_2_2",
+        "id": "9:2350",
+        "width": 1440,
+        "height": 960,
+        "rows": 2
+      },
+      {
+        "key": "compact_all_q_1",
+        "id": "19:356",
+        "width": 1024,
+        "height": 1040,
+        "rows": 6
+      },
+      {
+        "key": "compact_all_q_2",
+        "id": "19:520",
+        "width": 1024,
+        "height": 1040,
+        "rows": 6
+      },
+      {
+        "key": "compact_high_q_1",
+        "id": "19:684",
+        "width": 1024,
+        "height": 1040,
+        "rows": 2
+      },
+      {
+        "key": "compact_high_q_2",
+        "id": "19:768",
+        "width": 1024,
+        "height": 1040,
+        "rows": 2
+      },
+      {
+        "key": "compact_all_d_1",
+        "id": "19:852",
+        "width": 1024,
+        "height": 1040,
+        "rows": 6
+      },
+      {
+        "key": "compact_all_d_2",
+        "id": "19:1048",
+        "width": 1024,
+        "height": 1040,
+        "rows": 6
+      },
+      {
+        "key": "compact_high_d_1",
+        "id": "19:1244",
+        "width": 1024,
+        "height": 1040,
+        "rows": 2
+      },
+      {
+        "key": "compact_high_d_2",
+        "id": "19:1360",
+        "width": 1024,
+        "height": 1040,
+        "rows": 2
+      },
+      {
+        "key": "compact_all_e_1_1",
+        "id": "19:1492",
+        "width": 1024,
+        "height": 1040,
+        "rows": 6
+      },
+      {
+        "key": "compact_all_e_1_2",
+        "id": "19:1691",
+        "width": 1024,
+        "height": 1040,
+        "rows": 6
+      },
+      {
+        "key": "compact_all_e_2_1",
+        "id": "19:1890",
+        "width": 1024,
+        "height": 1040,
+        "rows": 6
+      },
+      {
+        "key": "compact_all_e_2_2",
+        "id": "19:2089",
+        "width": 1024,
+        "height": 1040,
+        "rows": 6
+      },
+      {
+        "key": "compact_high_e_1_1",
+        "id": "20:528",
+        "width": 1024,
+        "height": 1040,
+        "rows": 2
+      },
+      {
+        "key": "compact_high_e_1_2",
+        "id": "20:647",
+        "width": 1024,
+        "height": 1040,
+        "rows": 2
+      },
+      {
+        "key": "compact_high_e_2_1",
+        "id": "20:766",
+        "width": 1024,
+        "height": 1040,
+        "rows": 2
+      },
+      {
+        "key": "compact_high_e_2_2",
+        "id": "20:885",
+        "width": 1024,
+        "height": 1040,
+        "rows": 2
+      }
+    ],
+    "links": 118,
+    "flow": [
+      {
+        "nodeId": "7:34",
+        "name": "Смена · Очередь · 1440"
+      },
+      {
+        "nodeId": "19:684",
+        "name": "Смена · Высокий + критический · 1024"
+      }
+    ]
+  },
+  "compactLinks": [
+    {
+      "from": "19:356",
+      "control": "filter_high",
+      "to": "19:684"
+    },
+    {
+      "from": "19:356",
+      "control": "row_SD-1042",
+      "to": "19:852"
+    },
+    {
+      "from": "19:520",
+      "control": "filter_high",
+      "to": "19:768"
+    },
+    {
+      "from": "19:520",
+      "control": "row_SD-1042",
+      "to": "19:1048"
+    },
+    {
+      "from": "19:684",
+      "control": "filter_all",
+      "to": "19:356"
+    },
+    {
+      "from": "19:684",
+      "control": "row_SD-1042",
+      "to": "19:1244"
+    },
+    {
+      "from": "19:768",
+      "control": "filter_all",
+      "to": "19:520"
+    },
+    {
+      "from": "19:768",
+      "control": "row_SD-1042",
+      "to": "19:1360"
+    },
+    {
+      "from": "19:852",
+      "control": "close",
+      "to": "19:356"
+    },
+    {
+      "from": "19:852",
+      "control": "edit",
+      "to": "19:1492"
+    },
+    {
+      "from": "19:1048",
+      "control": "close",
+      "to": "19:520"
+    },
+    {
+      "from": "19:1048",
+      "control": "edit",
+      "to": "19:2089"
+    },
+    {
+      "from": "19:1244",
+      "control": "close",
+      "to": "19:684"
+    },
+    {
+      "from": "19:1244",
+      "control": "edit",
+      "to": "20:528"
+    },
+    {
+      "from": "19:1360",
+      "control": "close",
+      "to": "19:768"
+    },
+    {
+      "from": "19:1360",
+      "control": "edit",
+      "to": "20:885"
+    },
+    {
+      "from": "19:1492",
+      "control": "close",
+      "to": "19:356"
+    },
+    {
+      "from": "19:1492",
+      "control": "cancel",
+      "to": "19:852"
+    },
+    {
+      "from": "19:1492",
+      "control": "choose_2",
+      "to": "19:1691"
+    },
+    {
+      "from": "19:1691",
+      "control": "close",
+      "to": "19:356"
+    },
+    {
+      "from": "19:1691",
+      "control": "cancel",
+      "to": "19:852"
+    },
+    {
+      "from": "19:1691",
+      "control": "choose_1",
+      "to": "19:1492"
+    },
+    {
+      "from": "19:1691",
+      "control": "save",
+      "to": "19:1048"
+    },
+    {
+      "from": "19:1890",
+      "control": "close",
+      "to": "19:520"
+    },
+    {
+      "from": "19:1890",
+      "control": "cancel",
+      "to": "19:1048"
+    },
+    {
+      "from": "19:1890",
+      "control": "choose_2",
+      "to": "19:2089"
+    },
+    {
+      "from": "19:1890",
+      "control": "save",
+      "to": "19:852"
+    },
+    {
+      "from": "19:2089",
+      "control": "close",
+      "to": "19:520"
+    },
+    {
+      "from": "19:2089",
+      "control": "cancel",
+      "to": "19:1048"
+    },
+    {
+      "from": "19:2089",
+      "control": "choose_1",
+      "to": "19:1890"
+    },
+    {
+      "from": "20:528",
+      "control": "close",
+      "to": "19:684"
+    },
+    {
+      "from": "20:528",
+      "control": "cancel",
+      "to": "19:1244"
+    },
+    {
+      "from": "20:528",
+      "control": "choose_2",
+      "to": "20:647"
+    },
+    {
+      "from": "20:647",
+      "control": "close",
+      "to": "19:684"
+    },
+    {
+      "from": "20:647",
+      "control": "cancel",
+      "to": "19:1244"
+    },
+    {
+      "from": "20:647",
+      "control": "choose_1",
+      "to": "20:528"
+    },
+    {
+      "from": "20:647",
+      "control": "save",
+      "to": "19:1360"
+    },
+    {
+      "from": "20:766",
+      "control": "close",
+      "to": "19:768"
+    },
+    {
+      "from": "20:766",
+      "control": "cancel",
+      "to": "19:1360"
+    },
+    {
+      "from": "20:766",
+      "control": "choose_2",
+      "to": "20:885"
+    },
+    {
+      "from": "20:766",
+      "control": "save",
+      "to": "19:1244"
+    },
+    {
+      "from": "20:885",
+      "control": "close",
+      "to": "19:768"
+    },
+    {
+      "from": "20:885",
+      "control": "cancel",
+      "to": "19:1360"
+    },
+    {
+      "from": "20:885",
+      "control": "choose_1",
+      "to": "20:766"
+    }
+  ],
+  "exports": [
+    {
+      "key": "desktop_all_q_0",
+      "id": "3:25",
+      "png": "C:/Dev/_Work/_Other/leinodesign/evals/overnight-2026-09-08/desk02/revision/after/desktop_all_q_0.png"
+    },
+    {
+      "key": "desktop_all_q_1",
+      "id": "7:34",
+      "png": "C:/Dev/_Work/_Other/leinodesign/evals/overnight-2026-09-08/desk02/revision/after/desktop_all_q_1.png"
+    },
+    {
+      "key": "desktop_all_q_2",
+      "id": "7:182",
+      "png": "C:/Dev/_Work/_Other/leinodesign/evals/overnight-2026-09-08/desk02/revision/after/desktop_all_q_2.png"
+    },
+    {
+      "key": "desktop_high_q_0",
+      "id": "7:330",
+      "png": "C:/Dev/_Work/_Other/leinodesign/evals/overnight-2026-09-08/desk02/revision/after/desktop_high_q_0.png"
+    },
+    {
+      "key": "desktop_high_q_1",
+      "id": "7:482",
+      "png": "C:/Dev/_Work/_Other/leinodesign/evals/overnight-2026-09-08/desk02/revision/after/desktop_high_q_1.png"
+    },
+    {
+      "key": "desktop_high_q_2",
+      "id": "7:634",
+      "png": "C:/Dev/_Work/_Other/leinodesign/evals/overnight-2026-09-08/desk02/revision/after/desktop_high_q_2.png"
+    },
+    {
+      "key": "desktop_all_d_0",
+      "id": "5:16",
+      "png": "C:/Dev/_Work/_Other/leinodesign/evals/overnight-2026-09-08/desk02/revision/after/desktop_all_d_0.png"
+    },
+    {
+      "key": "desktop_all_d_1",
+      "id": "8:80",
+      "png": "C:/Dev/_Work/_Other/leinodesign/evals/overnight-2026-09-08/desk02/revision/after/desktop_all_d_1.png"
+    },
+    {
+      "key": "desktop_all_d_2",
+      "id": "8:274",
+      "png": "C:/Dev/_Work/_Other/leinodesign/evals/overnight-2026-09-08/desk02/revision/after/desktop_all_d_2.png"
+    },
+    {
+      "key": "desktop_high_d_0",
+      "id": "8:468",
+      "png": "C:/Dev/_Work/_Other/leinodesign/evals/overnight-2026-09-08/desk02/revision/after/desktop_high_d_0.png"
+    },
+    {
+      "key": "desktop_high_d_1",
+      "id": "8:649",
+      "png": "C:/Dev/_Work/_Other/leinodesign/evals/overnight-2026-09-08/desk02/revision/after/desktop_high_d_1.png"
+    },
+    {
+      "key": "desktop_high_d_2",
+      "id": "8:837",
+      "png": "C:/Dev/_Work/_Other/leinodesign/evals/overnight-2026-09-08/desk02/revision/after/desktop_high_d_2.png"
+    },
+    {
+      "key": "desktop_all_e_0_0",
+      "id": "9:146",
+      "png": "C:/Dev/_Work/_Other/leinodesign/evals/overnight-2026-09-08/desk02/revision/after/desktop_all_e_0_0.png"
+    },
+    {
+      "key": "desktop_all_e_0_1",
+      "id": "9:349",
+      "png": "C:/Dev/_Work/_Other/leinodesign/evals/overnight-2026-09-08/desk02/revision/after/desktop_all_e_0_1.png"
+    },
+    {
+      "key": "desktop_all_e_0_2",
+      "id": "9:552",
+      "png": "C:/Dev/_Work/_Other/leinodesign/evals/overnight-2026-09-08/desk02/revision/after/desktop_all_e_0_2.png"
+    },
+    {
+      "key": "desktop_all_e_1_1",
+      "id": "9:755",
+      "png": "C:/Dev/_Work/_Other/leinodesign/evals/overnight-2026-09-08/desk02/revision/after/desktop_all_e_1_1.png"
+    },
+    {
+      "key": "desktop_all_e_1_2",
+      "id": "9:961",
+      "png": "C:/Dev/_Work/_Other/leinodesign/evals/overnight-2026-09-08/desk02/revision/after/desktop_all_e_1_2.png"
+    },
+    {
+      "key": "desktop_all_e_2_1",
+      "id": "9:1167",
+      "png": "C:/Dev/_Work/_Other/leinodesign/evals/overnight-2026-09-08/desk02/revision/after/desktop_all_e_2_1.png"
+    },
+    {
+      "key": "desktop_all_e_2_2",
+      "id": "9:1373",
+      "png": "C:/Dev/_Work/_Other/leinodesign/evals/overnight-2026-09-08/desk02/revision/after/desktop_all_e_2_2.png"
+    },
+    {
+      "key": "desktop_high_e_0_0",
+      "id": "9:1579",
+      "png": "C:/Dev/_Work/_Other/leinodesign/evals/overnight-2026-09-08/desk02/revision/after/desktop_high_e_0_0.png"
+    },
+    {
+      "key": "desktop_high_e_0_1",
+      "id": "9:1706",
+      "png": "C:/Dev/_Work/_Other/leinodesign/evals/overnight-2026-09-08/desk02/revision/after/desktop_high_e_0_1.png"
+    },
+    {
+      "key": "desktop_high_e_0_2",
+      "id": "9:1833",
+      "png": "C:/Dev/_Work/_Other/leinodesign/evals/overnight-2026-09-08/desk02/revision/after/desktop_high_e_0_2.png"
+    },
+    {
+      "key": "desktop_high_e_1_1",
+      "id": "9:1960",
+      "png": "C:/Dev/_Work/_Other/leinodesign/evals/overnight-2026-09-08/desk02/revision/after/desktop_high_e_1_1.png"
+    },
+    {
+      "key": "desktop_high_e_1_2",
+      "id": "9:2090",
+      "png": "C:/Dev/_Work/_Other/leinodesign/evals/overnight-2026-09-08/desk02/revision/after/desktop_high_e_1_2.png"
+    },
+    {
+      "key": "desktop_high_e_2_1",
+      "id": "9:2220",
+      "png": "C:/Dev/_Work/_Other/leinodesign/evals/overnight-2026-09-08/desk02/revision/after/desktop_high_e_2_1.png"
+    },
+    {
+      "key": "desktop_high_e_2_2",
+      "id": "9:2350",
+      "png": "C:/Dev/_Work/_Other/leinodesign/evals/overnight-2026-09-08/desk02/revision/after/desktop_high_e_2_2.png"
+    },
+    {
+      "key": "compact_all_q_1",
+      "id": "19:356",
+      "png": "C:/Dev/_Work/_Other/leinodesign/evals/overnight-2026-09-08/desk02/revision/after/compact_all_q_1.png"
+    },
+    {
+      "key": "compact_all_q_2",
+      "id": "19:520",
+      "png": "C:/Dev/_Work/_Other/leinodesign/evals/overnight-2026-09-08/desk02/revision/after/compact_all_q_2.png"
+    },
+    {
+      "key": "compact_high_q_1",
+      "id": "19:684",
+      "png": "C:/Dev/_Work/_Other/leinodesign/evals/overnight-2026-09-08/desk02/revision/after/compact_high_q_1.png"
+    },
+    {
+      "key": "compact_high_q_2",
+      "id": "19:768",
+      "png": "C:/Dev/_Work/_Other/leinodesign/evals/overnight-2026-09-08/desk02/revision/after/compact_high_q_2.png"
+    },
+    {
+      "key": "compact_all_d_1",
+      "id": "19:852",
+      "png": "C:/Dev/_Work/_Other/leinodesign/evals/overnight-2026-09-08/desk02/revision/after/compact_all_d_1.png"
+    },
+    {
+      "key": "compact_all_d_2",
+      "id": "19:1048",
+      "png": "C:/Dev/_Work/_Other/leinodesign/evals/overnight-2026-09-08/desk02/revision/after/compact_all_d_2.png"
+    },
+    {
+      "key": "compact_high_d_1",
+      "id": "19:1244",
+      "png": "C:/Dev/_Work/_Other/leinodesign/evals/overnight-2026-09-08/desk02/revision/after/compact_high_d_1.png"
+    },
+    {
+      "key": "compact_high_d_2",
+      "id": "19:1360",
+      "png": "C:/Dev/_Work/_Other/leinodesign/evals/overnight-2026-09-08/desk02/revision/after/compact_high_d_2.png"
+    },
+    {
+      "key": "compact_all_e_1_1",
+      "id": "19:1492",
+      "png": "C:/Dev/_Work/_Other/leinodesign/evals/overnight-2026-09-08/desk02/revision/after/compact_all_e_1_1.png"
+    },
+    {
+      "key": "compact_all_e_1_2",
+      "id": "19:1691",
+      "png": "C:/Dev/_Work/_Other/leinodesign/evals/overnight-2026-09-08/desk02/revision/after/compact_all_e_1_2.png"
+    },
+    {
+      "key": "compact_all_e_2_1",
+      "id": "19:1890",
+      "png": "C:/Dev/_Work/_Other/leinodesign/evals/overnight-2026-09-08/desk02/revision/after/compact_all_e_2_1.png"
+    },
+    {
+      "key": "compact_all_e_2_2",
+      "id": "19:2089",
+      "png": "C:/Dev/_Work/_Other/leinodesign/evals/overnight-2026-09-08/desk02/revision/after/compact_all_e_2_2.png"
+    },
+    {
+      "key": "compact_high_e_1_1",
+      "id": "20:528",
+      "png": "C:/Dev/_Work/_Other/leinodesign/evals/overnight-2026-09-08/desk02/revision/after/compact_high_e_1_1.png"
+    },
+    {
+      "key": "compact_high_e_1_2",
+      "id": "20:647",
+      "png": "C:/Dev/_Work/_Other/leinodesign/evals/overnight-2026-09-08/desk02/revision/after/compact_high_e_1_2.png"
+    },
+    {
+      "key": "compact_high_e_2_1",
+      "id": "20:766",
+      "png": "C:/Dev/_Work/_Other/leinodesign/evals/overnight-2026-09-08/desk02/revision/after/compact_high_e_2_1.png"
+    },
+    {
+      "key": "compact_high_e_2_2",
+      "id": "20:885",
+      "png": "C:/Dev/_Work/_Other/leinodesign/evals/overnight-2026-09-08/desk02/revision/after/compact_high_e_2_2.png"
+    }
+  ]
+}

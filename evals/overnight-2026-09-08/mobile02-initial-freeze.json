@@ -1,0 +1,31 @@
+{
+  "captured_utc": "2026-09-08T01:49:01.307545+00:00",
+  "files": {
+    "mobile02/initial/at14-contacts.png": "2925243d42edf4853658380cd6bd75eb7e75f107fa8df94c5480ca1b35a3636a",
+    "mobile02/initial/at14-error.png": "401c2900299b9da219adf3a0041b9b564f37d106a98eafb729a07d6ae65785ea",
+    "mobile02/initial/at14-invalid.png": "bcce6b1d623bb9202098568c89a9c7a084faaade998fb4703521b80d37e31666",
+    "mobile02/initial/at14-review.png": "cf1c7021d8c163885e4f6d390a3b8e59f15fa84590ba658eba00d1cf00173c3d",
+    "mobile02/initial/at14-selection.png": "7d0a3d1844ec604060bb119739853acf747d45297c9dba0ff027116454383be5",
+    "mobile02/initial/at14-success.png": "f207527f917e472139f9b4a00810f29602484f31d4aea4a5c19b8f4fd9207d6b",
+    "mobile02/initial/at18-contacts.png": "5f19a9843a934c48113318f3e68eb3899f9bf868a0e87e09ff1515498512c347",
+    "mobile02/initial/at18-error.png": "975eb4da737cc0d41af5a70f524f5e2b813938cc82bc6dcdbca3c1368c4b13df",
+    "mobile02/initial/at18-invalid.png": "c5d5aa7a51fe2e19de23bcb64fc29b46bcf03e04d62bcbb0cb65df651914f300",
+    "mobile02/initial/at18-review.png": "17a3d4ea48d6a3af640c08c4dc15dae03d16fbf21e4cd860d249a5de2712d1a2",
+    "mobile02/initial/at18-selection.png": "bef95d9903eadc0e4bd2e11bfccd6520778aaf2ad6f04b9c0daa84def11554d2",
+    "mobile02/initial/at18-success.png": "3a92bd018d3d1a0b5ac92eda6ed2042d9f1e118c470b85aedf9bcd0c1224f3d2",
+    "mobile02/initial/buttons.png": "0f5b568ac1f8f94d07ef55c911cffe6d24c16d9de8e5d56efcc5aaad002fa511",
+    "mobile02/initial/checks.json": "2f98bec5e551b1b36b9140f7229f7a339fcf8b6e6c83ec4455825307faee0e28",
+    "mobile02/initial/choices.png": "d2426a187e5f57e4f6f1169903bcbd188caa61108b01b8d0faea99adfda3da38",
+    "mobile02/initial/component-edit-resize.png": "085fded5acf683e6af6c836c63bf9c6b46bac067bafbd637edd6deea49eedbcc",
+    "mobile02/initial/inputs.png": "6db14a4e30f11de6531db4ded9c70d893da00795a7d8e25fc09aa5f0832a9a98",
+    "mobile02/initial/main-contacts.png": "c934cf4bc4e45dd2cd2ff81dd0f0d87c6357a330c8ebee9a04d49d529ac93d44",
+    "mobile02/initial/main-error.png": "d8c58f4a1b13fa08b9e5b79d2872176a631c7b034b48c678ec0c46611ef210e7",
+    "mobile02/initial/main-invalid.png": "d383bf9084e91c014bbbb8e30acc9ee57324947e9c30c70d4d0230c1857446d5",
+    "mobile02/initial/main-review.png": "8e8afe3ef8a9c72e9baecc56c27fd76e43e9b9c66d2df29f23d1e9214e1d092d",
+    "mobile02/initial/main-selection.png": "d83e653eed4f51b896259abb8978c17bbea703ffadab0bcfc240e99aa57c7d32",
+    "mobile02/initial/main-success.png": "8af620ad7b89d46d650ffa310abe323634ef808d203b9d6ec938ae85d595c294",
+    "mobile02/initial/README.md": "a6aea274546f4401b4513c43cf115569b4d37fd5ffc8ea3e8c9c57d996499186",
+    "mobile02/initial/state.json": "5f57c3760cac48446c62f32d865147892c15166591217ae78eea8816abd3c070",
+    "mobile02/initial/voice-choice.png": "177079895f1c701fb09f49a2354687dd07604e729c85f6684b6dede747554552"
+  }
+}

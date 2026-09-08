@@ -1,0 +1,16 @@
+{
+  "captured_utc": "2026-09-08T01:30:32.760142+00:00",
+  "files": {
+    "mobile01/initial/01-selection-14.png": "2861ad9e07084c1ab64515afd33583f9a862e8da045011b3f7842f371bc5bfda",
+    "mobile01/initial/01-selection-18.png": "192325a2a57c3e4aab88092acbf4e219c48e7b887160320acf5c03012f4cf6a0",
+    "mobile01/initial/01-selection.png": "d474f417c8a4d0cdca3906d624553677bb135acfc69ea059c9c0b0985755ea1f",
+    "mobile01/initial/01-voice.png": "145e9970011e2cd261d6c78c20ada281f2f08aee5dc04b7cc9cd9e349a7f49df",
+    "mobile01/initial/02-contacts.png": "72a5a4bee6821e57019ec29261d49a632ef4e1a4319958ad3392d9b27f631534",
+    "mobile01/initial/02-invalid-input.png": "d9d64fe8e448f87585f0a19468b311b861013592414096b827f077b5a1e4f43d",
+    "mobile01/initial/02-phone-error.png": "c0834fa138781aa80ce89399c05df37fed1ed47e16ac30d7afcefa8af5d9d900",
+    "mobile01/initial/03-review.png": "daf5bd3a1682ac29de938ef8c31cf9e12633fe96a33ae65fd9624396a4b7882f",
+    "mobile01/initial/04-success.png": "d004ceeee6a362ce50845031fd05c6f24ed96d3625b0b84f93cfa3804b0d183f",
+    "mobile01/initial/figma-manifest.json": "b4e87301fbb974911d8b78154890d7cc0de99e62a9ad267d5d436dc98e52f2be",
+    "mobile01/initial/report.md": "c9f24c452b51751ed333d41ebe1f3dd91dfc1d5f1ba92f62cc6effe7b06a1e2c"
+  }
+}

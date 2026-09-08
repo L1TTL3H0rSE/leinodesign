@@ -1,0 +1,132 @@
+[
+  {
+    "name": "all_d_0.png",
+    "beforeSHA256": "B558306AAD9A2077BB63D968E3AA9E57497AC2673F24A92CBE689AB28726AE51",
+    "matchesOriginal": true
+  },
+  {
+    "name": "all_d_1.png",
+    "beforeSHA256": "C4CDE28F948E1B35A24473AAEB387597A17501234DE3E58C577133E914AF3839",
+    "matchesOriginal": true
+  },
+  {
+    "name": "all_d_2.png",
+    "beforeSHA256": "16966B0EBCCEDF02BFD6BC9365D1647B558F88A4D77EA63C639266D9456F19AA",
+    "matchesOriginal": true
+  },
+  {
+    "name": "all_e_0_0.png",
+    "beforeSHA256": "184A281E53D40BE90BD1BD8472E74C0B45F2A957B68D9169F340B8F61006B931",
+    "matchesOriginal": true
+  },
+  {
+    "name": "all_e_0_1.png",
+    "beforeSHA256": "A013E93856F918FA07FDA08FFE98A68F3425B67CAA67C7D18AD448E21512CA01",
+    "matchesOriginal": true
+  },
+  {
+    "name": "all_e_0_2.png",
+    "beforeSHA256": "F4DE4998FBAE5EA80902C7AABEC51E277F3546D7913234C4D6FCA83DAFA73405",
+    "matchesOriginal": true
+  },
+  {
+    "name": "all_e_1_1.png",
+    "beforeSHA256": "BD9C58301A07F8AF3733E689F82F3D13B10377B746ABB76AEA898AED4F9640CC",
+    "matchesOriginal": true
+  },
+  {
+    "name": "all_e_1_2.png",
+    "beforeSHA256": "E674ADABC98F4ED460D5457C10353DCB256CC1F4FD2E8605D5208EC1C6BC847A",
+    "matchesOriginal": true
+  },
+  {
+    "name": "all_e_2_1.png",
+    "beforeSHA256": "A2FAEF6388ACFA888C8B8E649E8BB6AE9B7D2956FDB32A66BFF8D3BA781C58A3",
+    "matchesOriginal": true
+  },
+  {
+    "name": "all_e_2_2.png",
+    "beforeSHA256": "C977A8E67285847598DEFBC871742491E9DD221C8B680E09AEE8C38E9E4A840C",
+    "matchesOriginal": true
+  },
+  {
+    "name": "all_q_0.png",
+    "beforeSHA256": "CE292D343987EF7C0A5BD018657D509F200054608B8D976499CD6E6D0DFF6523",
+    "matchesOriginal": true
+  },
+  {
+    "name": "all_q_1.png",
+    "beforeSHA256": "27AA12CB442C7D7962A83A25F24512EBCC62D7B062A6D9966E01FBBD15AD5000",
+    "matchesOriginal": true
+  },
+  {
+    "name": "all_q_2.png",
+    "beforeSHA256": "EEE152529F68038D3FE1670D88B837D0D240B2E2440C00DBB50834FFFF3229BF",
+    "matchesOriginal": true
+  },
+  {
+    "name": "high_d_0.png",
+    "beforeSHA256": "B248BC8EE191B4A47E4962B8538FBAC58BD35C09DDC7F12C7BD6BD18016AB2E1",
+    "matchesOriginal": true
+  },
+  {
+    "name": "high_d_1.png",
+    "beforeSHA256": "4CDAD1CAC8C32CE289F3CCFBC4791B4151435A87F050E74308BE9B56565E6FC1",
+    "matchesOriginal": true
+  },
+  {
+    "name": "high_d_2.png",
+    "beforeSHA256": "03CD2169AF5D91D9544E928E2431266ECED0CA09450C56DA9EEE7E152749CFDD",
+    "matchesOriginal": true
+  },
+  {
+    "name": "high_e_0_0.png",
+    "beforeSHA256": "E426DF33553D35DAD204DC79DEF82F7A8176983F71E86ED2A75DDAE8793E3810",
+    "matchesOriginal": true
+  },
+  {
+    "name": "high_e_0_1.png",
+    "beforeSHA256": "8A1E21D17E8D687183A4809D06B66919696B8379DE1C6979F21C4FB69A5BF256",
+    "matchesOriginal": true
+  },
+  {
+    "name": "high_e_0_2.png",
+    "beforeSHA256": "704F2BFA1FC88669E7E691B55773A3532CA1FD6B04AD7E7C1E1A76F470C6993A",
+    "matchesOriginal": true
+  },
+  {
+    "name": "high_e_1_1.png",
+    "beforeSHA256": "3FCC13DDB1CEC2F78E108B5B54176DF38663842168FFFFC3F688EDE8D97C1399",
+    "matchesOriginal": true
+  },
+  {
+    "name": "high_e_1_2.png",
+    "beforeSHA256": "B7B3C9E6989854F56C985B3B8A36E087A6B625E1A733317800B06316B9C58C50",
+    "matchesOriginal": true
+  },
+  {
+    "name": "high_e_2_1.png",
+    "beforeSHA256": "75766A0D097BB6CA594C15F7EE7585686B367683E52A6FDE296D3DD380A212B5",
+    "matchesOriginal": true
+  },
+  {
+    "name": "high_e_2_2.png",
+    "beforeSHA256": "9FF67EC27261BAEE837F0A1DE6EC260648F245B890C4E7F57C26016E08DCD08E",
+    "matchesOriginal": true
+  },
+  {
+    "name": "high_q_0.png",
+    "beforeSHA256": "F3F5D175A388B933AA945F26C5C136F00D8E01C037B17EA19A86CE660A122D08",
+    "matchesOriginal": true
+  },
+  {
+    "name": "high_q_1.png",
+    "beforeSHA256": "AD6B231A2EE635FC6C001355C5BA4E77F2D0D887A5E3972AB459B1B99306948F",
+    "matchesOriginal": true
+  },
+  {
+    "name": "high_q_2.png",
+    "beforeSHA256": "A4968663697F68BAA28D93245D31C6478CB2051112612E2027E06E44A28C7D1A",
+    "matchesOriginal": true
+  }
+]

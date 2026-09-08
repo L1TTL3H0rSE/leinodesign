@@ -1,0 +1,29 @@
+{
+  "captured_utc": "2026-09-08T01:58:39.927282+00:00",
+  "files": {
+    "mobile01/revision/after/01-selection-14.png": "82c000241cc4af4ae4eebc414d8f3b6a4e291a8cc2404e72d55c4609d8b9a286",
+    "mobile01/revision/after/01-selection-18.png": "cf05f3d3a06ed93d993cf794b37850bf2b528af2009f2267a0ef1824c377d476",
+    "mobile01/revision/after/01-selection.png": "675fba42274d529ceb11af011b4fd6babebb3b59e7a3c7259e9a8988491f7993",
+    "mobile01/revision/after/01-voice.png": "74b61e12dbea60a05d54538756cacba984d1f78674accca9074c600d90fb78a3",
+    "mobile01/revision/after/02-contacts.png": "478291041cd10095ccb33b5bb2d38e2aa8fd1e97dc9b6a8b4ec7f10fa045f8cf",
+    "mobile01/revision/after/02-invalid-input.png": "e68cabe2e9b6a12c58af3e96f96e3fa16b7f4071e0d4581139c998a4cee8493c",
+    "mobile01/revision/after/02-phone-error.png": "c161908b19a3560399fc7c2ec605ea3e0809cdee76d21c7a960e21c778a7a32e",
+    "mobile01/revision/after/03-review-320.png": "b0c65e51d7708d3ed4b87a69a1f9b4649adc6f58e756406368e4654682e44719",
+    "mobile01/revision/after/03-review.png": "7be7fadc0b9179702c13816c8771ca14a79efc33bc4438cf990aafcf5a84b684",
+    "mobile01/revision/after/03-time-unavailable.png": "6b1b6edac4b8597f54992d61856e1911c927b53bc85b367d674cf9ad3dfeec86",
+    "mobile01/revision/after/04-success.png": "8334564db11b90a66ba90e81758b3c9fc2fda955edc664e22dc77b72e382ffd6",
+    "mobile01/revision/before/01-selection-14.png": "2861ad9e07084c1ab64515afd33583f9a862e8da045011b3f7842f371bc5bfda",
+    "mobile01/revision/before/01-selection-18.png": "192325a2a57c3e4aab88092acbf4e219c48e7b887160320acf5c03012f4cf6a0",
+    "mobile01/revision/before/01-selection.png": "d474f417c8a4d0cdca3906d624553677bb135acfc69ea059c9c0b0985755ea1f",
+    "mobile01/revision/before/01-voice.png": "145e9970011e2cd261d6c78c20ada281f2f08aee5dc04b7cc9cd9e349a7f49df",
+    "mobile01/revision/before/02-contacts.png": "72a5a4bee6821e57019ec29261d49a632ef4e1a4319958ad3392d9b27f631534",
+    "mobile01/revision/before/02-invalid-input.png": "d9d64fe8e448f87585f0a19468b311b861013592414096b827f077b5a1e4f43d",
+    "mobile01/revision/before/02-phone-error.png": "c0834fa138781aa80ce89399c05df37fed1ed47e16ac30d7afcefa8af5d9d900",
+    "mobile01/revision/before/03-review.png": "daf5bd3a1682ac29de938ef8c31cf9e12633fe96a33ae65fd9624396a4b7882f",
+    "mobile01/revision/before/04-success.png": "d004ceeee6a362ce50845031fd05c6f24ed96d3625b0b84f93cfa3804b0d183f",
+    "mobile01/revision/before/figma-manifest.json": "b4e87301fbb974911d8b78154890d7cc0de99e62a9ad267d5d436dc98e52f2be",
+    "mobile01/revision/before-integrity.json": "e8d2dfc8379853a0fcb89e1ca47dae2a468574ab873bc27015c6e01b18a9d4f2",
+    "mobile01/revision/figma-manifest.json": "a979a78ca85508e22e815e3c25bd16e319ff11468e1e8eff8cd36412857e5a08",
+    "mobile01/revision/report.md": "fdd289c6cce9a852f502d0be040e1e553fdc54a0fc5656eb25c72883ceaa6cbc"
+  }
+}

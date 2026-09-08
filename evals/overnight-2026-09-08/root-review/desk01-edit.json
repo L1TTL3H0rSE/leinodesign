@@ -1,0 +1,1173 @@
+{
+  "before": {
+    "master": {
+      "id": "25:198",
+      "paddingTop": 0,
+      "boundVariables": {
+        "paddingLeft": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:5:17"
+        },
+        "paddingRight": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:5:17"
+        },
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:5:4"
+          }
+        ],
+        "strokes": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:5:7"
+          }
+        ]
+      }
+    },
+    "consumers": [
+      {
+        "id": "23:197",
+        "props": {
+          "Ответственный#7:6": {
+            "type": "TEXT",
+            "value": "Не назначен"
+          },
+          "Обновлено#7:7": {
+            "type": "TEXT",
+            "value": "09:42"
+          },
+          "Статус#7:4": {
+            "type": "TEXT",
+            "value": "Новое"
+          },
+          "Компания#7:2": {
+            "type": "TEXT",
+            "value": "Северный парк"
+          },
+          "Автор#7:3": {
+            "type": "TEXT",
+            "value": "Анна Миронова"
+          },
+          "Тема#7:1": {
+            "type": "TEXT",
+            "value": "Отчёт по всем филиалам за август не формируется — требуется выгрузка до 12:00"
+          },
+          "Приоритет#7:5": {
+            "type": "TEXT",
+            "value": "Критический"
+          },
+          "ID#7:0": {
+            "type": "TEXT",
+            "value": "SD-1042"
+          }
+        },
+        "paddingTop": 0,
+        "width": 976,
+        "height": 96,
+        "boundVariables": {
+          "paddingLeft": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:5:17"
+          },
+          "paddingRight": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:5:17"
+          },
+          "fills": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5:4"
+            }
+          ],
+          "strokes": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5:7"
+            }
+          ]
+        },
+        "texts": [
+          {
+            "id": "I23:197;25:199",
+            "text": "SD-1042",
+            "width": 76,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5:6"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I23:197;25:200",
+            "text": "Отчёт по всем филиалам за август не формируется — требуется выгрузка до 12:00",
+            "width": 256,
+            "height": 60,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5:5"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I23:197;25:201",
+            "text": "Северный парк",
+            "width": 104,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5:5"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I23:197;25:202",
+            "text": "Анна Миронова",
+            "width": 112,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5:5"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I23:197;25:203",
+            "text": "Новое",
+            "width": 126,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5:12"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I23:197;25:204",
+            "text": "Критический",
+            "width": 100,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:23:162"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I23:197;25:205",
+            "text": "Елена Волкова",
+            "width": 128,
+            "height": 20,
+            "boundVariables": {
+              "characters": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5:22"
+              },
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5:5"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I23:197;25:206",
+            "text": "09:48",
+            "width": 42,
+            "height": 20,
+            "boundVariables": {
+              "characters": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5:23"
+              },
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5:5"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "23:198",
+        "props": {
+          "Обновлено#7:7": {
+            "type": "TEXT",
+            "value": "09:28"
+          },
+          "Ответственный#7:6": {
+            "type": "TEXT",
+            "value": "Максим Орлов"
+          },
+          "Статус#7:4": {
+            "type": "TEXT",
+            "value": "Ожидает ответа"
+          },
+          "Компания#7:2": {
+            "type": "TEXT",
+            "value": "Ритм"
+          },
+          "Автор#7:3": {
+            "type": "TEXT",
+            "value": "Олег Нестеров"
+          },
+          "Тема#7:1": {
+            "type": "TEXT",
+            "value": "Ошибка синхронизации справочника клиентов"
+          },
+          "Приоритет#7:5": {
+            "type": "TEXT",
+            "value": "Высокий"
+          },
+          "ID#7:0": {
+            "type": "TEXT",
+            "value": "SD-1040"
+          }
+        },
+        "paddingTop": 0,
+        "width": 976,
+        "height": 96,
+        "boundVariables": {
+          "paddingLeft": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:5:17"
+          },
+          "paddingRight": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:5:17"
+          },
+          "fills": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5:4"
+            }
+          ],
+          "strokes": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5:7"
+            }
+          ]
+        },
+        "texts": [
+          {
+            "id": "I23:198;25:199",
+            "text": "SD-1040",
+            "width": 76,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5:6"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I23:198;25:200",
+            "text": "Ошибка синхронизации справочника клиентов",
+            "width": 256,
+            "height": 40,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5:5"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I23:198;25:201",
+            "text": "Ритм",
+            "width": 104,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5:5"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I23:198;25:202",
+            "text": "Олег Нестеров",
+            "width": 112,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5:5"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I23:198;25:203",
+            "text": "Ожидает ответа",
+            "width": 126,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5:6"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I23:198;25:204",
+            "text": "Высокий",
+            "width": 100,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5:10"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I23:198;25:205",
+            "text": "Максим Орлов",
+            "width": 128,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5:5"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I23:198;25:206",
+            "text": "09:28",
+            "width": 42,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5:5"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "changed": {
+    "master": {
+      "id": "25:198",
+      "paddingTop": 4,
+      "boundVariables": {
+        "paddingLeft": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:5:17"
+        },
+        "paddingRight": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:5:17"
+        },
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:5:4"
+          }
+        ],
+        "strokes": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:5:7"
+          }
+        ]
+      }
+    },
+    "consumers": [
+      {
+        "id": "23:197",
+        "props": {
+          "Обновлено#7:7": {
+            "type": "TEXT",
+            "value": "09:42"
+          },
+          "Ответственный#7:6": {
+            "type": "TEXT",
+            "value": "Не назначен"
+          },
+          "Статус#7:4": {
+            "type": "TEXT",
+            "value": "Новое"
+          },
+          "Компания#7:2": {
+            "type": "TEXT",
+            "value": "Северный парк"
+          },
+          "Автор#7:3": {
+            "type": "TEXT",
+            "value": "Анна Миронова"
+          },
+          "Тема#7:1": {
+            "type": "TEXT",
+            "value": "Проба редактирования одной темы"
+          },
+          "Приоритет#7:5": {
+            "type": "TEXT",
+            "value": "Критический"
+          },
+          "ID#7:0": {
+            "type": "TEXT",
+            "value": "SD-1042"
+          }
+        },
+        "paddingTop": 4,
+        "width": 976,
+        "height": 96,
+        "boundVariables": {
+          "paddingLeft": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:5:17"
+          },
+          "paddingRight": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:5:17"
+          },
+          "fills": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5:4"
+            }
+          ],
+          "strokes": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5:7"
+            }
+          ]
+        },
+        "texts": [
+          {
+            "id": "I23:197;25:199",
+            "text": "SD-1042",
+            "width": 76,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5:6"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I23:197;25:200",
+            "text": "Проба редактирования одной темы",
+            "width": 256,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5:5"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I23:197;25:201",
+            "text": "Северный парк",
+            "width": 104,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5:5"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I23:197;25:202",
+            "text": "Анна Миронова",
+            "width": 112,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5:5"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I23:197;25:203",
+            "text": "Новое",
+            "width": 126,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5:12"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I23:197;25:204",
+            "text": "Критический",
+            "width": 100,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:23:162"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I23:197;25:205",
+            "text": "Елена Волкова",
+            "width": 128,
+            "height": 20,
+            "boundVariables": {
+              "characters": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5:22"
+              },
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5:5"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I23:197;25:206",
+            "text": "09:48",
+            "width": 42,
+            "height": 20,
+            "boundVariables": {
+              "characters": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5:23"
+              },
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5:5"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "23:198",
+        "props": {
+          "Обновлено#7:7": {
+            "type": "TEXT",
+            "value": "09:28"
+          },
+          "Ответственный#7:6": {
+            "type": "TEXT",
+            "value": "Максим Орлов"
+          },
+          "Статус#7:4": {
+            "type": "TEXT",
+            "value": "Ожидает ответа"
+          },
+          "Компания#7:2": {
+            "type": "TEXT",
+            "value": "Ритм"
+          },
+          "Автор#7:3": {
+            "type": "TEXT",
+            "value": "Олег Нестеров"
+          },
+          "Тема#7:1": {
+            "type": "TEXT",
+            "value": "Ошибка синхронизации справочника клиентов"
+          },
+          "Приоритет#7:5": {
+            "type": "TEXT",
+            "value": "Высокий"
+          },
+          "ID#7:0": {
+            "type": "TEXT",
+            "value": "SD-1040"
+          }
+        },
+        "paddingTop": 4,
+        "width": 976,
+        "height": 96,
+        "boundVariables": {
+          "paddingLeft": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:5:17"
+          },
+          "paddingRight": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:5:17"
+          },
+          "fills": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5:4"
+            }
+          ],
+          "strokes": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5:7"
+            }
+          ]
+        },
+        "texts": [
+          {
+            "id": "I23:198;25:199",
+            "text": "SD-1040",
+            "width": 76,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5:6"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I23:198;25:200",
+            "text": "Ошибка синхронизации справочника клиентов",
+            "width": 256,
+            "height": 40,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5:5"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I23:198;25:201",
+            "text": "Ритм",
+            "width": 104,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5:5"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I23:198;25:202",
+            "text": "Олег Нестеров",
+            "width": 112,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5:5"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I23:198;25:203",
+            "text": "Ожидает ответа",
+            "width": 126,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5:6"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I23:198;25:204",
+            "text": "Высокий",
+            "width": 100,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5:10"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I23:198;25:205",
+            "text": "Максим Орлов",
+            "width": 128,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5:5"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I23:198;25:206",
+            "text": "09:28",
+            "width": 42,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5:5"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "restored": {
+    "master": {
+      "id": "25:198",
+      "paddingTop": 0,
+      "boundVariables": {
+        "paddingLeft": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:5:17"
+        },
+        "paddingRight": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:5:17"
+        },
+        "fills": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:5:4"
+          }
+        ],
+        "strokes": [
+          {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:5:7"
+          }
+        ]
+      }
+    },
+    "consumers": [
+      {
+        "id": "23:197",
+        "props": {
+          "Ответственный#7:6": {
+            "type": "TEXT",
+            "value": "Не назначен"
+          },
+          "Обновлено#7:7": {
+            "type": "TEXT",
+            "value": "09:42"
+          },
+          "Статус#7:4": {
+            "type": "TEXT",
+            "value": "Новое"
+          },
+          "Компания#7:2": {
+            "type": "TEXT",
+            "value": "Северный парк"
+          },
+          "Автор#7:3": {
+            "type": "TEXT",
+            "value": "Анна Миронова"
+          },
+          "Тема#7:1": {
+            "type": "TEXT",
+            "value": "Отчёт по всем филиалам за август не формируется — требуется выгрузка до 12:00"
+          },
+          "Приоритет#7:5": {
+            "type": "TEXT",
+            "value": "Критический"
+          },
+          "ID#7:0": {
+            "type": "TEXT",
+            "value": "SD-1042"
+          }
+        },
+        "paddingTop": 0,
+        "width": 976,
+        "height": 96,
+        "boundVariables": {
+          "paddingLeft": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:5:17"
+          },
+          "paddingRight": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:5:17"
+          },
+          "fills": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5:4"
+            }
+          ],
+          "strokes": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5:7"
+            }
+          ]
+        },
+        "texts": [
+          {
+            "id": "I23:197;25:199",
+            "text": "SD-1042",
+            "width": 76,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5:6"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I23:197;25:200",
+            "text": "Отчёт по всем филиалам за август не формируется — требуется выгрузка до 12:00",
+            "width": 256,
+            "height": 60,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5:5"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I23:197;25:201",
+            "text": "Северный парк",
+            "width": 104,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5:5"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I23:197;25:202",
+            "text": "Анна Миронова",
+            "width": 112,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5:5"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I23:197;25:203",
+            "text": "Новое",
+            "width": 126,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5:12"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I23:197;25:204",
+            "text": "Критический",
+            "width": 100,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:23:162"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I23:197;25:205",
+            "text": "Елена Волкова",
+            "width": 128,
+            "height": 20,
+            "boundVariables": {
+              "characters": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5:22"
+              },
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5:5"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I23:197;25:206",
+            "text": "09:48",
+            "width": 42,
+            "height": 20,
+            "boundVariables": {
+              "characters": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5:23"
+              },
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5:5"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "23:198",
+        "props": {
+          "Обновлено#7:7": {
+            "type": "TEXT",
+            "value": "09:28"
+          },
+          "Ответственный#7:6": {
+            "type": "TEXT",
+            "value": "Максим Орлов"
+          },
+          "Статус#7:4": {
+            "type": "TEXT",
+            "value": "Ожидает ответа"
+          },
+          "Компания#7:2": {
+            "type": "TEXT",
+            "value": "Ритм"
+          },
+          "Автор#7:3": {
+            "type": "TEXT",
+            "value": "Олег Нестеров"
+          },
+          "Тема#7:1": {
+            "type": "TEXT",
+            "value": "Ошибка синхронизации справочника клиентов"
+          },
+          "Приоритет#7:5": {
+            "type": "TEXT",
+            "value": "Высокий"
+          },
+          "ID#7:0": {
+            "type": "TEXT",
+            "value": "SD-1040"
+          }
+        },
+        "paddingTop": 0,
+        "width": 976,
+        "height": 96,
+        "boundVariables": {
+          "paddingLeft": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:5:17"
+          },
+          "paddingRight": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:5:17"
+          },
+          "fills": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5:4"
+            }
+          ],
+          "strokes": [
+            {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:5:7"
+            }
+          ]
+        },
+        "texts": [
+          {
+            "id": "I23:198;25:199",
+            "text": "SD-1040",
+            "width": 76,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5:6"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I23:198;25:200",
+            "text": "Ошибка синхронизации справочника клиентов",
+            "width": 256,
+            "height": 40,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5:5"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I23:198;25:201",
+            "text": "Ритм",
+            "width": 104,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5:5"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I23:198;25:202",
+            "text": "Олег Нестеров",
+            "width": 112,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5:5"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I23:198;25:203",
+            "text": "Ожидает ответа",
+            "width": 126,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5:6"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I23:198;25:204",
+            "text": "Высокий",
+            "width": 100,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5:10"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I23:198;25:205",
+            "text": "Максим Орлов",
+            "width": 128,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5:5"
+                }
+              ]
+            }
+          },
+          {
+            "id": "I23:198;25:206",
+            "text": "09:28",
+            "width": 42,
+            "height": 20,
+            "boundVariables": {
+              "fills": [
+                {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:5:5"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "exactRestoration": true
+}
