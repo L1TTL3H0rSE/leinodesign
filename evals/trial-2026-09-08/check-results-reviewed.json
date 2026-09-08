@@ -1,0 +1,17 @@
+{
+  "good": {
+    "chunk_id": "9df32b",
+    "wall_time_seconds": 0.7355958,
+    "exit_code": 0,
+    "original_token_count": 27,
+    "output": "PASS: exact content, local independence, real resize, native slots, master propagation and preservation\r\n"
+  },
+  "bad": {
+    "chunk_id": "28f036",
+    "wall_time_seconds": 0.7857766,
+    "exit_code": 1,
+    "original_token_count": 139,
+    "output": "Traceback (most recent call last):\r\n  File \"C:\\Dev\\_Work\\_Other\\leinodesign\\evals\\trial-2026-09-08\\check_trial.py\", line 63, in <module>\r\n    main()\r\n    ~~~~^^\r\n  File \"C:\\Dev\\_Work\\_Other\\leinodesign\\evals\\trial-2026-09-08\\check_trial.py\", line 32, in main\r\n    check(bad[\"a\"],\"a\")\r\n    ~~~~~^^^^^^^^^^^^^^\r\n  File \"C:\\Dev\\_Work\\_Other\\leinodesign\\evals\\trial-2026-09-08\\check_trial.py\", line 12, in check\r\n    assert s[\"title\"] == expected_title, key+\": local title lost\"\r\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nAssertionError: a: local title lost\r\n"
+  },
+  "intervention": "Root review found always-failing bad-mode branch; removed and added exact failure-reason self-test in good mode."
+}

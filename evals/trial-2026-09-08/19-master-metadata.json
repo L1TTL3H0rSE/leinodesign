@@ -1,0 +1,13 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "<symbol id=\"3:9\" name=\"ReviewPanel\" x=\"80\" y=\"200\" width=\"360\" height=\"104.0199966430664\">\n  <frame id=\"3:10\" name=\"Header\" x=\"24\" y=\"24\" width=\"312\" height=\"56\">\n    <text id=\"3:11\" name=\"Title\" x=\"0\" y=\"0\" width=\"252\" height=\"56\" />\n    <frame id=\"3:12\" name=\"Закрыть\" x=\"268\" y=\"0\" width=\"44\" height=\"44\">\n      <instance id=\"3:13\" name=\"Close / Cross\" x=\"12\" y=\"12\" width=\"20\" height=\"20\" />\n    </frame>\n  </frame>\n  <slot id=\"3:15\" name=\"Body\" x=\"24\" y=\"80\" width=\"312\" height=\"0.009999999776482582\" />\n  <slot id=\"3:16\" name=\"Footer\" x=\"24\" y=\"80.01000213623047\" width=\"312\" height=\"0.009999999776482582\" />\n</symbol>"
+    },
+    {
+      "type": "text",
+      "text": "IMPORTANT: After you call this tool, you MUST call get_design_context if trying to implement the design, since this tool only returns metadata. If you do not call get_design_context, the agent will not be able to implement the design."
+    }
+  ],
+  "isError": false
+}

@@ -1,0 +1,1 @@
+return {pages:figma.root.children.map(p=>({id:p.id,name:p.name})), children:figma.currentPage.children.map(n=>({id:n.id,name:n.name,type:n.type})), variables:await figma.variables.getLocalVariablesAsync(),textStyles:await figma.getLocalTextStylesAsync(),fonts:(await figma.listAvailableFontsAsync()).filter(f=>f.fontName.family==='Inter')};

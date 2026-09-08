@@ -1,0 +1,52 @@
+{
+  "date": "2026-09-08",
+  "status": "draft extraction, not source-of-truth switch",
+  "source_repository": "haulplane/platform",
+  "source_commit": "a2ff95baf34f877ea83fb3557f6b040a7ddc8382",
+  "source_files": [
+    {
+      "path": ".agents/skills/figma-design-system/SKILL.md",
+      "git_blob": "f51c50db22aafeb55d33b9820475021c214b6a64",
+      "sha256": "861c1070ddba734b35c20e0c03f09944927ef985044d0eb689c42b0d7417be09"
+    },
+    {
+      "path": ".agents/skills/figma-design-system/references/design-method.md",
+      "git_blob": "882096c50f0e56fd717c6eedab4925f7a3850031",
+      "sha256": "c5de656d19375cafcc0854f1052054a4577f719f28c0313297456f4eeef8d55c"
+    },
+    {
+      "path": ".agents/skills/figma-design-system/references/component-contract.md",
+      "git_blob": "20394526b0eb72b1419e02ffce5fd1d15d855db2",
+      "sha256": "c9d68536289d139aa0c8f9c12d4b13a891b72c3add554c7a7dd1f0c749d6f41c"
+    },
+    {
+      "path": ".agents/skills/figma-design-system/references/quality-gate.md",
+      "git_blob": "a39aaa6bb1f73f2b14679b0fb8c01abb607fa09c",
+      "sha256": "a248b88e8fabeb50e1513ef8f37f0e1cd64ea77369037e5967030e46779fd39e"
+    },
+    {
+      "path": ".agents/skills/figma-design-system/references/file-and-docs.md",
+      "git_blob": "1033acb3bf09a504477a76f028b683d2aec9ba5f",
+      "sha256": "b8ca72fd607045b1626ebb3f2461bac4ad48ac070e53d1724d2c7add49cd71dd"
+    },
+    {
+      "path": ".agents/skills/figma-design-system/references/screens.md",
+      "git_blob": "b960fd53f29abf38e1d3d0973edf1d49a05801b6",
+      "sha256": "c07a3849d1619ae564a0d9fa2af86fa72aec5a8bb340e3f13ef921d84958e5f6"
+    },
+    {
+      "path": "docs/frontend/design-direction.md",
+      "git_blob": "82867abf189079098c82a2c2ce1a6062a70e47e3",
+      "sha256": "f24e2f6189d93398ce204f616a20207d46c6915292e76ebbb9dcb52cdce93be4"
+    },
+    {
+      "path": "docs/AGENT_ROUTING_NOTES.md",
+      "git_blob": "1125fcfe8b543ddccf5ea1c4088ed4b2424b32fa",
+      "sha256": "d21af8a4c683ddd59e576959e6121d4ce9e9e04fe0feb14d94edb9e715e95408"
+    }
+  ],
+  "archive_sha256": "6a34d0d0fe79d40f85f05fcd43e883287dde7b1a8b9cc47fe87edc5e4c4f512c",
+  "archive_baseline": "7fa5718e9be43a2384250538498c540fa0db1ac7",
+  "source_worktree": "Tracked files clean at intake. Five pre-existing untracked PNG exports left untouched.",
+  "trial_file": "https://www.figma.com/design/w9Pl9kkKD79ASwzqFBYNx6"
+}

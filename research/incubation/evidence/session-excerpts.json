@@ -1,0 +1,50 @@
+{
+  "status": "supplementary historical observation, not canonical repository facts and not current Figma verification",
+  "thread_id": "01a07725-9ecf-7103-a3a3-2dce9f50e931",
+  "title": "Проверить Figma-инструкции",
+  "source_path": "C:\\Users\\Maks\\.codex\\sessions\\2026\\09\\06\\rollout-2026-09-06T17-35-49-01a07725-9ecf-7103-a3a3-2dce9f50e931.jsonl",
+  "excerpts": [
+    {
+      "line": 1765,
+      "timestamp": "2026-09-07T20:25:20.9Z",
+      "record_type": "custom_tool_call_output",
+      "text": "Script completed\nWall time 1.0 seconds\nOutput:\n\n{\"content\":[{\"type\":\"text\",\"text\":\"Error: in set_isExposedInstance: Cannot expose instances within slots.\\n    at set (<input>:58:11)\\n    at <anonymous> (PLUGIN_3_SOURCE:205:17)\\n\"},{\"type\":\"text\",\"text\":\"Figma Debug UUID: bb991609-fe9d-492b-80ee-779beb6e6d9b\"}],\"structuredContent\":{\"safeToRetryWithoutCanvasRead\":true,\"error_code\":\"INVALID_ARGUMENT\"},\"isError\":true}"
+    },
+    {
+      "line": 2495,
+      "timestamp": "2026-09-07T21:04:54.22Z",
+      "record_type": "custom_tool_call_output",
+      "text": "Script completed\nWall time 4.0 seconds\nOutput:\n\n{\"content\":[{\"type\":\"text\",\"text\":\"Error: Fallback does not reflow with ShowSideIcon: {\\\"shownFallbackSize\\\":{\\\"width\\\":26,\\\"height\\\":18},\\\"hiddenFallbackSize\\\":{\\\"width\\\":26,\\\"height\\\":18}}\\n    at <anonymous> (PLUGIN_1_SOURCE:99:18)\\n\"},{\"type\":\"text\",\"text\":\"Figma Debug UUID: c3aaa845-e817-4120-90ca-9767e852b51b\"}],\"structuredContent\":{\"safeToRetryWithoutCanvasRead\":true,\"error_code\":\"INVALID_ARGUMENT\"},\"isError\":true}"
+    },
+    {
+      "line": 2519,
+      "timestamp": "2026-09-07T21:05:55.177Z",
+      "record_type": "custom_tool_call_output",
+      "text": "Script completed\nWall time 1.3 seconds\nOutput:\n\n{\"content\":[{\"type\":\"text\",\"text\":\"[{\\\"id\\\":\\\"14:27\\\",\\\"type\\\":\\\"COMPONENT\\\",\\\"w\\\":92,\\\"h\\\":36,\\\"children\\\":[{\\\"id\\\":\\\"14:28\\\",\\\"visible\\\":false,\\\"w\\\":201,\\\"h\\\":116},{\\\"id\\\":\\\"14:29\\\",\\\"visible\\\":false,\\\"w\\\":100,\\\"h\\\":100},{\\\"id\\\":\\\"14:31\\\",\\\"visible\\\":true,\\\"w\\\":34,\\\"h\\\":20},{\\\"id\\\":\\\"14:32\\\",\\\"visible\\\":true,\\\"w\\\":26,\\\"h\\\":18},{\\\"id\\\":\\\"14:35\\\",\\\"visible\\\":false,\\\"w\\\":16,\\\"h\\\":16}]},{\\\"id\\\":\\\"14:32\\\",\\\"type\\\":\\\"SLOT\\\",\\\"w\\\":26,\\\"h\\\":18,\\\"children\\\":[{\\\"id\\\":\\\"14:33\\\",\\\"visible\\\":true,\\\"w\\\":26,\\\"h\\\":18}]},{\\\"id\\\":\\\"14:33\\\",\\\"type\\\":\\\"INSTANCE\\\",\\\"w\\\":26,\\\"h\\\":18,\\\"props\\\":{\\\"SideIcon#14:3\\\":{\\\"type\\\":\\\"INSTANCE_SWAP\\\",\\\"value\\\":\\\"14:17\\\",\\\"preferredValues\\\":[]},\\\"ShowSideIcon#14:2\\\":{\\\"type\\\":\\\"BOOLEAN\\\",\\\"value\\\":false}},\\\"children\\\":[]},{\\\"id\\\":\\\"14:21\\\",\\\"type\\\":\\\"COMPONENT\\\",\\\"w\\\":1,\\\"h\\\":1,\\\"children\\\":[{\\\"id\\\":\\\"14:22\\\",\\\"visible\\\":false,\\\"w\\\":1,\\\"h\\\":1}]}]\"}],\"isError\":false}"
+    },
+    {
+      "line": 2632,
+      "timestamp": "2026-09-07T21:11:29.856Z",
+      "record_type": "custom_tool_call_output",
+      "text": "Script completed\nWall time 1.4 seconds\nOutput:\n\n{\"content\":[{\"type\":\"text\",\"text\":\"{\\\"createdNodeIds\\\":[],\\\"mutatedNodeIds\\\":[\\\"14:27\\\",\\\"14:32\\\",\\\"14:33\\\",\\\"14:28\\\",\\\"14:35\\\",\\\"14:18\\\",\\\"14:19\\\",\\\"14:20\\\",\\\"14:21\\\",\\\"14:22\\\",\\\"14:23\\\",\\\"14:24\\\",\\\"14:25\\\",\\\"14:26\\\"],\\\"propertyKeys\\\":{\\\"Label\\\":\\\"Label#14:6\\\",\\\"Side\\\":\\\"Side#14:10\\\",\\\"ShowSide\\\":\\\"ShowSide#30:0\\\"},\\\"geometry\\\":{\\\"shown\\\":{\\\"buttonWidth\\\":92,\\\"sideVisible\\\":true,\\\"sideWidth\\\":26},\\\"hidden\\\":{\\\"buttonWidth\\\":66,\\\"sideVisible\\\":false,\\\"sideWidth\\\":26},\\\"final\\\":{\\\"width\\\":66,\\\"height\\\":36}},\\\"fallbackDx\\\":\\\"Select side-fallback inside Side to change its local SideIcon; replace Side content for a custom #side; ShowSide controls the shared region.\\\"}\"}],\"isError\":false}"
+    },
+    {
+      "line": 3069,
+      "timestamp": "2026-09-07T21:30:12.327Z",
+      "record_type": "message",
+      "text": "Просмотрел живые образцы компонентов. Длинная подпись увеличивает Button без ручного растягивания, индикатор загрузки остаётся по центру. Замена содержимого native Side ещё требует доработки: структура правильная, но на скриншоте текст внутри слота отображается неверно. Это не считаю пройденной проверкой.\n"
+    },
+    {
+      "line": 3074,
+      "timestamp": "2026-09-07T21:30:26.635Z",
+      "record_type": "custom_tool_call_output",
+      "text": "Script completed\nWall time 3.1 seconds\nOutput:\n\n{\"content\":[{\"type\":\"text\",\"text\":\"{\\\"slot\\\":{\\\"id\\\":\\\"I37:36;35:18\\\",\\\"fills\\\":[{\\\"type\\\":\\\"SOLID\\\",\\\"visible\\\":true,\\\"opacity\\\":1,\\\"blendMode\\\":\\\"NORMAL\\\",\\\"color\\\":{\\\"r\\\":1,\\\"g\\\":1,\\\"b\\\":1},\\\"boundVariables\\\":{}}],\\\"w\\\":26,\\\"h\\\":18},\\\"children\\\":[{\\\"id\\\":\\\"I37:36;35:18;39:36\\\",\\\"type\\\":\\\"TEXT\\\",\\\"name\\\":\\\"format\\\",\\\"chars\\\":\\\"CSV\\\",\\\"font\\\":{\\\"family\\\":\\\"Inter\\\",\\\"style\\\":\\\"Medium\\\",\\\"variationSettings\\\":{\\\"wght\\\":500,\\\"slnt\\\":0}},\\\"size\\\":12,\\\"style\\\":\\\"S:a9f56bc5f199df3d170ba2460918836680ea7f09,\\\",\\\"fill\\\":[{\\\"type\\\":\\\"SOLID\\\",\\\"visible\\\":true,\\\"opacity\\\":1,\\\"blendMode\\\":\\\"NORMAL\\\",\\\"color\\\":{\\\"r\\\":1,\\\"g\\\":1,\\\"b\\\":1},\\\"boundVariables\\\":{\\\"color\\\":{\\\"type\\\":\\\"VARIABLE_ALIAS\\\",\\\"id\\\":\\\"VariableID:3:6\\\"}}}],\\\"opacity\\\":1,\\\"auto\\\":\\\"WIDTH_AND_HEIGHT\\\",\\\"w\\\":26,\\\"h\\\":18}]}\"}],\"isError\":false}\n{\"rows\":19}"
+    },
+    {
+      "line": 3244,
+      "timestamp": "2026-09-07T21:43:25.859Z",
+      "record_type": "message",
+      "text": "**Я сам заложил неправильное исключение в харнесс:** разрешил собирать продуктовую пробу в библиотеке ради доступа к неопубликованным компонентам. Потом начал развивать её в экран. Это моя ошибка в организации работы.\n\nИсправил порядок и закоммитил — `7fa5718`, без push:\n\n- **Design system:** основы, компоненты, состояния и примеры использования.\n- **Dispatcher:** продуктовые экраны и сценарии, включая черновики.\n- Сначала работающие базовые компоненты, затем сборка экранов их инстансами.\n\nВ Figma уже есть отдельные страницы основ и начальный Button. **Библиотека ещё не готова.** Старые экраны помечены как остановленные и убраны на последнюю страницу `Legacy product drafts`; перенос в Dispatcher пока не выполнен — текущий канал не импортировал неопубликованный мастер.\n\n<oai-mem-citation>\n<citation_entries>\nMEMORY.md:17-24|note=[project context and boundaries for design preparation]\n</citation_entries>\n<rollout_ids>\n01a0766b-21e9-7d62-a1cb-2a82c49b5227\n</rollout_ids>\n</oai-mem-citation>"
+    }
+  ]
+}

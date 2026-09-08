@@ -1,0 +1,109 @@
+{
+  "status": "incubation research snapshot; not an extraction freeze",
+  "repository": "haulplane/platform",
+  "head": "7fa5718e9be43a2384250538498c540fa0db1ac7",
+  "initial_status": "clean",
+  "source_of_truth": ".agents/skills/figma-design-system remains canonical",
+  "sources": [
+    {
+      "path": ".agents/skills/figma-design-system/SKILL.md",
+      "git_blob": "1946afc873257d9979bc187361af550dbea0c2a8",
+      "url": "https://github.com/haulplane/platform/blob/7fa5718e9be43a2384250538498c540fa0db1ac7/.agents/skills/figma-design-system/SKILL.md"
+    },
+    {
+      "path": ".agents/skills/figma-design-system/references/design-method.md",
+      "git_blob": "c59658bbf6212f6ac71dd2c387d73b2bf7f1f5b4",
+      "url": "https://github.com/haulplane/platform/blob/7fa5718e9be43a2384250538498c540fa0db1ac7/.agents/skills/figma-design-system/references/design-method.md"
+    },
+    {
+      "path": ".agents/skills/figma-design-system/references/component-contract.md",
+      "git_blob": "93f6be40300f62bb056b3a1b0dbf9c6a9fdd064e",
+      "url": "https://github.com/haulplane/platform/blob/7fa5718e9be43a2384250538498c540fa0db1ac7/.agents/skills/figma-design-system/references/component-contract.md"
+    },
+    {
+      "path": ".agents/skills/figma-design-system/references/quality-gate.md",
+      "git_blob": "a39aaa6bb1f73f2b14679b0fb8c01abb607fa09c",
+      "url": "https://github.com/haulplane/platform/blob/7fa5718e9be43a2384250538498c540fa0db1ac7/.agents/skills/figma-design-system/references/quality-gate.md"
+    },
+    {
+      "path": ".agents/skills/figma-design-system/references/tokens.md",
+      "git_blob": "31c05b8e39145c85f608cc9ad572e37ec012c9ae",
+      "url": "https://github.com/haulplane/platform/blob/7fa5718e9be43a2384250538498c540fa0db1ac7/.agents/skills/figma-design-system/references/tokens.md"
+    },
+    {
+      "path": ".agents/skills/figma-design-system/references/screens.md",
+      "git_blob": "b960fd53f29abf38e1d3d0973edf1d49a05801b6",
+      "url": "https://github.com/haulplane/platform/blob/7fa5718e9be43a2384250538498c540fa0db1ac7/.agents/skills/figma-design-system/references/screens.md"
+    },
+    {
+      "path": ".agents/skills/figma-design-system/references/file-and-docs.md",
+      "git_blob": "1033acb3bf09a504477a76f028b683d2aec9ba5f",
+      "url": "https://github.com/haulplane/platform/blob/7fa5718e9be43a2384250538498c540fa0db1ac7/.agents/skills/figma-design-system/references/file-and-docs.md"
+    },
+    {
+      "path": ".agents/skills/figma-design-system/references/principles.md",
+      "git_blob": "838b0c3158b8d67d8ebf6faa86d911a92d2f0976",
+      "url": "https://github.com/haulplane/platform/blob/7fa5718e9be43a2384250538498c540fa0db1ac7/.agents/skills/figma-design-system/references/principles.md"
+    },
+    {
+      "path": ".agents/skills/figma-design-system/references/kosygin-evidence.md",
+      "git_blob": "3f80dfb9be5146dacc9219b35a29b4681e0149a2",
+      "url": "https://github.com/haulplane/platform/blob/7fa5718e9be43a2384250538498c540fa0db1ac7/.agents/skills/figma-design-system/references/kosygin-evidence.md"
+    },
+    {
+      "path": "docs/frontend/design-direction.md",
+      "git_blob": "f2a72978487ae63e5883e850ac3f3a4cc1a85971",
+      "url": "https://github.com/haulplane/platform/blob/7fa5718e9be43a2384250538498c540fa0db1ac7/docs/frontend/design-direction.md"
+    },
+    {
+      "path": "docs/figma/README.md",
+      "git_blob": "c74e882c56dc51ede467b972aefd1cf15914ff1c",
+      "url": "https://github.com/haulplane/platform/blob/7fa5718e9be43a2384250538498c540fa0db1ac7/docs/figma/README.md"
+    },
+    {
+      "path": "docs/AGENT_ROUTING_NOTES.md",
+      "git_blob": "e6350167b5b430b288611b2c9d1a7040ceef8131",
+      "url": "https://github.com/haulplane/platform/blob/7fa5718e9be43a2384250538498c540fa0db1ac7/docs/AGENT_ROUTING_NOTES.md"
+    },
+    {
+      "path": "docs/AGENT_ORCHESTRATION.md",
+      "git_blob": "c794f086f610197aaea2679592d2b8557ecdf1b0",
+      "url": "https://github.com/haulplane/platform/blob/7fa5718e9be43a2384250538498c540fa0db1ac7/docs/AGENT_ORCHESTRATION.md"
+    },
+    {
+      "path": "docs/frontend/components-package.md",
+      "git_blob": "7aa28cc0eb33a121896427b0c5b74432438fafe0",
+      "url": "https://github.com/haulplane/platform/blob/7fa5718e9be43a2384250538498c540fa0db1ac7/docs/frontend/components-package.md"
+    },
+    {
+      "path": "docs/frontend/storybook.md",
+      "git_blob": "3d05f3a3889da230aea03da1e2dd0e1268c20b16",
+      "url": "https://github.com/haulplane/platform/blob/7fa5718e9be43a2384250538498c540fa0db1ac7/docs/frontend/storybook.md"
+    },
+    {
+      "path": "docs/frontend/figma-authoring.md",
+      "git_blob": "1ff57dcfba23275a53683032daa23a482620a769",
+      "url": "https://github.com/haulplane/platform/blob/7fa5718e9be43a2384250538498c540fa0db1ac7/docs/frontend/figma-authoring.md"
+    },
+    {
+      "path": "docs/frontend/figma-implementation.md",
+      "git_blob": "73bcd78ee6f58cb8a85a6948b224afb2b0dd2f36",
+      "url": "https://github.com/haulplane/platform/blob/7fa5718e9be43a2384250538498c540fa0db1ac7/docs/frontend/figma-implementation.md"
+    },
+    {
+      "path": "docs/decisions/0012-figma-storybook-first.md",
+      "git_blob": "8c1ae6d965df12226a6acf6517a9270b4b1e16e6",
+      "url": "https://github.com/haulplane/platform/blob/7fa5718e9be43a2384250538498c540fa0db1ac7/docs/decisions/0012-figma-storybook-first.md"
+    },
+    {
+      "path": "docs/decisions/0013-figma-authoring-and-token-sync.md",
+      "git_blob": "e1f7be6b2435afbc19c32152f993cb8bc562a039",
+      "url": "https://github.com/haulplane/platform/blob/7fa5718e9be43a2384250538498c540fa0db1ac7/docs/decisions/0013-figma-authoring-and-token-sync.md"
+    },
+    {
+      "path": "frontend/packages/components/src/components/Button.vue",
+      "git_blob": "89ec33aa1c9e2ee2d5e6447e7737fd349963a565",
+      "url": "https://github.com/haulplane/platform/blob/7fa5718e9be43a2384250538498c540fa0db1ac7/frontend/packages/components/src/components/Button.vue"
+    }
+  ]
+}

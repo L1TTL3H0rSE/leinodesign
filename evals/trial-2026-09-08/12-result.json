@@ -1,0 +1,17 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "TypeError: cannot read property 'appendChild' of undefined\n    at inserted (PLUGIN_1_SOURCE:9:34)\n    at <anonymous> (PLUGIN_1_SOURCE:20:229)\n"
+    },
+    {
+      "type": "text",
+      "text": "Figma Debug UUID: 0ea45656-95c2-49ea-a59a-44d3b79c38e6"
+    }
+  ],
+  "structuredContent": {
+    "safeToRetryWithoutCanvasRead": true,
+    "error_code": "INVALID_ARGUMENT"
+  },
+  "isError": true
+}

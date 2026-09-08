@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"mutatedNodeIds\":[\"3:20\",\"I3:20;3:15\",\"I3:20;3:16\"],\"createdNodeIds\":[\"I3:20;3:10\",\"I3:20;3:11\",\"I3:20;3:12\",\"I3:20;3:13\",\"I3:20;3:13;2:27\",\"I3:20;3:13;2:28\",\"I3:20;3:15\",\"I3:20;3:15;5:26\",\"I3:20;3:15;5:27\",\"I3:20;3:15;5:28\",\"I3:20;3:15;5:29\",\"I3:20;3:15;5:30\",\"I3:20;3:15;5:31\",\"I3:20;3:16\",\"I3:20;3:16;5:36\",\"I3:20;3:16;5:37\",\"I3:20;3:16;5:38\"],\"a\":{\"width\":360,\"height\":370,\"props\":{\"Footer#3:8\":{\"type\":\"SLOT\",\"preferredValues\":[]},\"Show footer#3:6\":{\"type\":\"BOOLEAN\",\"value\":true},\"Body#3:7\":{\"type\":\"SLOT\",\"preferredValues\":[]},\"Close icon#3:5\":{\"type\":\"INSTANCE_SWAP\",\"value\":\"2:26\",\"preferredValues\":[]},\"Title#3:4\":{\"type\":\"TEXT\",\"value\":\"Городские прогулки\"}}},\"beforeB\":{\"props\":{\"Footer#3:8\":{\"type\":\"SLOT\",\"preferredValues\":[]},\"Show footer#3:6\":{\"type\":\"BOOLEAN\",\"value\":true},\"Body#3:7\":{\"type\":\"SLOT\",\"preferredValues\":[]},\"Close icon#3:5\":{\"type\":\"INSTANCE_SWAP\",\"value\":\"2:24\",\"preferredValues\":[]},\"Title#3:4\":{\"type\":\"TEXT\",\"value\":\"Материалы исследования\"}},\"height\":92.0199966430664,\"texts\":[\"Материалы исследования\"]},\"afterB\":{\"props\":{\"Footer#3:8\":{\"type\":\"SLOT\",\"preferredValues\":[]},\"Show footer#3:6\":{\"type\":\"BOOLEAN\",\"value\":true},\"Body#3:7\":{\"type\":\"SLOT\",\"preferredValues\":[]},\"Close icon#3:5\":{\"type\":\"INSTANCE_SWAP\",\"value\":\"2:24\",\"preferredValues\":[]},\"Title#3:4\":{\"type\":\"TEXT\",\"value\":\"Материалы исследования\"}},\"height\":92.0199966430664,\"texts\":[\"Материалы исследования\"]}}"
+    }
+  ],
+  "isError": false
+}
