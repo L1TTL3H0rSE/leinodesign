@@ -1,0 +1,23 @@
+{
+  "captured_utc": "2026-09-08T00:23:30.693243+00:00",
+  "files": {
+    "B\\initial\\completion.json": "553021fd6c490233d3726fd8332ace8ed970ae85be73a36f073ea545e4570a76",
+    "B\\initial\\decisions.md": "d4e79871f3c78c32a57a724ac96905c94b18652b327892f14e02f81c17688c42",
+    "B\\initial\\detail-before-nav-fix.png": "bb65ba1371bb750778537b0ec25caa567dd27d0ce0c65711723cabc6c9b2a9dc",
+    "B\\initial\\detail.png": "8cb89a3f25615f5c06032d9ce217d46b4f7490ae3921e3f4ad0d071d4ae72d64",
+    "B\\initial\\empty.png": "09785481653caa944d720c38d6632bd4fb31fc0968d262e865eb75a44d37430b",
+    "B\\initial\\error.png": "10fe8adb052e6c87ccdc4ebf973fd8d7d0314d3542fd14d30a2269081bc80904",
+    "B\\initial\\final-inventory.json": "74a973dfe3e3924a5374f4e90e7bcc7b78f8a785b28c2cc1cef31825939df945",
+    "B\\initial\\list.png": "a9481fa5300b50ecccb98851b9c38de5c041e2286a45ef34b112c0e3f29e7e5a",
+    "B\\initial\\modal.png": "4d2c7af9e611c0713f7085330704779619682c282672c193eddfd83d6372ed55",
+    "B\\initial\\operations.json": "6acc1888a1820469837912215997250305a0500996f0e9df99d1115706f6baa4",
+    "B\\initial\\probe-after.png": "8a36d5a1788a0b0f54db80c8a31f4a0f6e7572c0a0b9ad0a1c3302a8e2589dbf",
+    "B\\initial\\probe-before.png": "e6dc7694953c2b6c51d0172450355f96bf14340acc3269bf3c0ecca6f3942a1a",
+    "B\\initial\\probe-restored.png": "d5a4bbba0b2bbc43d3b4a9b819d1c03855dd31fc8f3f61bbad6ce1679aab852b",
+    "B\\initial\\report.md": "86c713fd208041d56c52da7756a315077286b7f0ffebde94e77a0d32d78b3e0a",
+    "B\\initial\\row-master.png": "8a64a1d2b3e17c4803bb2619c199e00a81688d699acae460f5e3449ebef7234c",
+    "B\\initial\\screenshots.json": "141f962423d2cbecadde23ede695439621a98127021e93af27fdd72e68a5cb3b",
+    "B\\initial\\starter-inventory.json": "a967c0b8e501ba09fe1f1b11e35ff80fb7ab0c850e53ef66e68bdd4e07f38099",
+    "B\\initial\\starter.png": "5a04bb8c769a845caf8e59cecba7c7f01c4668a5d8bf6f42ba904017088ad9dc"
+  }
+}

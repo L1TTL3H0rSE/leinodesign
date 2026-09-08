@@ -1,0 +1,260 @@
+[
+  {
+    "id": "10:59",
+    "name": "Все материалы",
+    "reactions": [
+      {
+        "action": {
+          "type": "BACK"
+        },
+        "actions": [
+          {
+            "type": "BACK"
+          }
+        ],
+        "trigger": {
+          "type": "ON_CLICK"
+        }
+      }
+    ],
+    "overlayBackground": {
+      "type": "NONE"
+    },
+    "strokes": [
+      {
+        "type": "SOLID",
+        "visible": true,
+        "opacity": 1,
+        "blendMode": "NORMAL",
+        "color": {
+          "r": 0.7843137383460999,
+          "g": 0.8156862854957581,
+          "b": 0.8078431487083435
+        },
+        "boundVariables": {
+          "color": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:2:9"
+          }
+        }
+      }
+    ],
+    "effects": [],
+    "cornerRadius": 8,
+    "clipsContent": false
+  },
+  {
+    "id": "15:90",
+    "name": "Все материалы",
+    "reactions": [
+      {
+        "action": {
+          "type": "BACK"
+        },
+        "actions": [
+          {
+            "type": "BACK"
+          }
+        ],
+        "trigger": {
+          "type": "ON_CLICK"
+        }
+      }
+    ],
+    "overlayBackground": {
+      "type": "NONE"
+    },
+    "strokes": [
+      {
+        "type": "SOLID",
+        "visible": true,
+        "opacity": 1,
+        "blendMode": "NORMAL",
+        "color": {
+          "r": 0.7843137383460999,
+          "g": 0.8156862854957581,
+          "b": 0.8078431487083435
+        },
+        "boundVariables": {
+          "color": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:2:9"
+          }
+        }
+      }
+    ],
+    "effects": [],
+    "cornerRadius": 8,
+    "clipsContent": false
+  },
+  {
+    "id": "10:125",
+    "name": "Сбросить поиск",
+    "reactions": [
+      {
+        "action": {
+          "type": "BACK"
+        },
+        "actions": [
+          {
+            "type": "BACK"
+          }
+        ],
+        "trigger": {
+          "type": "ON_CLICK"
+        }
+      }
+    ],
+    "overlayBackground": {
+      "type": "NONE"
+    },
+    "strokes": [
+      {
+        "type": "SOLID",
+        "visible": true,
+        "opacity": 1,
+        "blendMode": "NORMAL",
+        "color": {
+          "r": 0.7843137383460999,
+          "g": 0.8156862854957581,
+          "b": 0.8078431487083435
+        },
+        "boundVariables": {
+          "color": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:2:9"
+          }
+        }
+      }
+    ],
+    "effects": [],
+    "cornerRadius": 8,
+    "clipsContent": false
+  },
+  {
+    "id": "10:99",
+    "name": "Сохранить",
+    "reactions": [
+      {
+        "action": {
+          "type": "CLOSE"
+        },
+        "actions": [
+          {
+            "type": "CLOSE"
+          }
+        ],
+        "trigger": {
+          "type": "ON_CLICK"
+        }
+      }
+    ],
+    "overlayBackground": {
+      "type": "NONE"
+    },
+    "strokes": [],
+    "effects": [],
+    "cornerRadius": 8,
+    "clipsContent": false
+  },
+  {
+    "id": "10:76",
+    "name": "Редактирование материала",
+    "reactions": [],
+    "overlayBackground": {
+      "type": "NONE"
+    },
+    "strokes": [
+      {
+        "type": "SOLID",
+        "visible": true,
+        "opacity": 1,
+        "blendMode": "NORMAL",
+        "color": {
+          "r": 0.7843137383460999,
+          "g": 0.8156862854957581,
+          "b": 0.8078431487083435
+        },
+        "boundVariables": {
+          "color": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:2:9"
+          }
+        }
+      }
+    ],
+    "effects": [
+      {
+        "type": "DROP_SHADOW",
+        "visible": true,
+        "radius": 32,
+        "boundVariables": {},
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0,
+          "a": 0.23999999463558197
+        },
+        "offset": {
+          "x": 0,
+          "y": 8
+        },
+        "spread": 0,
+        "blendMode": "NORMAL",
+        "showShadowBehindNode": true
+      }
+    ],
+    "cornerRadius": 8,
+    "clipsContent": true
+  },
+  {
+    "id": "10:127",
+    "name": "Редактирование — ошибка названия",
+    "reactions": [],
+    "overlayBackground": {
+      "type": "NONE"
+    },
+    "strokes": [
+      {
+        "type": "SOLID",
+        "visible": true,
+        "opacity": 1,
+        "blendMode": "NORMAL",
+        "color": {
+          "r": 0.7843137383460999,
+          "g": 0.8156862854957581,
+          "b": 0.8078431487083435
+        },
+        "boundVariables": {
+          "color": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:2:9"
+          }
+        }
+      }
+    ],
+    "effects": [
+      {
+        "type": "DROP_SHADOW",
+        "visible": true,
+        "radius": 32,
+        "boundVariables": {},
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0,
+          "a": 0.23999999463558197
+        },
+        "offset": {
+          "x": 0,
+          "y": 8
+        },
+        "spread": 0,
+        "blendMode": "NORMAL",
+        "showShadowBehindNode": true
+      }
+    ],
+    "cornerRadius": 8,
+    "clipsContent": true
+  }
+]

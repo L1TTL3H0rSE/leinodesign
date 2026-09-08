@@ -1,0 +1,11 @@
+await Promise.all(['Regular','Medium'].map(style=>figma.loadFontAsync({family:'Inter',style})));
+const c=figma.currentPage.query('COMPONENT[name=TextField]').first();
+const keys=Object.fromEntries(Object.keys(c.componentPropertyDefinitions).map(k=>[k.split('#')[0],k]));
+const instance=c.createInstance();const id=instance.id;
+instance.setProperties({[keys.Label]:'Test label',[keys.Value]:'Test value',[keys.Helper]:'Test helper',[keys['Show helper']]:true});
+const values=instance.query('TEXT').values(['name','characters','visible']);
+const visibleCheck=['Label','Value','Helper'].every(name=>values.some(x=>x.name===name&&x.characters==='Test '+name.toLowerCase()));
+instance.setProperties({[keys['Show helper']]:false});
+const hiddenCheck=instance.componentProperties[keys['Show helper']].value===false;
+instance.remove();
+return {passed:visibleCheck&&hiddenCheck,visibleCheck,hiddenCheck,values,createdNodeIds:[id],removedNodeIds:[id],retainedTestNodes:0};

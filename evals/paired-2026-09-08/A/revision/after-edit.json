@@ -1,0 +1,375 @@
+{
+  "rootId": "9:19",
+  "name": "Редактировать материал",
+  "width": 520,
+  "height": 488,
+  "nodes": [
+    {
+      "id": "9:19",
+      "parentId": "2:2",
+      "type": "FRAME",
+      "name": "Редактировать материал",
+      "x": 2800,
+      "y": 80,
+      "width": 520,
+      "height": 488,
+      "visible": true,
+      "layout": "VERTICAL",
+      "reactions": []
+    },
+    {
+      "id": "10:60",
+      "parentId": "9:19",
+      "type": "FRAME",
+      "name": "Dialog title bar",
+      "x": 24,
+      "y": 24,
+      "width": 472,
+      "height": 44,
+      "visible": true,
+      "layout": "HORIZONTAL",
+      "reactions": []
+    },
+    {
+      "id": "10:61",
+      "parentId": "10:60",
+      "type": "TEXT",
+      "name": "Title",
+      "x": 0,
+      "y": 6,
+      "width": 306,
+      "height": 32,
+      "visible": true,
+      "text": "Редактировать материал",
+      "font": "Inter",
+      "reactions": []
+    },
+    {
+      "id": "10:62",
+      "parentId": "10:60",
+      "type": "INSTANCE",
+      "name": "Закрыть",
+      "x": 428,
+      "y": 0,
+      "width": 44,
+      "height": 44,
+      "visible": true,
+      "layout": "HORIZONTAL",
+      "properties": {
+        "Label#3:1": "×"
+      },
+      "source": "3:6",
+      "reactions": [
+        {
+          "action": {
+            "type": "CLOSE"
+          },
+          "actions": [
+            {
+              "type": "CLOSE"
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "id": "I10:62;3:7",
+      "parentId": "10:62",
+      "type": "TEXT",
+      "name": "Label",
+      "x": 17,
+      "y": 12,
+      "width": 10,
+      "height": 20,
+      "visible": true,
+      "text": "×",
+      "font": "Inter",
+      "reactions": []
+    },
+    {
+      "id": "10:64",
+      "parentId": "9:19",
+      "type": "FRAME",
+      "name": "Edit form",
+      "x": 24,
+      "y": 92,
+      "width": 472,
+      "height": 304,
+      "visible": true,
+      "layout": "VERTICAL",
+      "reactions": []
+    },
+    {
+      "id": "10:65",
+      "parentId": "10:64",
+      "type": "INSTANCE",
+      "name": "Название",
+      "x": 0,
+      "y": 0,
+      "width": 472,
+      "height": 92,
+      "visible": true,
+      "layout": "VERTICAL",
+      "properties": {
+        "Show helper#4:3": false,
+        "Helper#4:2": "Helpful supporting text",
+        "Value#4:1": "Городские прогулки: маршруты для родителей с маленькими детьми",
+        "Label#4:0": "Название *"
+      },
+      "source": "4:2",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "12:123",
+            "navigation": "SWAP",
+            "transition": null,
+            "resetVideoPosition": false
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "12:123",
+              "navigation": "SWAP",
+              "transition": null,
+              "resetVideoPosition": false
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "id": "I10:65;4:3",
+      "parentId": "10:65",
+      "type": "TEXT",
+      "name": "Label",
+      "x": 0,
+      "y": 0,
+      "width": 78,
+      "height": 20,
+      "visible": true,
+      "text": "Название *",
+      "font": "Inter",
+      "reactions": []
+    },
+    {
+      "id": "I10:65;4:4",
+      "parentId": "10:65",
+      "type": "FRAME",
+      "name": "Input",
+      "x": 0,
+      "y": 28,
+      "width": 472,
+      "height": 64,
+      "visible": true,
+      "layout": "HORIZONTAL",
+      "reactions": []
+    },
+    {
+      "id": "I10:65;4:5",
+      "parentId": "I10:65;4:4",
+      "type": "TEXT",
+      "name": "Value",
+      "x": 12,
+      "y": 12,
+      "width": 448,
+      "height": 40,
+      "visible": true,
+      "text": "Городские прогулки: маршруты для родителей с маленькими детьми",
+      "font": "Inter",
+      "reactions": []
+    },
+    {
+      "id": "10:70",
+      "parentId": "10:64",
+      "type": "INSTANCE",
+      "name": "Описание",
+      "x": 0,
+      "y": 112,
+      "width": 472,
+      "height": 152,
+      "visible": true,
+      "layout": "VERTICAL",
+      "properties": {
+        "Show helper#4:3": false,
+        "Helper#4:2": "Helpful supporting text",
+        "Value#4:1": "Исследование повседневных маршрутов семей с детьми. Мы прошли восемь маршрутов вместе с родителями и отметили участки, где сложно пройти с коляской, безопасно пересечь дорогу или сделать остановку. В материале — наблюдения, фотографии и рекомендации для следующего этапа.",
+        "Label#4:0": "Описание"
+      },
+      "source": "4:2",
+      "reactions": []
+    },
+    {
+      "id": "I10:70;4:3",
+      "parentId": "10:70",
+      "type": "TEXT",
+      "name": "Label",
+      "x": 0,
+      "y": 0,
+      "width": 69,
+      "height": 20,
+      "visible": true,
+      "text": "Описание",
+      "font": "Inter",
+      "reactions": []
+    },
+    {
+      "id": "I10:70;4:4",
+      "parentId": "10:70",
+      "type": "FRAME",
+      "name": "Input",
+      "x": 0,
+      "y": 28,
+      "width": 472,
+      "height": 124,
+      "visible": true,
+      "layout": "HORIZONTAL",
+      "reactions": []
+    },
+    {
+      "id": "I10:70;4:5",
+      "parentId": "I10:70;4:4",
+      "type": "TEXT",
+      "name": "Value",
+      "x": 12,
+      "y": 12,
+      "width": 448,
+      "height": 100,
+      "visible": true,
+      "text": "Исследование повседневных маршрутов семей с детьми. Мы прошли восемь маршрутов вместе с родителями и отметили участки, где сложно пройти с коляской, безопасно пересечь дорогу или сделать остановку. В материале — наблюдения, фотографии и рекомендации для следующего этапа.",
+      "font": "Inter",
+      "reactions": []
+    },
+    {
+      "id": "10:75",
+      "parentId": "10:64",
+      "type": "TEXT",
+      "name": "Required field note",
+      "x": 0,
+      "y": 284,
+      "width": 145,
+      "height": 20,
+      "visible": true,
+      "text": "* Обязательное поле",
+      "font": "Inter",
+      "reactions": []
+    },
+    {
+      "id": "11:61",
+      "parentId": "9:19",
+      "type": "FRAME",
+      "name": "Dialog actions",
+      "x": 24,
+      "y": 420,
+      "width": 472,
+      "height": 44,
+      "visible": true,
+      "layout": "HORIZONTAL",
+      "reactions": []
+    },
+    {
+      "id": "11:62",
+      "parentId": "11:61",
+      "type": "INSTANCE",
+      "name": "Отменить",
+      "x": 252,
+      "y": 0,
+      "width": 101,
+      "height": 44,
+      "visible": true,
+      "layout": "HORIZONTAL",
+      "properties": {
+        "Label#3:1": "Отменить"
+      },
+      "source": "3:6",
+      "reactions": [
+        {
+          "action": {
+            "type": "CLOSE"
+          },
+          "actions": [
+            {
+              "type": "CLOSE"
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "id": "I11:62;3:7",
+      "parentId": "11:62",
+      "type": "TEXT",
+      "name": "Label",
+      "x": 16,
+      "y": 12,
+      "width": 69,
+      "height": 20,
+      "visible": true,
+      "text": "Отменить",
+      "font": "Inter",
+      "reactions": []
+    },
+    {
+      "id": "11:64",
+      "parentId": "11:61",
+      "type": "INSTANCE",
+      "name": "Сохранить",
+      "x": 365,
+      "y": 0,
+      "width": 107,
+      "height": 44,
+      "visible": true,
+      "layout": "HORIZONTAL",
+      "properties": {
+        "Label#3:0": "Сохранить"
+      },
+      "source": "3:4",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "9:18",
+            "navigation": "NAVIGATE",
+            "transition": null,
+            "resetVideoPosition": false
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "9:18",
+              "navigation": "NAVIGATE",
+              "transition": null,
+              "resetVideoPosition": false
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "id": "I11:64;3:5",
+      "parentId": "11:64",
+      "type": "TEXT",
+      "name": "Label",
+      "x": 16,
+      "y": 12,
+      "width": 75,
+      "height": 20,
+      "visible": true,
+      "text": "Сохранить",
+      "font": "Inter",
+      "reactions": []
+    }
+  ]
+}

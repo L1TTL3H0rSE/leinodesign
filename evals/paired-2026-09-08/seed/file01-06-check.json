@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"passed\":true,\"visibleCheck\":true,\"hiddenCheck\":true,\"values\":[{\"name\":\"Label\",\"characters\":\"Test label\",\"visible\":true},{\"name\":\"Value\",\"characters\":\"Test value\",\"visible\":true},{\"name\":\"Helper\",\"characters\":\"Test helper\",\"visible\":true}],\"createdNodeIds\":[\"4:22\"],\"removedNodeIds\":[\"4:22\"],\"retainedTestNodes\":0}"
+    }
+  ],
+  "isError": false
+}

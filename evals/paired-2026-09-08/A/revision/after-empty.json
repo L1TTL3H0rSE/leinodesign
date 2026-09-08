@@ -1,0 +1,339 @@
+{
+  "rootId": "12:63",
+  "name": "Поиск — ничего не найдено",
+  "width": 1280,
+  "height": 528,
+  "nodes": [
+    {
+      "id": "12:63",
+      "parentId": "2:2",
+      "type": "FRAME",
+      "name": "Поиск — ничего не найдено",
+      "x": 80,
+      "y": 840,
+      "width": 1280,
+      "height": 528,
+      "visible": true,
+      "layout": "VERTICAL",
+      "reactions": []
+    },
+    {
+      "id": "12:64",
+      "parentId": "12:63",
+      "type": "INSTANCE",
+      "name": "App header",
+      "x": 0,
+      "y": 0,
+      "width": 1280,
+      "height": 76,
+      "visible": true,
+      "layout": "HORIZONTAL",
+      "properties": {},
+      "source": "9:2",
+      "reactions": []
+    },
+    {
+      "id": "I12:64;9:3",
+      "parentId": "12:64",
+      "type": "TEXT",
+      "name": "Brand",
+      "x": 48,
+      "y": 22,
+      "width": 75,
+      "height": 32,
+      "visible": true,
+      "text": "Полка",
+      "font": "Inter",
+      "reactions": []
+    },
+    {
+      "id": "I12:64;9:4",
+      "parentId": "12:64",
+      "type": "INSTANCE",
+      "name": "Библиотека — активный раздел",
+      "x": 139,
+      "y": 16,
+      "width": 114,
+      "height": 44,
+      "visible": true,
+      "layout": "HORIZONTAL",
+      "properties": {
+        "Label#3:2": "Библиотека"
+      },
+      "source": "3:8",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "9:17",
+            "navigation": "NAVIGATE",
+            "transition": null,
+            "resetVideoPosition": false
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "9:17",
+              "navigation": "NAVIGATE",
+              "transition": null,
+              "resetVideoPosition": false
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "id": "I12:64;9:4;3:9",
+      "parentId": "I12:64;9:4",
+      "type": "TEXT",
+      "name": "Label",
+      "x": 16,
+      "y": 12,
+      "width": 82,
+      "height": 20,
+      "visible": true,
+      "text": "Библиотека",
+      "font": "Inter",
+      "reactions": []
+    },
+    {
+      "id": "I12:64;9:6",
+      "parentId": "12:64",
+      "type": "FRAME",
+      "name": "Flexible space",
+      "x": 269,
+      "y": 37.5,
+      "width": 747,
+      "height": 1,
+      "visible": true,
+      "layout": "HORIZONTAL",
+      "reactions": []
+    },
+    {
+      "id": "I12:64;9:7",
+      "parentId": "12:64",
+      "type": "TEXT",
+      "name": "Workspace",
+      "x": 1032,
+      "y": 28,
+      "width": 200,
+      "height": 20,
+      "visible": true,
+      "text": "Исследовательская команда",
+      "font": "Inter",
+      "reactions": []
+    },
+    {
+      "id": "12:65",
+      "parentId": "12:63",
+      "type": "FRAME",
+      "name": "Main",
+      "x": 0,
+      "y": 76,
+      "width": 1280,
+      "height": 452,
+      "visible": true,
+      "layout": "VERTICAL",
+      "reactions": []
+    },
+    {
+      "id": "12:66",
+      "parentId": "12:65",
+      "type": "FRAME",
+      "name": "Page heading",
+      "x": 80,
+      "y": 40,
+      "width": 393,
+      "height": 60,
+      "visible": true,
+      "layout": "VERTICAL",
+      "reactions": []
+    },
+    {
+      "id": "12:67",
+      "parentId": "12:66",
+      "type": "TEXT",
+      "name": "Heading",
+      "x": 0,
+      "y": 0,
+      "width": 139,
+      "height": 32,
+      "visible": true,
+      "text": "Материалы",
+      "font": "Inter",
+      "reactions": []
+    },
+    {
+      "id": "12:68",
+      "parentId": "12:66",
+      "type": "TEXT",
+      "name": "Intro",
+      "x": 0,
+      "y": 40,
+      "width": 393,
+      "height": 20,
+      "visible": true,
+      "text": "Исследования и заметки команды — всё в одном месте.",
+      "font": "Inter",
+      "reactions": []
+    },
+    {
+      "id": "12:69",
+      "parentId": "12:65",
+      "type": "INSTANCE",
+      "name": "Поиск по названию",
+      "x": 80,
+      "y": 124,
+      "width": 520,
+      "height": 72,
+      "visible": true,
+      "layout": "VERTICAL",
+      "properties": {
+        "Show helper#4:3": false,
+        "Helper#4:2": "Helpful supporting text",
+        "Value#4:1": "велосипеды",
+        "Label#4:0": "Поиск по названию"
+      },
+      "source": "4:2",
+      "reactions": []
+    },
+    {
+      "id": "I12:69;4:3",
+      "parentId": "12:69",
+      "type": "TEXT",
+      "name": "Label",
+      "x": 0,
+      "y": 0,
+      "width": 135,
+      "height": 20,
+      "visible": true,
+      "text": "Поиск по названию",
+      "font": "Inter",
+      "reactions": []
+    },
+    {
+      "id": "I12:69;4:4",
+      "parentId": "12:69",
+      "type": "FRAME",
+      "name": "Input",
+      "x": 0,
+      "y": 28,
+      "width": 520,
+      "height": 44,
+      "visible": true,
+      "layout": "HORIZONTAL",
+      "reactions": []
+    },
+    {
+      "id": "I12:69;4:5",
+      "parentId": "I12:69;4:4",
+      "type": "TEXT",
+      "name": "Value",
+      "x": 12,
+      "y": 12,
+      "width": 496,
+      "height": 20,
+      "visible": true,
+      "text": "велосипеды",
+      "font": "Inter",
+      "reactions": []
+    },
+    {
+      "id": "12:118",
+      "parentId": "12:65",
+      "type": "FRAME",
+      "name": "Empty search result",
+      "x": 80,
+      "y": 220,
+      "width": 1120,
+      "height": 192,
+      "visible": true,
+      "layout": "VERTICAL",
+      "reactions": []
+    },
+    {
+      "id": "12:119",
+      "parentId": "12:118",
+      "type": "TEXT",
+      "name": "Empty heading",
+      "x": 285,
+      "y": 32,
+      "width": 550,
+      "height": 32,
+      "visible": true,
+      "text": "По запросу «велосипеды» ничего не найдено",
+      "font": "Inter",
+      "reactions": []
+    },
+    {
+      "id": "12:120",
+      "parentId": "12:118",
+      "type": "TEXT",
+      "name": "Guidance",
+      "x": 332,
+      "y": 80,
+      "width": 456,
+      "height": 20,
+      "visible": true,
+      "text": "Попробуйте другое название или вернитесь ко всем материалам.",
+      "font": "Inter",
+      "reactions": []
+    },
+    {
+      "id": "12:121",
+      "parentId": "12:118",
+      "type": "INSTANCE",
+      "name": "Сбросить поиск",
+      "x": 457,
+      "y": 116,
+      "width": 206,
+      "height": 44,
+      "visible": true,
+      "layout": "HORIZONTAL",
+      "properties": {
+        "Label#3:1": "Показать все материалы"
+      },
+      "source": "3:6",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "9:17",
+            "navigation": "NAVIGATE",
+            "transition": null,
+            "resetVideoPosition": false
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "9:17",
+              "navigation": "NAVIGATE",
+              "transition": null,
+              "resetVideoPosition": false
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "id": "I12:121;3:7",
+      "parentId": "12:121",
+      "type": "TEXT",
+      "name": "Label",
+      "x": 16,
+      "y": 12,
+      "width": 174,
+      "height": 20,
+      "visible": true,
+      "text": "Показать все материалы",
+      "font": "Inter",
+      "reactions": []
+    }
+  ]
+}

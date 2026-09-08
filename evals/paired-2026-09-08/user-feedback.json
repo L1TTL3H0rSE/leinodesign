@@ -1,0 +1,9 @@
+{
+  "stage": "initial screenshots, before revision review",
+  "question": "Посмотри исходные варианты A и B в файле сравнения. Какой ты бы оставил для дальнейшей работы? Если есть замечания, напиши, что первым хотелось бы поправить.",
+  "answer": "Вариант B",
+  "preferred": "B",
+  "rationale": null,
+  "requested_corrections": null,
+  "interpretation": "User preference for this pair only. No reasons or correction list supplied; no acceptance of revision, implementation, or broad quality claim inferred."
+}

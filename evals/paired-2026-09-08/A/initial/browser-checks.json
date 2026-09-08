@@ -1,0 +1,73 @@
+{
+  "note": "Exact CUA code with result summaries. Full AX output and browser screenshots are retained in tool transcript.",
+  "calls": [
+    [
+      "let browser = await cua.getBrowser({url:'https://www.figma.com/proto/1uRCzGX2sEXpYQ2Un4sm5S?node-id=9-17&starting-point-node-id=9%3A17'});",
+      "Chrome browser 1 selected"
+    ],
+    [
+      "await browser.nameSession('🔎 Полка A'); let tab = await cua.createBrowserTab(browser.browserId,'https://www.figma.com/proto/1uRCzGX2sEXpYQ2Un4sm5S?node-id=9-17&starting-point-node-id=9%3A17',{sessionName:'🔎 Полка A'});",
+      "Tab 1844150219, node-id=9-17"
+    ],
+    [
+      "await tab.getScreenshot();",
+      "List displayed"
+    ],
+    [
+      "await tab.click([594,469]); await tab.getAXState(); await tab.getScreenshot();",
+      "URL node-id=9-18; immediate screenshot retained previous frame"
+    ],
+    [
+      "await tab.getScreenshot();",
+      "Settled detail displayed"
+    ],
+    [
+      "await tab.click([1453,402]); await tab.getAXState();",
+      "URL remains node-id=9-18 for overlay"
+    ],
+    [
+      "await tab.getScreenshot();",
+      "Edit overlay displayed"
+    ],
+    [
+      "await tab.click([906,355]); await tab.getAXState();",
+      "URL remains node-id=9-18 for overlay swap"
+    ],
+    [
+      "await tab.getScreenshot();",
+      "Error overlay displayed; blank title and preserved description"
+    ],
+    [
+      "await tab.click([904,343]); await tab.getAXState();",
+      "URL remains node-id=9-18"
+    ],
+    [
+      "await tab.getScreenshot();",
+      "Filled edit overlay restored"
+    ],
+    [
+      "await tab.click([1143,638]); await tab.getAXState();",
+      "URL node-id=9-18"
+    ],
+    [
+      "await tab.getScreenshot();",
+      "Detail displayed without overlay"
+    ],
+    [
+      "await tab.click([482,334]); await tab.getAXState();",
+      "URL node-id=9-17"
+    ],
+    [
+      "await tab.click([667,362]); await tab.getAXState();",
+      "URL node-id=12-63"
+    ],
+    [
+      "await tab.getScreenshot();",
+      "Empty search displayed"
+    ],
+    [
+      "await tab.click([951,619]); await tab.getAXState();",
+      "URL node-id=9-17"
+    ]
+  ]
+}

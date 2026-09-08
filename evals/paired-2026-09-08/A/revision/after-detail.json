@@ -1,0 +1,443 @@
+{
+  "rootId": "9:18",
+  "name": "Городские прогулки: маршруты для родителей с маленькими детьми",
+  "width": 1280,
+  "height": 512,
+  "nodes": [
+    {
+      "id": "9:18",
+      "parentId": "2:2",
+      "type": "FRAME",
+      "name": "Городские прогулки: маршруты для родителей с маленькими детьми",
+      "x": 1440,
+      "y": 80,
+      "width": 1280,
+      "height": 512,
+      "visible": true,
+      "layout": "VERTICAL",
+      "reactions": []
+    },
+    {
+      "id": "9:74",
+      "parentId": "9:18",
+      "type": "INSTANCE",
+      "name": "App header",
+      "x": 0,
+      "y": 0,
+      "width": 1280,
+      "height": 76,
+      "visible": true,
+      "layout": "HORIZONTAL",
+      "properties": {},
+      "source": "9:2",
+      "reactions": []
+    },
+    {
+      "id": "I9:74;9:3",
+      "parentId": "9:74",
+      "type": "TEXT",
+      "name": "Brand",
+      "x": 48,
+      "y": 22,
+      "width": 75,
+      "height": 32,
+      "visible": true,
+      "text": "Полка",
+      "font": "Inter",
+      "reactions": []
+    },
+    {
+      "id": "I9:74;9:4",
+      "parentId": "9:74",
+      "type": "INSTANCE",
+      "name": "Библиотека — активный раздел",
+      "x": 139,
+      "y": 16,
+      "width": 114,
+      "height": 44,
+      "visible": true,
+      "layout": "HORIZONTAL",
+      "properties": {
+        "Label#3:2": "Библиотека"
+      },
+      "source": "3:8",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "9:17",
+            "navigation": "NAVIGATE",
+            "transition": null,
+            "resetVideoPosition": false
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "9:17",
+              "navigation": "NAVIGATE",
+              "transition": null,
+              "resetVideoPosition": false
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "id": "I9:74;9:4;3:9",
+      "parentId": "I9:74;9:4",
+      "type": "TEXT",
+      "name": "Label",
+      "x": 16,
+      "y": 12,
+      "width": 82,
+      "height": 20,
+      "visible": true,
+      "text": "Библиотека",
+      "font": "Inter",
+      "reactions": []
+    },
+    {
+      "id": "I9:74;9:6",
+      "parentId": "9:74",
+      "type": "FRAME",
+      "name": "Flexible space",
+      "x": 269,
+      "y": 37.5,
+      "width": 747,
+      "height": 1,
+      "visible": true,
+      "layout": "HORIZONTAL",
+      "reactions": []
+    },
+    {
+      "id": "I9:74;9:7",
+      "parentId": "9:74",
+      "type": "TEXT",
+      "name": "Workspace",
+      "x": 1032,
+      "y": 28,
+      "width": 200,
+      "height": 20,
+      "visible": true,
+      "text": "Исследовательская команда",
+      "font": "Inter",
+      "reactions": []
+    },
+    {
+      "id": "9:80",
+      "parentId": "9:18",
+      "type": "FRAME",
+      "name": "Main",
+      "x": 0,
+      "y": 76,
+      "width": 1280,
+      "height": 436,
+      "visible": true,
+      "layout": "VERTICAL",
+      "reactions": []
+    },
+    {
+      "id": "9:81",
+      "parentId": "9:80",
+      "type": "INSTANCE",
+      "name": "Вернуться к материалам",
+      "x": 80,
+      "y": 32,
+      "width": 156,
+      "height": 44,
+      "visible": true,
+      "layout": "HORIZONTAL",
+      "properties": {
+        "Label#3:1": "← Все материалы"
+      },
+      "source": "3:6",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "9:17",
+            "navigation": "NAVIGATE",
+            "transition": null,
+            "resetVideoPosition": false
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "9:17",
+              "navigation": "NAVIGATE",
+              "transition": null,
+              "resetVideoPosition": false
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "id": "I9:81;3:7",
+      "parentId": "9:81",
+      "type": "TEXT",
+      "name": "Label",
+      "x": 16,
+      "y": 12,
+      "width": 124,
+      "height": 20,
+      "visible": true,
+      "text": "← Все материалы",
+      "font": "Inter",
+      "reactions": []
+    },
+    {
+      "id": "9:83",
+      "parentId": "9:80",
+      "type": "FRAME",
+      "name": "Title and actions",
+      "x": 80,
+      "y": 100,
+      "width": 1120,
+      "height": 44,
+      "visible": true,
+      "layout": "HORIZONTAL",
+      "reactions": []
+    },
+    {
+      "id": "9:84",
+      "parentId": "9:83",
+      "type": "TEXT",
+      "name": "Title",
+      "x": 0,
+      "y": 6,
+      "width": 982,
+      "height": 32,
+      "visible": true,
+      "text": "Городские прогулки: маршруты для родителей с маленькими детьми",
+      "font": "Inter",
+      "reactions": []
+    },
+    {
+      "id": "9:85",
+      "parentId": "9:83",
+      "type": "INSTANCE",
+      "name": "Редактировать",
+      "x": 982,
+      "y": 0,
+      "width": 138,
+      "height": 44,
+      "visible": true,
+      "layout": "HORIZONTAL",
+      "properties": {
+        "Label#3:1": "Редактировать"
+      },
+      "source": "3:6",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "9:19",
+            "navigation": "OVERLAY",
+            "transition": null,
+            "resetVideoPosition": false
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "9:19",
+              "navigation": "OVERLAY",
+              "transition": null,
+              "resetVideoPosition": false
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "id": "I9:85;3:7",
+      "parentId": "9:85",
+      "type": "TEXT",
+      "name": "Label",
+      "x": 16,
+      "y": 12,
+      "width": 106,
+      "height": 20,
+      "visible": true,
+      "text": "Редактировать",
+      "font": "Inter",
+      "reactions": []
+    },
+    {
+      "id": "9:87",
+      "parentId": "9:80",
+      "type": "FRAME",
+      "name": "Metadata",
+      "x": 80,
+      "y": 168,
+      "width": 382,
+      "height": 20,
+      "visible": true,
+      "layout": "HORIZONTAL",
+      "reactions": []
+    },
+    {
+      "id": "9:88",
+      "parentId": "9:87",
+      "type": "TEXT",
+      "name": "Author",
+      "x": 0,
+      "y": 0,
+      "width": 156,
+      "height": 20,
+      "visible": true,
+      "text": "Автор: Анна Морозова",
+      "font": "Inter",
+      "reactions": []
+    },
+    {
+      "id": "9:89",
+      "parentId": "9:87",
+      "type": "TEXT",
+      "name": "Updated",
+      "x": 188,
+      "y": 0,
+      "width": 194,
+      "height": 20,
+      "visible": true,
+      "text": "Обновлено 7 сентября 2026",
+      "font": "Inter",
+      "reactions": []
+    },
+    {
+      "id": "10:51",
+      "parentId": "9:80",
+      "type": "FRAME",
+      "name": "Material content",
+      "x": 80,
+      "y": 212,
+      "width": 1120,
+      "height": 184,
+      "visible": true,
+      "layout": "HORIZONTAL",
+      "reactions": []
+    },
+    {
+      "id": "10:52",
+      "parentId": "10:51",
+      "type": "FRAME",
+      "name": "Описание",
+      "x": 0,
+      "y": 0,
+      "width": 696,
+      "height": 112,
+      "visible": true,
+      "layout": "VERTICAL",
+      "reactions": []
+    },
+    {
+      "id": "10:53",
+      "parentId": "10:52",
+      "type": "TEXT",
+      "name": "Description heading",
+      "x": 0,
+      "y": 0,
+      "width": 90,
+      "height": 20,
+      "visible": true,
+      "text": "О материале",
+      "font": "Inter",
+      "reactions": []
+    },
+    {
+      "id": "10:54",
+      "parentId": "10:52",
+      "type": "TEXT",
+      "name": "Description",
+      "x": 0,
+      "y": 32,
+      "width": 696,
+      "height": 80,
+      "visible": true,
+      "text": "Исследование повседневных маршрутов семей с детьми. Мы прошли восемь маршрутов вместе с родителями и отметили участки, где сложно пройти с коляской, безопасно пересечь дорогу или сделать остановку. В материале — наблюдения, фотографии и рекомендации для следующего этапа.",
+      "font": "Inter",
+      "reactions": []
+    },
+    {
+      "id": "10:55",
+      "parentId": "10:51",
+      "type": "FRAME",
+      "name": "PDF attachment",
+      "x": 736,
+      "y": 0,
+      "width": 384,
+      "height": 184,
+      "visible": true,
+      "layout": "VERTICAL",
+      "reactions": []
+    },
+    {
+      "id": "10:56",
+      "parentId": "10:55",
+      "type": "TEXT",
+      "name": "Format",
+      "x": 24,
+      "y": 24,
+      "width": 86,
+      "height": 20,
+      "visible": true,
+      "text": "PDF · 2,4 МБ",
+      "font": "Inter",
+      "reactions": []
+    },
+    {
+      "id": "10:57",
+      "parentId": "10:55",
+      "type": "TEXT",
+      "name": "File name",
+      "x": 24,
+      "y": 60,
+      "width": 336,
+      "height": 40,
+      "visible": true,
+      "text": "Городские прогулки: маршруты для родителей с маленькими детьми.pdf",
+      "font": "Inter",
+      "reactions": []
+    },
+    {
+      "id": "10:58",
+      "parentId": "10:55",
+      "type": "INSTANCE",
+      "name": "Открыть PDF",
+      "x": 24,
+      "y": 116,
+      "width": 142,
+      "height": 44,
+      "visible": true,
+      "layout": "HORIZONTAL",
+      "properties": {
+        "Label#3:0": "Открыть PDF ↗"
+      },
+      "source": "3:4",
+      "reactions": []
+    },
+    {
+      "id": "I10:58;3:5",
+      "parentId": "10:58",
+      "type": "TEXT",
+      "name": "Label",
+      "x": 16,
+      "y": 12,
+      "width": 110,
+      "height": 20,
+      "visible": true,
+      "text": "Открыть PDF ↗",
+      "font": "Inter",
+      "reactions": []
+    }
+  ]
+}

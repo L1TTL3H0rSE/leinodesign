@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"createdNodeIds\":[\"3:2\",\"3:3\",\"3:4\",\"3:5\",\"3:6\",\"3:7\",\"3:8\",\"3:9\"],\"mutatedNodeIds\":[\"0:1\"],\"boardId\":\"3:2\",\"components\":[{\"id\":\"3:4\",\"name\":\"Primary Button\",\"properties\":{\"Label#3:0\":{\"type\":\"TEXT\",\"defaultValue\":\"Continue\"}},\"children\":[{\"id\":\"3:5\",\"name\":\"Label\",\"refs\":{\"characters\":\"Label#3:0\"}}]},{\"id\":\"3:6\",\"name\":\"Secondary Button\",\"properties\":{\"Label#3:1\":{\"type\":\"TEXT\",\"defaultValue\":\"Cancel\"}},\"children\":[{\"id\":\"3:7\",\"name\":\"Label\",\"refs\":{\"characters\":\"Label#3:1\"}}]},{\"id\":\"3:8\",\"name\":\"NavItem\",\"properties\":{\"Label#3:2\":{\"type\":\"TEXT\",\"defaultValue\":\"Overview\"}},\"children\":[{\"id\":\"3:9\",\"name\":\"Label\",\"refs\":{\"characters\":\"Label#3:2\"}}]}]}"
+    }
+  ],
+  "isError": false
+}

@@ -1,0 +1,17 @@
+{
+  "A": {
+    "condition": "standard",
+    "fileKey": "1uRCzGX2sEXpYQ2Un4sm5S"
+  },
+  "B": {
+    "condition": "leinodesign",
+    "fileKey": "P8wYRWbq7NR1v3KZDt6anF"
+  },
+  "input_skill": {
+    "skills\\leinodesign\\references\\components.md": "5b61012699607a061ba8bc57c57ff9979a5ccce54e75e206526522d47e44fc3e",
+    "skills\\leinodesign\\references\\figma.md": "8ab48e808d0756e71f4faf778288c0f0d24972ad7e8f2ff75983b0749ee7158f",
+    "skills\\leinodesign\\references\\visual-review.md": "4fb1d6fe1d9fd9e284a09a044636e44d387201d35f31e942f570bd688e4601df",
+    "skills\\leinodesign\\SKILL.md": "f457a1b39932a97cbe27b1439305146aa78c94725af22529bfb3292ef2ece38b"
+  },
+  "brief_sha256": "8bfb032327944b52bfedcf2ca8674b05f54458ab2459044350f109a319d96465"
+}

@@ -1,0 +1,367 @@
+{
+  "rootId": "12:123",
+  "name": "Редактировать — ошибка названия",
+  "width": 520,
+  "height": 496,
+  "nodes": [
+    {
+      "id": "12:123",
+      "parentId": "2:2",
+      "type": "FRAME",
+      "name": "Редактировать — ошибка названия",
+      "x": 3400,
+      "y": 80,
+      "width": 520,
+      "height": 496,
+      "visible": true,
+      "layout": "VERTICAL",
+      "reactions": []
+    },
+    {
+      "id": "12:124",
+      "parentId": "12:123",
+      "type": "FRAME",
+      "name": "Dialog title bar",
+      "x": 24,
+      "y": 24,
+      "width": 472,
+      "height": 44,
+      "visible": true,
+      "layout": "HORIZONTAL",
+      "reactions": []
+    },
+    {
+      "id": "12:125",
+      "parentId": "12:124",
+      "type": "TEXT",
+      "name": "Title",
+      "x": 0,
+      "y": 6,
+      "width": 306,
+      "height": 32,
+      "visible": true,
+      "text": "Редактировать материал",
+      "font": "Inter",
+      "reactions": []
+    },
+    {
+      "id": "12:126",
+      "parentId": "12:124",
+      "type": "INSTANCE",
+      "name": "Закрыть",
+      "x": 428,
+      "y": 0,
+      "width": 44,
+      "height": 44,
+      "visible": true,
+      "layout": "HORIZONTAL",
+      "properties": {
+        "Label#3:1": "×"
+      },
+      "source": "3:6",
+      "reactions": [
+        {
+          "action": {
+            "type": "CLOSE"
+          },
+          "actions": [
+            {
+              "type": "CLOSE"
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "id": "I12:126;3:7",
+      "parentId": "12:126",
+      "type": "TEXT",
+      "name": "Label",
+      "x": 17,
+      "y": 12,
+      "width": 10,
+      "height": 20,
+      "visible": true,
+      "text": "×",
+      "font": "Inter",
+      "reactions": []
+    },
+    {
+      "id": "12:127",
+      "parentId": "12:123",
+      "type": "FRAME",
+      "name": "Edit form",
+      "x": 24,
+      "y": 92,
+      "width": 472,
+      "height": 312,
+      "visible": true,
+      "layout": "VERTICAL",
+      "reactions": []
+    },
+    {
+      "id": "12:128",
+      "parentId": "12:127",
+      "type": "INSTANCE",
+      "name": "Название",
+      "x": 0,
+      "y": 0,
+      "width": 472,
+      "height": 100,
+      "visible": true,
+      "layout": "VERTICAL",
+      "properties": {
+        "Show helper#4:3": true,
+        "Helper#4:2": "Введите название, чтобы сохранить материал.",
+        "Value#4:1": "",
+        "Label#4:0": "Название *"
+      },
+      "source": "4:2",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "9:19",
+            "navigation": "SWAP",
+            "transition": null,
+            "resetVideoPosition": false
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "9:19",
+              "navigation": "SWAP",
+              "transition": null,
+              "resetVideoPosition": false
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "id": "I12:128;4:3",
+      "parentId": "12:128",
+      "type": "TEXT",
+      "name": "Label",
+      "x": 0,
+      "y": 0,
+      "width": 78,
+      "height": 20,
+      "visible": true,
+      "text": "Название *",
+      "font": "Inter",
+      "reactions": []
+    },
+    {
+      "id": "I12:128;4:4",
+      "parentId": "12:128",
+      "type": "FRAME",
+      "name": "Input",
+      "x": 0,
+      "y": 28,
+      "width": 472,
+      "height": 44,
+      "visible": true,
+      "layout": "HORIZONTAL",
+      "reactions": []
+    },
+    {
+      "id": "I12:128;4:5",
+      "parentId": "I12:128;4:4",
+      "type": "TEXT",
+      "name": "Value",
+      "x": 12,
+      "y": 12,
+      "width": 448,
+      "height": 20,
+      "visible": true,
+      "text": "",
+      "font": "Inter",
+      "reactions": []
+    },
+    {
+      "id": "I12:128;4:6",
+      "parentId": "12:128",
+      "type": "TEXT",
+      "name": "Helper",
+      "x": 0,
+      "y": 80,
+      "width": 472,
+      "height": 20,
+      "visible": true,
+      "text": "Введите название, чтобы сохранить материал.",
+      "font": "Inter",
+      "reactions": []
+    },
+    {
+      "id": "12:129",
+      "parentId": "12:127",
+      "type": "INSTANCE",
+      "name": "Описание",
+      "x": 0,
+      "y": 120,
+      "width": 472,
+      "height": 152,
+      "visible": true,
+      "layout": "VERTICAL",
+      "properties": {
+        "Show helper#4:3": false,
+        "Helper#4:2": "Helpful supporting text",
+        "Value#4:1": "Исследование повседневных маршрутов семей с детьми. Мы прошли восемь маршрутов вместе с родителями и отметили участки, где сложно пройти с коляской, безопасно пересечь дорогу или сделать остановку. В материале — наблюдения, фотографии и рекомендации для следующего этапа.",
+        "Label#4:0": "Описание"
+      },
+      "source": "4:2",
+      "reactions": []
+    },
+    {
+      "id": "I12:129;4:3",
+      "parentId": "12:129",
+      "type": "TEXT",
+      "name": "Label",
+      "x": 0,
+      "y": 0,
+      "width": 69,
+      "height": 20,
+      "visible": true,
+      "text": "Описание",
+      "font": "Inter",
+      "reactions": []
+    },
+    {
+      "id": "I12:129;4:4",
+      "parentId": "12:129",
+      "type": "FRAME",
+      "name": "Input",
+      "x": 0,
+      "y": 28,
+      "width": 472,
+      "height": 124,
+      "visible": true,
+      "layout": "HORIZONTAL",
+      "reactions": []
+    },
+    {
+      "id": "I12:129;4:5",
+      "parentId": "I12:129;4:4",
+      "type": "TEXT",
+      "name": "Value",
+      "x": 12,
+      "y": 12,
+      "width": 448,
+      "height": 100,
+      "visible": true,
+      "text": "Исследование повседневных маршрутов семей с детьми. Мы прошли восемь маршрутов вместе с родителями и отметили участки, где сложно пройти с коляской, безопасно пересечь дорогу или сделать остановку. В материале — наблюдения, фотографии и рекомендации для следующего этапа.",
+      "font": "Inter",
+      "reactions": []
+    },
+    {
+      "id": "12:130",
+      "parentId": "12:127",
+      "type": "TEXT",
+      "name": "Required field note",
+      "x": 0,
+      "y": 292,
+      "width": 145,
+      "height": 20,
+      "visible": true,
+      "text": "* Обязательное поле",
+      "font": "Inter",
+      "reactions": []
+    },
+    {
+      "id": "12:131",
+      "parentId": "12:123",
+      "type": "FRAME",
+      "name": "Dialog actions",
+      "x": 24,
+      "y": 428,
+      "width": 472,
+      "height": 44,
+      "visible": true,
+      "layout": "HORIZONTAL",
+      "reactions": []
+    },
+    {
+      "id": "12:132",
+      "parentId": "12:131",
+      "type": "INSTANCE",
+      "name": "Отменить",
+      "x": 252,
+      "y": 0,
+      "width": 101,
+      "height": 44,
+      "visible": true,
+      "layout": "HORIZONTAL",
+      "properties": {
+        "Label#3:1": "Отменить"
+      },
+      "source": "3:6",
+      "reactions": [
+        {
+          "action": {
+            "type": "CLOSE"
+          },
+          "actions": [
+            {
+              "type": "CLOSE"
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "id": "I12:132;3:7",
+      "parentId": "12:132",
+      "type": "TEXT",
+      "name": "Label",
+      "x": 16,
+      "y": 12,
+      "width": 69,
+      "height": 20,
+      "visible": true,
+      "text": "Отменить",
+      "font": "Inter",
+      "reactions": []
+    },
+    {
+      "id": "12:133",
+      "parentId": "12:131",
+      "type": "INSTANCE",
+      "name": "Сохранить",
+      "x": 365,
+      "y": 0,
+      "width": 107,
+      "height": 44,
+      "visible": true,
+      "layout": "HORIZONTAL",
+      "properties": {
+        "Label#3:0": "Сохранить"
+      },
+      "source": "3:4",
+      "reactions": []
+    },
+    {
+      "id": "I12:133;3:5",
+      "parentId": "12:133",
+      "type": "TEXT",
+      "name": "Label",
+      "x": 16,
+      "y": 12,
+      "width": 75,
+      "height": 20,
+      "visible": true,
+      "text": "Сохранить",
+      "font": "Inter",
+      "reactions": []
+    }
+  ]
+}

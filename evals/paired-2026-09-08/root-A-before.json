@@ -1,0 +1,1413 @@
+{
+  "screens": {
+    "list": {
+      "id": "9:17",
+      "w": 1280,
+      "h": 748,
+      "texts": [
+        [
+          "I9:20;9:3",
+          "Полка"
+        ],
+        [
+          "I9:20;9:4;3:9",
+          "Библиотека"
+        ],
+        [
+          "I9:20;9:7",
+          "Исследовательская команда"
+        ],
+        [
+          "9:28",
+          "Материалы"
+        ],
+        [
+          "9:29",
+          "Исследования и заметки команды — всё в одном месте."
+        ],
+        [
+          "I9:30;4:3",
+          "Поиск по названию"
+        ],
+        [
+          "I9:30;4:5",
+          "Введите название материала"
+        ],
+        [
+          "9:36",
+          "5 материалов"
+        ],
+        [
+          "I18:84;9:10",
+          "Заметка"
+        ],
+        [
+          "I18:84;9:12",
+          "Наблюдения после вечерней прогулки"
+        ],
+        [
+          "I18:84;9:13",
+          "Анна Морозова"
+        ],
+        [
+          "I18:84;9:14",
+          "8 сентября 2026"
+        ],
+        [
+          "I18:84;9:16",
+          "→"
+        ],
+        [
+          "I9:38;9:10",
+          "PDF"
+        ],
+        [
+          "I9:38;9:12",
+          "Городские прогулки: маршруты для родителей с маленькими детьми"
+        ],
+        [
+          "I9:38;9:13",
+          "Анна Морозова"
+        ],
+        [
+          "I9:38;9:14",
+          "7 сентября 2026"
+        ],
+        [
+          "I9:38;9:15",
+          "2,4 МБ"
+        ],
+        [
+          "I9:38;9:16",
+          "→"
+        ],
+        [
+          "I9:47;9:10",
+          "PDF"
+        ],
+        [
+          "I9:47;9:12",
+          "Как родители выбирают маршрут до школы и что заставляет их менять привычный путь"
+        ],
+        [
+          "I9:47;9:13",
+          "Максим Орлов"
+        ],
+        [
+          "I9:47;9:14",
+          "5 сентября 2026"
+        ],
+        [
+          "I9:47;9:15",
+          "4,8 МБ"
+        ],
+        [
+          "I9:47;9:16",
+          "→"
+        ],
+        [
+          "I9:56;9:10",
+          "PDF"
+        ],
+        [
+          "I9:56;9:12",
+          "Интервью с жителями Северного района"
+        ],
+        [
+          "I9:56;9:13",
+          "Елена Волкова"
+        ],
+        [
+          "I9:56;9:14",
+          "3 сентября 2026"
+        ],
+        [
+          "I9:56;9:15",
+          "1,6 МБ"
+        ],
+        [
+          "I9:56;9:16",
+          "→"
+        ],
+        [
+          "I9:65;9:10",
+          "PDF"
+        ],
+        [
+          "I9:65;9:12",
+          "Доступность остановок: результаты полевого исследования"
+        ],
+        [
+          "I9:65;9:13",
+          "Илья Соколов"
+        ],
+        [
+          "I9:65;9:14",
+          "1 сентября 2026"
+        ],
+        [
+          "I9:65;9:15",
+          "3,2 МБ"
+        ],
+        [
+          "I9:65;9:16",
+          "→"
+        ]
+      ],
+      "edges": [
+        {
+          "id": "9:30",
+          "reactions": [
+            {
+              "action": {
+                "type": "NODE",
+                "destinationId": "12:63",
+                "navigation": "NAVIGATE",
+                "transition": null,
+                "resetVideoPosition": false
+              },
+              "actions": [
+                {
+                  "type": "NODE",
+                  "destinationId": "12:63",
+                  "navigation": "NAVIGATE",
+                  "transition": null,
+                  "resetVideoPosition": false
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        },
+        {
+          "id": "18:84",
+          "reactions": [
+            {
+              "action": {
+                "type": "NODE",
+                "destinationId": "18:93",
+                "navigation": "NAVIGATE",
+                "transition": null,
+                "resetVideoPosition": false
+              },
+              "actions": [
+                {
+                  "type": "NODE",
+                  "destinationId": "18:93",
+                  "navigation": "NAVIGATE",
+                  "transition": null,
+                  "resetVideoPosition": false
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        },
+        {
+          "id": "9:38",
+          "reactions": [
+            {
+              "action": {
+                "type": "NODE",
+                "destinationId": "9:18",
+                "navigation": "NAVIGATE",
+                "transition": null,
+                "resetVideoPosition": false
+              },
+              "actions": [
+                {
+                  "type": "NODE",
+                  "destinationId": "9:18",
+                  "navigation": "NAVIGATE",
+                  "transition": null,
+                  "resetVideoPosition": false
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "detail": {
+      "id": "9:18",
+      "w": 1280,
+      "h": 512,
+      "texts": [
+        [
+          "I9:74;9:3",
+          "Полка"
+        ],
+        [
+          "I9:74;9:4;3:9",
+          "Библиотека"
+        ],
+        [
+          "I9:74;9:7",
+          "Исследовательская команда"
+        ],
+        [
+          "I9:81;3:7",
+          "← Все материалы"
+        ],
+        [
+          "9:84",
+          "Городские прогулки: маршруты для родителей с маленькими детьми"
+        ],
+        [
+          "I9:85;3:7",
+          "Редактировать"
+        ],
+        [
+          "9:88",
+          "Автор: Анна Морозова"
+        ],
+        [
+          "9:89",
+          "Обновлено 7 сентября 2026"
+        ],
+        [
+          "10:53",
+          "О материале"
+        ],
+        [
+          "10:54",
+          "Исследование повседневных маршрутов семей с детьми. Мы прошли восемь маршрутов вместе с родителями и отметили участки, где сложно пройти с коляской, безопасно пересечь дорогу или сделать остановку. В материале — наблюдения, фотографии и рекомендации для следующего этапа."
+        ],
+        [
+          "10:56",
+          "PDF · 2,4 МБ"
+        ],
+        [
+          "10:57",
+          "Городские прогулки: маршруты для родителей с маленькими детьми.pdf"
+        ],
+        [
+          "I10:58;3:5",
+          "Открыть PDF ↗"
+        ]
+      ],
+      "edges": [
+        {
+          "id": "I9:74;9:4",
+          "reactions": [
+            {
+              "action": {
+                "type": "NODE",
+                "destinationId": "9:17",
+                "navigation": "NAVIGATE",
+                "transition": null,
+                "resetVideoPosition": false
+              },
+              "actions": [
+                {
+                  "type": "NODE",
+                  "destinationId": "9:17",
+                  "navigation": "NAVIGATE",
+                  "transition": null,
+                  "resetVideoPosition": false
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        },
+        {
+          "id": "9:81",
+          "reactions": [
+            {
+              "action": {
+                "type": "NODE",
+                "destinationId": "9:17",
+                "navigation": "NAVIGATE",
+                "transition": null,
+                "resetVideoPosition": false
+              },
+              "actions": [
+                {
+                  "type": "NODE",
+                  "destinationId": "9:17",
+                  "navigation": "NAVIGATE",
+                  "transition": null,
+                  "resetVideoPosition": false
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        },
+        {
+          "id": "9:85",
+          "reactions": [
+            {
+              "action": {
+                "type": "NODE",
+                "destinationId": "9:19",
+                "navigation": "OVERLAY",
+                "transition": null,
+                "resetVideoPosition": false
+              },
+              "actions": [
+                {
+                  "type": "NODE",
+                  "destinationId": "9:19",
+                  "navigation": "OVERLAY",
+                  "transition": null,
+                  "resetVideoPosition": false
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "edit": {
+      "id": "9:19",
+      "w": 520,
+      "h": 488,
+      "texts": [
+        [
+          "10:61",
+          "Редактировать материал"
+        ],
+        [
+          "I10:62;3:7",
+          "×"
+        ],
+        [
+          "I10:65;4:3",
+          "Название *"
+        ],
+        [
+          "I10:65;4:5",
+          "Городские прогулки: маршруты для родителей с маленькими детьми"
+        ],
+        [
+          "I10:70;4:3",
+          "Описание"
+        ],
+        [
+          "I10:70;4:5",
+          "Исследование повседневных маршрутов семей с детьми. Мы прошли восемь маршрутов вместе с родителями и отметили участки, где сложно пройти с коляской, безопасно пересечь дорогу или сделать остановку. В материале — наблюдения, фотографии и рекомендации для следующего этапа."
+        ],
+        [
+          "10:75",
+          "* Обязательное поле"
+        ],
+        [
+          "I11:62;3:7",
+          "Отменить"
+        ],
+        [
+          "I11:64;3:5",
+          "Сохранить"
+        ]
+      ],
+      "edges": [
+        {
+          "id": "10:62",
+          "reactions": [
+            {
+              "action": {
+                "type": "CLOSE"
+              },
+              "actions": [
+                {
+                  "type": "CLOSE"
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        },
+        {
+          "id": "10:65",
+          "reactions": [
+            {
+              "action": {
+                "type": "NODE",
+                "destinationId": "12:123",
+                "navigation": "SWAP",
+                "transition": null,
+                "resetVideoPosition": false
+              },
+              "actions": [
+                {
+                  "type": "NODE",
+                  "destinationId": "12:123",
+                  "navigation": "SWAP",
+                  "transition": null,
+                  "resetVideoPosition": false
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        },
+        {
+          "id": "11:62",
+          "reactions": [
+            {
+              "action": {
+                "type": "CLOSE"
+              },
+              "actions": [
+                {
+                  "type": "CLOSE"
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        },
+        {
+          "id": "11:64",
+          "reactions": [
+            {
+              "action": {
+                "type": "NODE",
+                "destinationId": "9:18",
+                "navigation": "NAVIGATE",
+                "transition": null,
+                "resetVideoPosition": false
+              },
+              "actions": [
+                {
+                  "type": "NODE",
+                  "destinationId": "9:18",
+                  "navigation": "NAVIGATE",
+                  "transition": null,
+                  "resetVideoPosition": false
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "empty": {
+      "id": "12:63",
+      "w": 1280,
+      "h": 528,
+      "texts": [
+        [
+          "I12:64;9:3",
+          "Полка"
+        ],
+        [
+          "I12:64;9:4;3:9",
+          "Библиотека"
+        ],
+        [
+          "I12:64;9:7",
+          "Исследовательская команда"
+        ],
+        [
+          "12:67",
+          "Материалы"
+        ],
+        [
+          "12:68",
+          "Исследования и заметки команды — всё в одном месте."
+        ],
+        [
+          "I12:69;4:3",
+          "Поиск по названию"
+        ],
+        [
+          "I12:69;4:5",
+          "велосипеды"
+        ],
+        [
+          "12:119",
+          "По запросу «велосипеды» ничего не найдено"
+        ],
+        [
+          "12:120",
+          "Попробуйте другое название или вернитесь ко всем материалам."
+        ],
+        [
+          "I12:121;3:7",
+          "Показать все материалы"
+        ]
+      ],
+      "edges": [
+        {
+          "id": "I12:64;9:4",
+          "reactions": [
+            {
+              "action": {
+                "type": "NODE",
+                "destinationId": "9:17",
+                "navigation": "NAVIGATE",
+                "transition": null,
+                "resetVideoPosition": false
+              },
+              "actions": [
+                {
+                  "type": "NODE",
+                  "destinationId": "9:17",
+                  "navigation": "NAVIGATE",
+                  "transition": null,
+                  "resetVideoPosition": false
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        },
+        {
+          "id": "12:121",
+          "reactions": [
+            {
+              "action": {
+                "type": "NODE",
+                "destinationId": "9:17",
+                "navigation": "NAVIGATE",
+                "transition": null,
+                "resetVideoPosition": false
+              },
+              "actions": [
+                {
+                  "type": "NODE",
+                  "destinationId": "9:17",
+                  "navigation": "NAVIGATE",
+                  "transition": null,
+                  "resetVideoPosition": false
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "error": {
+      "id": "12:123",
+      "w": 520,
+      "h": 496,
+      "texts": [
+        [
+          "12:125",
+          "Редактировать материал"
+        ],
+        [
+          "I12:126;3:7",
+          "×"
+        ],
+        [
+          "I12:128;4:3",
+          "Название *"
+        ],
+        [
+          "I12:128;4:5",
+          ""
+        ],
+        [
+          "I12:128;4:6",
+          "Введите название, чтобы сохранить материал."
+        ],
+        [
+          "I12:129;4:3",
+          "Описание"
+        ],
+        [
+          "I12:129;4:5",
+          "Исследование повседневных маршрутов семей с детьми. Мы прошли восемь маршрутов вместе с родителями и отметили участки, где сложно пройти с коляской, безопасно пересечь дорогу или сделать остановку. В материале — наблюдения, фотографии и рекомендации для следующего этапа."
+        ],
+        [
+          "12:130",
+          "* Обязательное поле"
+        ],
+        [
+          "I12:132;3:7",
+          "Отменить"
+        ],
+        [
+          "I12:133;3:5",
+          "Сохранить"
+        ]
+      ],
+      "edges": [
+        {
+          "id": "12:126",
+          "reactions": [
+            {
+              "action": {
+                "type": "CLOSE"
+              },
+              "actions": [
+                {
+                  "type": "CLOSE"
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        },
+        {
+          "id": "12:128",
+          "reactions": [
+            {
+              "action": {
+                "type": "NODE",
+                "destinationId": "9:19",
+                "navigation": "SWAP",
+                "transition": null,
+                "resetVideoPosition": false
+              },
+              "actions": [
+                {
+                  "type": "NODE",
+                  "destinationId": "9:19",
+                  "navigation": "SWAP",
+                  "transition": null,
+                  "resetVideoPosition": false
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        },
+        {
+          "id": "12:132",
+          "reactions": [
+            {
+              "action": {
+                "type": "CLOSE"
+              },
+              "actions": [
+                {
+                  "type": "CLOSE"
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "compact": {
+      "id": "18:111",
+      "w": 760,
+      "h": 832,
+      "texts": [
+        [
+          "I18:112;9:3",
+          "Полка"
+        ],
+        [
+          "I18:112;9:4;3:9",
+          "Библиотека"
+        ],
+        [
+          "I18:112;9:7",
+          "Исследовательская команда"
+        ],
+        [
+          "18:115",
+          "Материалы"
+        ],
+        [
+          "18:116",
+          "Исследования и заметки команды — всё в одном месте."
+        ],
+        [
+          "I18:117;4:3",
+          "Поиск по названию"
+        ],
+        [
+          "I18:117;4:5",
+          "Введите название материала"
+        ],
+        [
+          "18:119",
+          "5 материалов"
+        ],
+        [
+          "I18:121;9:10",
+          "Заметка"
+        ],
+        [
+          "I18:121;9:12",
+          "Наблюдения после вечерней прогулки"
+        ],
+        [
+          "I18:121;9:13",
+          "Анна Морозова"
+        ],
+        [
+          "I18:121;9:14",
+          "8 сентября 2026"
+        ],
+        [
+          "I18:121;9:16",
+          "→"
+        ],
+        [
+          "I18:122;9:10",
+          "PDF"
+        ],
+        [
+          "I18:122;9:12",
+          "Городские прогулки: маршруты для родителей с маленькими детьми"
+        ],
+        [
+          "I18:122;9:13",
+          "Анна Морозова"
+        ],
+        [
+          "I18:122;9:14",
+          "7 сентября 2026"
+        ],
+        [
+          "I18:122;9:15",
+          "2,4 МБ"
+        ],
+        [
+          "I18:122;9:16",
+          "→"
+        ],
+        [
+          "I18:123;9:10",
+          "PDF"
+        ],
+        [
+          "I18:123;9:12",
+          "Как родители выбирают маршрут до школы и что заставляет их менять привычный путь"
+        ],
+        [
+          "I18:123;9:13",
+          "Максим Орлов"
+        ],
+        [
+          "I18:123;9:14",
+          "5 сентября 2026"
+        ],
+        [
+          "I18:123;9:15",
+          "4,8 МБ"
+        ],
+        [
+          "I18:123;9:16",
+          "→"
+        ],
+        [
+          "I18:124;9:10",
+          "PDF"
+        ],
+        [
+          "I18:124;9:12",
+          "Интервью с жителями Северного района"
+        ],
+        [
+          "I18:124;9:13",
+          "Елена Волкова"
+        ],
+        [
+          "I18:124;9:14",
+          "3 сентября 2026"
+        ],
+        [
+          "I18:124;9:15",
+          "1,6 МБ"
+        ],
+        [
+          "I18:124;9:16",
+          "→"
+        ],
+        [
+          "I18:125;9:10",
+          "PDF"
+        ],
+        [
+          "I18:125;9:12",
+          "Доступность остановок: результаты полевого исследования"
+        ],
+        [
+          "I18:125;9:13",
+          "Илья Соколов"
+        ],
+        [
+          "I18:125;9:14",
+          "1 сентября 2026"
+        ],
+        [
+          "I18:125;9:15",
+          "3,2 МБ"
+        ],
+        [
+          "I18:125;9:16",
+          "→"
+        ]
+      ],
+      "edges": [
+        {
+          "id": "18:117",
+          "reactions": [
+            {
+              "action": {
+                "type": "NODE",
+                "destinationId": "12:63",
+                "navigation": "NAVIGATE",
+                "transition": null,
+                "resetVideoPosition": false
+              },
+              "actions": [
+                {
+                  "type": "NODE",
+                  "destinationId": "12:63",
+                  "navigation": "NAVIGATE",
+                  "transition": null,
+                  "resetVideoPosition": false
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        },
+        {
+          "id": "18:121",
+          "reactions": [
+            {
+              "action": {
+                "type": "NODE",
+                "destinationId": "18:93",
+                "navigation": "NAVIGATE",
+                "transition": null,
+                "resetVideoPosition": false
+              },
+              "actions": [
+                {
+                  "type": "NODE",
+                  "destinationId": "18:93",
+                  "navigation": "NAVIGATE",
+                  "transition": null,
+                  "resetVideoPosition": false
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        },
+        {
+          "id": "18:122",
+          "reactions": [
+            {
+              "action": {
+                "type": "NODE",
+                "destinationId": "9:18",
+                "navigation": "NAVIGATE",
+                "transition": null,
+                "resetVideoPosition": false
+              },
+              "actions": [
+                {
+                  "type": "NODE",
+                  "destinationId": "9:18",
+                  "navigation": "NAVIGATE",
+                  "transition": null,
+                  "resetVideoPosition": false
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "note": {
+      "id": "18:93",
+      "w": 1280,
+      "h": 436,
+      "texts": [
+        [
+          "I18:94;9:3",
+          "Полка"
+        ],
+        [
+          "I18:94;9:4;3:9",
+          "Библиотека"
+        ],
+        [
+          "I18:94;9:7",
+          "Исследовательская команда"
+        ],
+        [
+          "I18:101;3:7",
+          "← Все материалы"
+        ],
+        [
+          "18:104",
+          "Заметка"
+        ],
+        [
+          "18:105",
+          "Наблюдения после вечерней прогулки"
+        ],
+        [
+          "18:107",
+          "Автор: Анна Морозова"
+        ],
+        [
+          "18:108",
+          "Обновлено 8 сентября 2026"
+        ],
+        [
+          "18:110",
+          "На двух перекрёстках участникам не хватало времени перейти дорогу. Проверить длительность зелёного сигнала перед следующей прогулкой."
+        ]
+      ],
+      "edges": [
+        {
+          "id": "I18:94;9:4",
+          "reactions": [
+            {
+              "action": {
+                "type": "NODE",
+                "destinationId": "9:17",
+                "navigation": "NAVIGATE",
+                "transition": null,
+                "resetVideoPosition": false
+              },
+              "actions": [
+                {
+                  "type": "NODE",
+                  "destinationId": "9:17",
+                  "navigation": "NAVIGATE",
+                  "transition": null,
+                  "resetVideoPosition": false
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        },
+        {
+          "id": "18:101",
+          "reactions": [
+            {
+              "action": {
+                "type": "BACK"
+              },
+              "actions": [
+                {
+                  "type": "BACK"
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "master": {
+    "id": "9:8",
+    "gap": 16,
+    "bound": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:2:13"
+    },
+    "props": {
+      "Title#9:0": {
+        "type": "TEXT",
+        "defaultValue": "Городские прогулки: маршруты для родителей с маленькими детьми"
+      },
+      "Author#9:1": {
+        "type": "TEXT",
+        "defaultValue": "Анна Морозова"
+      },
+      "Date#9:2": {
+        "type": "TEXT",
+        "defaultValue": "7 сентября 2026"
+      },
+      "Size#9:3": {
+        "type": "TEXT",
+        "defaultValue": "2,4 МБ"
+      },
+      "Type#18:0": {
+        "type": "TEXT",
+        "defaultValue": "PDF"
+      },
+      "Show size#18:1": {
+        "type": "BOOLEAN",
+        "defaultValue": true
+      }
+    }
+  },
+  "rows": [
+    {
+      "screen": "list",
+      "id": "18:84",
+      "props": {
+        "Author#9:1": {
+          "type": "TEXT",
+          "value": "Анна Морозова"
+        },
+        "Type#18:0": {
+          "type": "TEXT",
+          "value": "Заметка"
+        },
+        "Date#9:2": {
+          "type": "TEXT",
+          "value": "8 сентября 2026"
+        },
+        "Show size#18:1": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Size#9:3": {
+          "type": "TEXT",
+          "value": ""
+        },
+        "Title#9:0": {
+          "type": "TEXT",
+          "value": "Наблюдения после вечерней прогулки"
+        }
+      },
+      "gap": 16,
+      "w": 1120,
+      "h": 76
+    },
+    {
+      "screen": "list",
+      "id": "9:38",
+      "props": {
+        "Author#9:1": {
+          "type": "TEXT",
+          "value": "Анна Морозова"
+        },
+        "Type#18:0": {
+          "type": "TEXT",
+          "value": "PDF"
+        },
+        "Date#9:2": {
+          "type": "TEXT",
+          "value": "7 сентября 2026"
+        },
+        "Show size#18:1": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Size#9:3": {
+          "type": "TEXT",
+          "value": "2,4 МБ"
+        },
+        "Title#9:0": {
+          "type": "TEXT",
+          "value": "Городские прогулки: маршруты для родителей с маленькими детьми"
+        }
+      },
+      "gap": 16,
+      "w": 1120,
+      "h": 76
+    },
+    {
+      "screen": "list",
+      "id": "9:47",
+      "props": {
+        "Author#9:1": {
+          "type": "TEXT",
+          "value": "Максим Орлов"
+        },
+        "Type#18:0": {
+          "type": "TEXT",
+          "value": "PDF"
+        },
+        "Date#9:2": {
+          "type": "TEXT",
+          "value": "5 сентября 2026"
+        },
+        "Show size#18:1": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Size#9:3": {
+          "type": "TEXT",
+          "value": "4,8 МБ"
+        },
+        "Title#9:0": {
+          "type": "TEXT",
+          "value": "Как родители выбирают маршрут до школы и что заставляет их менять привычный путь"
+        }
+      },
+      "gap": 16,
+      "w": 1120,
+      "h": 76
+    },
+    {
+      "screen": "list",
+      "id": "9:56",
+      "props": {
+        "Author#9:1": {
+          "type": "TEXT",
+          "value": "Елена Волкова"
+        },
+        "Type#18:0": {
+          "type": "TEXT",
+          "value": "PDF"
+        },
+        "Date#9:2": {
+          "type": "TEXT",
+          "value": "3 сентября 2026"
+        },
+        "Show size#18:1": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Size#9:3": {
+          "type": "TEXT",
+          "value": "1,6 МБ"
+        },
+        "Title#9:0": {
+          "type": "TEXT",
+          "value": "Интервью с жителями Северного района"
+        }
+      },
+      "gap": 16,
+      "w": 1120,
+      "h": 76
+    },
+    {
+      "screen": "list",
+      "id": "9:65",
+      "props": {
+        "Author#9:1": {
+          "type": "TEXT",
+          "value": "Илья Соколов"
+        },
+        "Type#18:0": {
+          "type": "TEXT",
+          "value": "PDF"
+        },
+        "Date#9:2": {
+          "type": "TEXT",
+          "value": "1 сентября 2026"
+        },
+        "Show size#18:1": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Size#9:3": {
+          "type": "TEXT",
+          "value": "3,2 МБ"
+        },
+        "Title#9:0": {
+          "type": "TEXT",
+          "value": "Доступность остановок: результаты полевого исследования"
+        }
+      },
+      "gap": 16,
+      "w": 1120,
+      "h": 76
+    },
+    {
+      "screen": "compact",
+      "id": "18:121",
+      "props": {
+        "Author#9:1": {
+          "type": "TEXT",
+          "value": "Анна Морозова"
+        },
+        "Type#18:0": {
+          "type": "TEXT",
+          "value": "Заметка"
+        },
+        "Date#9:2": {
+          "type": "TEXT",
+          "value": "8 сентября 2026"
+        },
+        "Show size#18:1": {
+          "type": "BOOLEAN",
+          "value": false
+        },
+        "Size#9:3": {
+          "type": "TEXT",
+          "value": ""
+        },
+        "Title#9:0": {
+          "type": "TEXT",
+          "value": "Наблюдения после вечерней прогулки"
+        }
+      },
+      "gap": 16,
+      "w": 696,
+      "h": 76
+    },
+    {
+      "screen": "compact",
+      "id": "18:122",
+      "props": {
+        "Author#9:1": {
+          "type": "TEXT",
+          "value": "Анна Морозова"
+        },
+        "Type#18:0": {
+          "type": "TEXT",
+          "value": "PDF"
+        },
+        "Date#9:2": {
+          "type": "TEXT",
+          "value": "7 сентября 2026"
+        },
+        "Show size#18:1": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Size#9:3": {
+          "type": "TEXT",
+          "value": "2,4 МБ"
+        },
+        "Title#9:0": {
+          "type": "TEXT",
+          "value": "Городские прогулки: маршруты для родителей с маленькими детьми"
+        }
+      },
+      "gap": 16,
+      "w": 696,
+      "h": 96
+    },
+    {
+      "screen": "compact",
+      "id": "18:123",
+      "props": {
+        "Author#9:1": {
+          "type": "TEXT",
+          "value": "Максим Орлов"
+        },
+        "Type#18:0": {
+          "type": "TEXT",
+          "value": "PDF"
+        },
+        "Date#9:2": {
+          "type": "TEXT",
+          "value": "5 сентября 2026"
+        },
+        "Show size#18:1": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Size#9:3": {
+          "type": "TEXT",
+          "value": "4,8 МБ"
+        },
+        "Title#9:0": {
+          "type": "TEXT",
+          "value": "Как родители выбирают маршрут до школы и что заставляет их менять привычный путь"
+        }
+      },
+      "gap": 16,
+      "w": 696,
+      "h": 116
+    },
+    {
+      "screen": "compact",
+      "id": "18:124",
+      "props": {
+        "Author#9:1": {
+          "type": "TEXT",
+          "value": "Елена Волкова"
+        },
+        "Type#18:0": {
+          "type": "TEXT",
+          "value": "PDF"
+        },
+        "Date#9:2": {
+          "type": "TEXT",
+          "value": "3 сентября 2026"
+        },
+        "Show size#18:1": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Size#9:3": {
+          "type": "TEXT",
+          "value": "1,6 МБ"
+        },
+        "Title#9:0": {
+          "type": "TEXT",
+          "value": "Интервью с жителями Северного района"
+        }
+      },
+      "gap": 16,
+      "w": 696,
+      "h": 96
+    },
+    {
+      "screen": "compact",
+      "id": "18:125",
+      "props": {
+        "Author#9:1": {
+          "type": "TEXT",
+          "value": "Илья Соколов"
+        },
+        "Type#18:0": {
+          "type": "TEXT",
+          "value": "PDF"
+        },
+        "Date#9:2": {
+          "type": "TEXT",
+          "value": "1 сентября 2026"
+        },
+        "Show size#18:1": {
+          "type": "BOOLEAN",
+          "value": true
+        },
+        "Size#9:3": {
+          "type": "TEXT",
+          "value": "3,2 МБ"
+        },
+        "Title#9:0": {
+          "type": "TEXT",
+          "value": "Доступность остановок: результаты полевого исследования"
+        }
+      },
+      "gap": 16,
+      "w": 696,
+      "h": 96
+    }
+  ]
+}

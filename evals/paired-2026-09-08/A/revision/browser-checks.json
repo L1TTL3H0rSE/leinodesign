@@ -1,0 +1,41 @@
+{
+  "note": "Exact calls; result summaries. Browser screenshots/AX output retained in tool transcript.",
+  "calls": [
+    [
+      "let revisionTab = await cua.createBrowserTab(browser.browserId,'https://www.figma.com/proto/1uRCzGX2sEXpYQ2Un4sm5S?node-id=18-111&starting-point-node-id=18%3A111',{sessionName:'🔎 Полка A revision'});",
+      "Tab 1844150236; node-id 18-111"
+    ],
+    [
+      "await revisionTab.getScreenshot();",
+      "Compact list visible"
+    ],
+    [
+      "await revisionTab.click([864,382]); await revisionTab.getAXState();",
+      "node-id 18-93"
+    ],
+    [
+      "await revisionTab.getScreenshot();",
+      "Exact note description visible, no PDF or size/download UI"
+    ],
+    [
+      "await revisionTab.click([479,362]); await revisionTab.getAXState();",
+      "node-id 18-111, returned to compact width"
+    ],
+    [
+      "await revisionTab.click([857,456]); await revisionTab.getAXState();",
+      "node-id 9-18"
+    ],
+    [
+      "await revisionTab.getScreenshot();",
+      "Renamed PDF detail visible"
+    ],
+    [
+      "await revisionTab.click([1450,393]); await revisionTab.getAXState();",
+      "Overlay opened on 9-18"
+    ],
+    [
+      "await revisionTab.getScreenshot();",
+      "Edit title complete and wraps to two lines"
+    ]
+  ]
+}

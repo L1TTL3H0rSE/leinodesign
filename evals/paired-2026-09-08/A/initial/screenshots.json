@@ -1,0 +1,52 @@
+[
+  {
+    "name": "list",
+    "id": "9:17",
+    "width": 1280,
+    "height": 672,
+    "format": "png",
+    "original_width": 1280,
+    "original_height": 672,
+    "path": "C:/Dev/_Work/_Other/leinodesign/evals/paired-2026-09-08/A/initial/list.png"
+  },
+  {
+    "name": "detail",
+    "id": "9:18",
+    "width": 1280,
+    "height": 492,
+    "format": "png",
+    "original_width": 1280,
+    "original_height": 492,
+    "path": "C:/Dev/_Work/_Other/leinodesign/evals/paired-2026-09-08/A/initial/detail.png"
+  },
+  {
+    "name": "edit",
+    "id": "9:19",
+    "width": 520,
+    "height": 468,
+    "format": "png",
+    "original_width": 520,
+    "original_height": 468,
+    "path": "C:/Dev/_Work/_Other/leinodesign/evals/paired-2026-09-08/A/initial/edit.png"
+  },
+  {
+    "name": "empty",
+    "id": "12:63",
+    "width": 1280,
+    "height": 528,
+    "format": "png",
+    "original_width": 1280,
+    "original_height": 528,
+    "path": "C:/Dev/_Work/_Other/leinodesign/evals/paired-2026-09-08/A/initial/empty.png"
+  },
+  {
+    "name": "error",
+    "id": "12:123",
+    "width": 520,
+    "height": 496,
+    "format": "png",
+    "original_width": 520,
+    "original_height": 496,
+    "path": "C:/Dev/_Work/_Other/leinodesign/evals/paired-2026-09-08/A/initial/error.png"
+  }
+]

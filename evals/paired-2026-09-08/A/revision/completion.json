@@ -1,0 +1,119 @@
+{
+  "startUTC": "2026-09-08 00:27:27 UTC",
+  "designQaCompleteUTC": "2026-09-08 00:35:46 UTC",
+  "evidenceReadyUTC": "2026-09-08 00:37:01 UTC",
+  "fileKey": "1uRCzGX2sEXpYQ2Un4sm5S",
+  "states": [
+    {
+      "name": "list",
+      "id": "9:17",
+      "width": 1280,
+      "height": 748,
+      "format": "png",
+      "original_width": 1280,
+      "original_height": 748,
+      "url": "https://www.figma.com/design/1uRCzGX2sEXpYQ2Un4sm5S?node-id=9-17"
+    },
+    {
+      "name": "detail",
+      "id": "9:18",
+      "width": 1280,
+      "height": 512,
+      "format": "png",
+      "original_width": 1280,
+      "original_height": 512,
+      "url": "https://www.figma.com/design/1uRCzGX2sEXpYQ2Un4sm5S?node-id=9-18"
+    },
+    {
+      "name": "edit",
+      "id": "9:19",
+      "width": 520,
+      "height": 488,
+      "format": "png",
+      "original_width": 520,
+      "original_height": 488,
+      "url": "https://www.figma.com/design/1uRCzGX2sEXpYQ2Un4sm5S?node-id=9-19"
+    },
+    {
+      "name": "empty",
+      "id": "12:63",
+      "width": 1280,
+      "height": 528,
+      "format": "png",
+      "original_width": 1280,
+      "original_height": 528,
+      "url": "https://www.figma.com/design/1uRCzGX2sEXpYQ2Un4sm5S?node-id=12-63"
+    },
+    {
+      "name": "error",
+      "id": "12:123",
+      "width": 520,
+      "height": 496,
+      "format": "png",
+      "original_width": 520,
+      "original_height": 496,
+      "url": "https://www.figma.com/design/1uRCzGX2sEXpYQ2Un4sm5S?node-id=12-123"
+    },
+    {
+      "name": "note",
+      "id": "18:93",
+      "width": 1280,
+      "height": 436,
+      "format": "png",
+      "original_width": 1280,
+      "original_height": 436,
+      "url": "https://www.figma.com/design/1uRCzGX2sEXpYQ2Un4sm5S?node-id=18-93"
+    },
+    {
+      "name": "compact",
+      "id": "18:111",
+      "width": 760,
+      "height": 832,
+      "format": "png",
+      "original_width": 760,
+      "original_height": 832,
+      "url": "https://www.figma.com/design/1uRCzGX2sEXpYQ2Un4sm5S?node-id=18-111"
+    }
+  ],
+  "checks": {
+    "originalPdfTitleCorrect": true,
+    "detailTitleCorrect": true,
+    "editTitleCorrect": true,
+    "otherTitlesUnchanged": true,
+    "noteTextCorrect": true,
+    "noteNoPdfOrDownload": true,
+    "noteNoSize": true,
+    "navRenamed": true,
+    "fontInterOnly": true,
+    "compact760": true,
+    "pdfDescriptionUnchanged": true
+  },
+  "geometryOverflow": [],
+  "frozenInitial": {
+    "hashesChecked": 18,
+    "changed": 0
+  },
+  "toolCounts": {
+    "useFigma": 26,
+    "cuaCalls": 9,
+    "overall": "unknown (not estimated)"
+  },
+  "changes": [
+    "AppHeader navigation label changed once to Библиотека and propagated to all screen instances.",
+    "MaterialRow extended with editable Type and Show size properties; note Size is empty and hidden.",
+    "New note entry and 1280 px readable detail, exact note data, no file/download affordance.",
+    "760 px main list reuses row/header instances; titles wrap, all five entries preserved.",
+    "Only named original PDF title changed in list/detail/file label/edit and reusable source default; validation title intentionally stays empty."
+  ],
+  "selfCorrections": [
+    "Baseline combined inventory inner JSON truncated; preserved raw invalid baseline and exported final states in bounded 20-node chunks, parsing each inner result before saving.",
+    "Missing local error screenshot detected by view_image; re-exported/downloaded and visually checked."
+  ],
+  "evidenceLimitations": [
+    "before-inventory.json has valid outer tool JSON but truncated/unparseable inner inventory. Use before-after-values.json plus before-*.png and initial evidence for before values. It is not a complete baseline inventory.",
+    "Browser screenshots retained in tool transcript; local final PNGs are direct Figma screenshots.",
+    "PDF URL still absent from brief; existing visible PDF open control has no live target.",
+    "Prototype search/edit remains fixed states. No working application or persistence claim.",
+    "Note opens from both list widths via read-back verified reactions; Chrome exercised compact path. Compact PDF detail uses existing 1280 px screen."
+  ]
+}

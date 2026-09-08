@@ -1,0 +1,17 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "Error: Editable TextField check failed\n    at <anonymous> (PLUGIN_3_SOURCE:8:66)\n"
+    },
+    {
+      "type": "text",
+      "text": "Figma Debug UUID: fe52d543-3a6e-43e4-8333-c9b592643c57"
+    }
+  ],
+  "structuredContent": {
+    "safeToRetryWithoutCanvasRead": true,
+    "error_code": "INVALID_ARGUMENT"
+  },
+  "isError": true
+}

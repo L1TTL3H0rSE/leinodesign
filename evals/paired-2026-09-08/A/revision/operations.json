@@ -1,0 +1,4076 @@
+[
+  {
+    "op": "before-inventory",
+    "code": "await figma.setCurrentPageAsync(await figma.getNodeByIdAsync('2:2'));const nodes=[];function walk(n){nodes.push({id:n.id,parentId:n.parent?.id,name:n.name,type:n.type,x:n.x,y:n.y,width:n.width,height:n.height,visible:n.visible,layoutMode:n.layoutMode,layoutSizingHorizontal:n.layoutSizingHorizontal,layoutSizingVertical:n.layoutSizingVertical,characters:n.type==='TEXT'?n.characters:undefined,fontName:n.type==='TEXT'?n.fontName:undefined,textStyleId:n.type==='TEXT'?n.textStyleId:undefined,componentProperties:n.type==='INSTANCE'?n.componentProperties:undefined,mainComponentId:n.type==='INSTANCE'?n.mainComponent?.id:undefined,boundVariables:n.boundVariables,reactions:n.reactions});if(n.children)for(const c of n.children)walk(c);}for(const n of figma.currentPage.children)walk(n);return {fileKey:figma.fileKey,pageId:figma.currentPage.id,nodes,variables:(await figma.variables.getLocalVariablesAsync()).map(v=>({id:v.id,name:v.name,values:v.valuesByMode,scopes:v.scopes})),flow:figma.currentPage.flowStartingPoints};",
+    "result": "before-inventory.json"
+  },
+  {
+    "op": "shared-library-revision",
+    "code": "const createdNodeIds=[],mutatedNodeIds=[];await figma.setCurrentPageAsync(await figma.getNodeByIdAsync('0:1'));const vars=Object.fromEntries((await figma.variables.getLocalVariablesAsync()).map(v=>[v.name,v]));const styles=Object.fromEntries((await figma.getLocalTextStylesAsync()).map(s=>[s.name,s]));await Promise.all(Object.values(styles).map(s=>figma.loadFontAsync(s.fontName)));\nfunction paint(name){return figma.variables.setBoundVariableForPaint({type:'SOLID',color:(()=>{const v=Object.values(vars[name].valuesByMode)[0];return {r:v.r,g:v.g,b:v.b};})()},'color',vars[name]);}\nfunction fills(n,name){n.fills=[paint(name)];}\nfunction gap(n,v){n.setBoundVariable('itemSpacing',vars['spacing/'+v]);}\nfunction pad(n,v){for(const k of ['paddingLeft','paddingRight','paddingTop','paddingBottom'])n.setBoundVariable(k,vars['spacing/'+v]);}\nfunction radius(n){for(const k of ['topLeftRadius','topRightRadius','bottomLeftRadius','bottomRightRadius'])n.setBoundVariable(k,vars['radius/8']);}\nfunction frame(name,parent,dir='VERTICAL',width){const n=figma.createAutoLayout(dir);n.name=name;n.fills=[];if(parent)parent.appendChild(n);createdNodeIds.push(n.id);if(width){n.resize(width,1);n.layoutSizingHorizontal='FIXED';n.layoutSizingVertical='HUG';}return n;}\nfunction textNode(name,value,parent,style='Body',color='color/ink',width){const n=figma.createText();n.name=name;n.textStyleId=styles[style].id;n.characters=value;fills(n,color);parent.appendChild(n);createdNodeIds.push(n.id);if(width){n.resize(width,20);n.textAutoResize='HEIGHT';}return n;}\nasync function instance(id,name,parent,props){const c=await figma.getNodeByIdAsync(id);const i=c.createInstance();i.name=name;parent.appendChild(i);if(props)i.setProperties(props);createdNodeIds.push(i.id,...i.findAll(()=>true).map(n=>n.id));return i;}\nfunction ret(extra={}){return {createdNodeIds,mutatedNodeIds,...extra};}const header=await figma.getNodeByIdAsync('9:2');const nav=await figma.getNodeByIdAsync('9:4');const before={nav:nav.componentProperties,row:(await figma.getNodeByIdAsync('9:8')).componentPropertyDefinitions};nav.setProperties({'Label#3:2':'Библиотека'});nav.name='Библиотека — активный раздел';header.description='Общая навигация Полки. Активный раздел — Библиотека.';mutatedNodeIds.push(header.id,nav.id,...nav.findAll(()=>true).map(n=>n.id));const row=await figma.getNodeByIdAsync('9:8');const marker=await figma.getNodeByIdAsync('9:9');marker.resize(80,marker.height);marker.layoutSizingVertical='HUG';const label=await figma.getNodeByIdAsync('9:10');label.name='Type';const typeKey=row.addComponentProperty('Type','TEXT','PDF');label.componentPropertyReferences={characters:typeKey};const size=await figma.getNodeByIdAsync('9:15');const sizeKey=row.addComponentProperty('Show size','BOOLEAN',true);size.componentPropertyReferences={...size.componentPropertyReferences,visible:sizeKey};row.description='Строка PDF или заметки. Type задаёт тип; Show size отключается для заметки. Название переносится по ширине.';mutatedNodeIds.push(row.id,marker.id,label.id,size.id);return ret({before,after:{nav:nav.componentProperties,row:row.componentPropertyDefinitions},typeKey,sizeKey});",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"createdNodeIds\":[],\"mutatedNodeIds\":[\"9:2\",\"9:4\",\"I9:4;3:9\",\"9:8\",\"9:9\",\"9:10\",\"9:15\"],\"before\":{\"nav\":{\"Label#3:2\":{\"type\":\"TEXT\",\"value\":\"Материалы\"}},\"row\":{\"Title#9:0\":{\"type\":\"TEXT\",\"defaultValue\":\"Городские прогулки\"},\"Author#9:1\":{\"type\":\"TEXT\",\"defaultValue\":\"Анна Морозова\"},\"Date#9:2\":{\"type\":\"TEXT\",\"defaultValue\":\"7 сентября 2026\"},\"Size#9:3\":{\"type\":\"TEXT\",\"defaultValue\":\"2,4 МБ\"}}},\"after\":{\"nav\":{\"Label#3:2\":{\"type\":\"TEXT\",\"value\":\"Библиотека\"}},\"row\":{\"Title#9:0\":{\"type\":\"TEXT\",\"defaultValue\":\"Городские прогулки\"},\"Author#9:1\":{\"type\":\"TEXT\",\"defaultValue\":\"Анна Морозова\"},\"Date#9:2\":{\"type\":\"TEXT\",\"defaultValue\":\"7 сентября 2026\"},\"Size#9:3\":{\"type\":\"TEXT\",\"defaultValue\":\"2,4 МБ\"},\"Type#18:0\":{\"type\":\"TEXT\",\"defaultValue\":\"PDF\"},\"Show size#18:1\":{\"type\":\"BOOLEAN\",\"defaultValue\":true}}},\"typeKey\":\"Type#18:0\",\"sizeKey\":\"Show size#18:1\"}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "op": "pdf-rename",
+    "code": "const createdNodeIds=[],mutatedNodeIds=[];await figma.setCurrentPageAsync(await figma.getNodeByIdAsync('2:2'));const vars=Object.fromEntries((await figma.variables.getLocalVariablesAsync()).map(v=>[v.name,v]));const styles=Object.fromEntries((await figma.getLocalTextStylesAsync()).map(s=>[s.name,s]));await Promise.all(Object.values(styles).map(s=>figma.loadFontAsync(s.fontName)));\nfunction paint(name){return figma.variables.setBoundVariableForPaint({type:'SOLID',color:(()=>{const v=Object.values(vars[name].valuesByMode)[0];return {r:v.r,g:v.g,b:v.b};})()},'color',vars[name]);}\nfunction fills(n,name){n.fills=[paint(name)];}\nfunction gap(n,v){n.setBoundVariable('itemSpacing',vars['spacing/'+v]);}\nfunction pad(n,v){for(const k of ['paddingLeft','paddingRight','paddingTop','paddingBottom'])n.setBoundVariable(k,vars['spacing/'+v]);}\nfunction radius(n){for(const k of ['topLeftRadius','topRightRadius','bottomLeftRadius','bottomRightRadius'])n.setBoundVariable(k,vars['radius/8']);}\nfunction frame(name,parent,dir='VERTICAL',width){const n=figma.createAutoLayout(dir);n.name=name;n.fills=[];if(parent)parent.appendChild(n);createdNodeIds.push(n.id);if(width){n.resize(width,1);n.layoutSizingHorizontal='FIXED';n.layoutSizingVertical='HUG';}return n;}\nfunction textNode(name,value,parent,style='Body',color='color/ink',width){const n=figma.createText();n.name=name;n.textStyleId=styles[style].id;n.characters=value;fills(n,color);parent.appendChild(n);createdNodeIds.push(n.id);if(width){n.resize(width,20);n.textAutoResize='HEIGHT';}return n;}\nasync function instance(id,name,parent,props){const c=await figma.getNodeByIdAsync(id);const i=c.createInstance();i.name=name;parent.appendChild(i);if(props)i.setProperties(props);createdNodeIds.push(i.id,...i.findAll(()=>true).map(n=>n.id));return i;}\nfunction ret(extra={}){return {createdNodeIds,mutatedNodeIds,...extra};}const title=\"Городские прогулки: маршруты для родителей с маленькими детьми\";const before=[];const row=await figma.getNodeByIdAsync('9:38');before.push({id:row.id,properties:row.componentProperties});row.setProperties({'Title#9:0':title});row.name=title;mutatedNodeIds.push(row.id);const detail=await figma.getNodeByIdAsync('9:18');detail.name=title;const t=await figma.getNodeByIdAsync('9:84');before.push({id:t.id,text:t.characters});t.characters=title;t.resize(900,32);t.textAutoResize='HEIGHT';t.layoutSizingHorizontal='FILL';mutatedNodeIds.push(detail.id,t.id);const file=await figma.getNodeByIdAsync('10:57');before.push({id:file.id,text:file.characters});file.characters=title+'.pdf';mutatedNodeIds.push(file.id);const edit=await figma.getNodeByIdAsync('10:65');before.push({id:edit.id,properties:edit.componentProperties});edit.setProperties({'Value#4:1':title});const input=edit.findOne(n=>n.name==='Input');input.layoutSizingVertical='HUG';const value=edit.findOne(n=>n.name==='Value');value.textAutoResize='HEIGHT';value.layoutSizingHorizontal='FILL';edit.layoutSizingVertical='HUG';mutatedNodeIds.push(edit.id,input.id,value.id);return ret({before,after:{title:row.componentProperties,detail:t.characters,file:file.characters,edit:edit.componentProperties}});",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"createdNodeIds\":[],\"mutatedNodeIds\":[\"9:38\",\"9:18\",\"9:84\",\"10:57\",\"10:65\",\"I10:65;4:4\",\"I10:65;4:5\"],\"before\":[{\"id\":\"9:38\",\"properties\":{\"Author#9:1\":{\"type\":\"TEXT\",\"value\":\"Анна Морозова\"},\"Type#18:0\":{\"type\":\"TEXT\",\"value\":\"PDF\"},\"Date#9:2\":{\"type\":\"TEXT\",\"value\":\"7 сентября 2026\"},\"Show size#18:1\":{\"type\":\"BOOLEAN\",\"value\":true},\"Size#9:3\":{\"type\":\"TEXT\",\"value\":\"2,4 МБ\"},\"Title#9:0\":{\"type\":\"TEXT\",\"value\":\"Городские прогулки\"}}},{\"id\":\"9:84\",\"text\":\"Городские прогулки\"},{\"id\":\"10:57\",\"text\":\"Городские прогулки.pdf\"},{\"id\":\"10:65\",\"properties\":{\"Show helper#4:3\":{\"type\":\"BOOLEAN\",\"value\":false},\"Helper#4:2\":{\"type\":\"TEXT\",\"value\":\"Helpful supporting text\"},\"Value#4:1\":{\"type\":\"TEXT\",\"value\":\"Городские прогулки\"},\"Label#4:0\":{\"type\":\"TEXT\",\"value\":\"Название *\"}}}],\"after\":{\"title\":{\"Author#9:1\":{\"type\":\"TEXT\",\"value\":\"Анна Морозова\"},\"Type#18:0\":{\"type\":\"TEXT\",\"value\":\"PDF\"},\"Date#9:2\":{\"type\":\"TEXT\",\"value\":\"7 сентября 2026\"},\"Show size#18:1\":{\"type\":\"BOOLEAN\",\"value\":true},\"Size#9:3\":{\"type\":\"TEXT\",\"value\":\"2,4 МБ\"},\"Title#9:0\":{\"type\":\"TEXT\",\"value\":\"Городские прогулки: маршруты для родителей с маленькими детьми\"}},\"detail\":\"Городские прогулки: маршруты для родителей с маленькими детьми\",\"file\":\"Городские прогулки: маршруты для родителей с маленькими детьми.pdf\",\"edit\":{\"Show helper#4:3\":{\"type\":\"BOOLEAN\",\"value\":false},\"Helper#4:2\":{\"type\":\"TEXT\",\"value\":\"Helpful supporting text\"},\"Value#4:1\":{\"type\":\"TEXT\",\"value\":\"Городские прогулки: маршруты для родителей с маленькими детьми\"},\"Label#4:0\":{\"type\":\"TEXT\",\"value\":\"Название *\"}}}}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "op": "note-list-entry",
+    "code": "const createdNodeIds=[],mutatedNodeIds=[];await figma.setCurrentPageAsync(await figma.getNodeByIdAsync('2:2'));const vars=Object.fromEntries((await figma.variables.getLocalVariablesAsync()).map(v=>[v.name,v]));const styles=Object.fromEntries((await figma.getLocalTextStylesAsync()).map(s=>[s.name,s]));await Promise.all(Object.values(styles).map(s=>figma.loadFontAsync(s.fontName)));\nfunction paint(name){return figma.variables.setBoundVariableForPaint({type:'SOLID',color:(()=>{const v=Object.values(vars[name].valuesByMode)[0];return {r:v.r,g:v.g,b:v.b};})()},'color',vars[name]);}\nfunction fills(n,name){n.fills=[paint(name)];}\nfunction gap(n,v){n.setBoundVariable('itemSpacing',vars['spacing/'+v]);}\nfunction pad(n,v){for(const k of ['paddingLeft','paddingRight','paddingTop','paddingBottom'])n.setBoundVariable(k,vars['spacing/'+v]);}\nfunction radius(n){for(const k of ['topLeftRadius','topRightRadius','bottomLeftRadius','bottomRightRadius'])n.setBoundVariable(k,vars['radius/8']);}\nfunction frame(name,parent,dir='VERTICAL',width){const n=figma.createAutoLayout(dir);n.name=name;n.fills=[];if(parent)parent.appendChild(n);createdNodeIds.push(n.id);if(width){n.resize(width,1);n.layoutSizingHorizontal='FIXED';n.layoutSizingVertical='HUG';}return n;}\nfunction textNode(name,value,parent,style='Body',color='color/ink',width){const n=figma.createText();n.name=name;n.textStyleId=styles[style].id;n.characters=value;fills(n,color);parent.appendChild(n);createdNodeIds.push(n.id);if(width){n.resize(width,20);n.textAutoResize='HEIGHT';}return n;}\nasync function instance(id,name,parent,props){const c=await figma.getNodeByIdAsync(id);const i=c.createInstance();i.name=name;parent.appendChild(i);if(props)i.setProperties(props);createdNodeIds.push(i.id,...i.findAll(()=>true).map(n=>n.id));return i;}\nfunction ret(extra={}){return {createdNodeIds,mutatedNodeIds,...extra};}const rows=await figma.getNodeByIdAsync('9:37');const note=await instance('9:8','Наблюдения после вечерней прогулки',rows,{'Title#9:0':'Наблюдения после вечерней прогулки','Author#9:1':'Анна Морозова','Date#9:2':'8 сентября 2026','Type#18:0':'Заметка','Size#9:3':'','Show size#18:1':false});note.layoutSizingVertical='HUG';rows.insertChild(0,note);const count=await figma.getNodeByIdAsync('9:36');const before=count.characters;count.characters='5 материалов';mutatedNodeIds.push(rows.id,count.id);return ret({noteRowId:note.id,count:{before,after:count.characters},props:note.componentProperties});",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"createdNodeIds\":[\"18:84\",\"I18:84;9:9\",\"I18:84;9:10\",\"I18:84;9:11\",\"I18:84;9:12\",\"I18:84;9:13\",\"I18:84;9:14\",\"I18:84;9:16\"],\"mutatedNodeIds\":[\"9:37\",\"9:36\"],\"noteRowId\":\"18:84\",\"count\":{\"before\":\"4 материала\",\"after\":\"5 материалов\"},\"props\":{\"Author#9:1\":{\"type\":\"TEXT\",\"value\":\"Анна Морозова\"},\"Type#18:0\":{\"type\":\"TEXT\",\"value\":\"Заметка\"},\"Date#9:2\":{\"type\":\"TEXT\",\"value\":\"8 сентября 2026\"},\"Show size#18:1\":{\"type\":\"BOOLEAN\",\"value\":false},\"Size#9:3\":{\"type\":\"TEXT\",\"value\":\"\"},\"Title#9:0\":{\"type\":\"TEXT\",\"value\":\"Наблюдения после вечерней прогулки\"}}}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "op": "note-wrapper",
+    "code": "const createdNodeIds=[],mutatedNodeIds=[];await figma.setCurrentPageAsync(await figma.getNodeByIdAsync('2:2'));const vars=Object.fromEntries((await figma.variables.getLocalVariablesAsync()).map(v=>[v.name,v]));const styles=Object.fromEntries((await figma.getLocalTextStylesAsync()).map(s=>[s.name,s]));await Promise.all(Object.values(styles).map(s=>figma.loadFontAsync(s.fontName)));\nfunction paint(name){return figma.variables.setBoundVariableForPaint({type:'SOLID',color:(()=>{const v=Object.values(vars[name].valuesByMode)[0];return {r:v.r,g:v.g,b:v.b};})()},'color',vars[name]);}\nfunction fills(n,name){n.fills=[paint(name)];}\nfunction gap(n,v){n.setBoundVariable('itemSpacing',vars['spacing/'+v]);}\nfunction pad(n,v){for(const k of ['paddingLeft','paddingRight','paddingTop','paddingBottom'])n.setBoundVariable(k,vars['spacing/'+v]);}\nfunction radius(n){for(const k of ['topLeftRadius','topRightRadius','bottomLeftRadius','bottomRightRadius'])n.setBoundVariable(k,vars['radius/8']);}\nfunction frame(name,parent,dir='VERTICAL',width){const n=figma.createAutoLayout(dir);n.name=name;n.fills=[];if(parent)parent.appendChild(n);createdNodeIds.push(n.id);if(width){n.resize(width,1);n.layoutSizingHorizontal='FIXED';n.layoutSizingVertical='HUG';}return n;}\nfunction textNode(name,value,parent,style='Body',color='color/ink',width){const n=figma.createText();n.name=name;n.textStyleId=styles[style].id;n.characters=value;fills(n,color);parent.appendChild(n);createdNodeIds.push(n.id);if(width){n.resize(width,20);n.textAutoResize='HEIGHT';}return n;}\nasync function instance(id,name,parent,props){const c=await figma.getNodeByIdAsync(id);const i=c.createInstance();i.name=name;parent.appendChild(i);if(props)i.setProperties(props);createdNodeIds.push(i.id,...i.findAll(()=>true).map(n=>n.id));return i;}\nfunction ret(extra={}){return {createdNodeIds,mutatedNodeIds,...extra};}const w=frame('Наблюдения после вечерней прогулки',null,'VERTICAL',1280);w.x=1440;w.y=840;fills(w,'color/background');return ret({noteDetailId:w.id});",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"createdNodeIds\":[\"18:93\"],\"mutatedNodeIds\":[],\"noteDetailId\":\"18:93\"}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "op": "note-heading",
+    "code": "const createdNodeIds=[],mutatedNodeIds=[];await figma.setCurrentPageAsync(await figma.getNodeByIdAsync('2:2'));const vars=Object.fromEntries((await figma.variables.getLocalVariablesAsync()).map(v=>[v.name,v]));const styles=Object.fromEntries((await figma.getLocalTextStylesAsync()).map(s=>[s.name,s]));await Promise.all(Object.values(styles).map(s=>figma.loadFontAsync(s.fontName)));\nfunction paint(name){return figma.variables.setBoundVariableForPaint({type:'SOLID',color:(()=>{const v=Object.values(vars[name].valuesByMode)[0];return {r:v.r,g:v.g,b:v.b};})()},'color',vars[name]);}\nfunction fills(n,name){n.fills=[paint(name)];}\nfunction gap(n,v){n.setBoundVariable('itemSpacing',vars['spacing/'+v]);}\nfunction pad(n,v){for(const k of ['paddingLeft','paddingRight','paddingTop','paddingBottom'])n.setBoundVariable(k,vars['spacing/'+v]);}\nfunction radius(n){for(const k of ['topLeftRadius','topRightRadius','bottomLeftRadius','bottomRightRadius'])n.setBoundVariable(k,vars['radius/8']);}\nfunction frame(name,parent,dir='VERTICAL',width){const n=figma.createAutoLayout(dir);n.name=name;n.fills=[];if(parent)parent.appendChild(n);createdNodeIds.push(n.id);if(width){n.resize(width,1);n.layoutSizingHorizontal='FIXED';n.layoutSizingVertical='HUG';}return n;}\nfunction textNode(name,value,parent,style='Body',color='color/ink',width){const n=figma.createText();n.name=name;n.textStyleId=styles[style].id;n.characters=value;fills(n,color);parent.appendChild(n);createdNodeIds.push(n.id);if(width){n.resize(width,20);n.textAutoResize='HEIGHT';}return n;}\nasync function instance(id,name,parent,props){const c=await figma.getNodeByIdAsync(id);const i=c.createInstance();i.name=name;parent.appendChild(i);if(props)i.setProperties(props);createdNodeIds.push(i.id,...i.findAll(()=>true).map(n=>n.id));return i;}\nfunction ret(extra={}){return {createdNodeIds,mutatedNodeIds,...extra};}const w=await figma.getNodeByIdAsync('18:93');await instance('9:2','App header',w);const main=frame('Main',w,'VERTICAL',1280);main.paddingLeft=80;main.paddingRight=80;main.paddingTop=32;main.paddingBottom=40;main.itemSpacing=24;const back=await instance('3:6','Вернуться в библиотеку',main,{'Label#3:1':'← Все материалы'});const heading=frame('Note heading',main);gap(heading,12);textNode('Material type','Заметка',heading,'Medium','color/accent');textNode('Title','Наблюдения после вечерней прогулки',heading,'Heading');const meta=frame('Metadata',main,'HORIZONTAL');meta.itemSpacing=32;textNode('Author','Автор: Анна Морозова',meta,'Body','color/muted');textNode('Updated','Обновлено 8 сентября 2026',meta,'Body','color/muted');return ret({mainId:main.id,backId:back.id});",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"createdNodeIds\":[\"18:94\",\"I18:94;9:3\",\"I18:94;9:4\",\"I18:94;9:4;3:9\",\"I18:94;9:6\",\"I18:94;9:7\",\"18:100\",\"18:101\",\"I18:101;3:7\",\"18:103\",\"18:104\",\"18:105\",\"18:106\",\"18:107\",\"18:108\"],\"mutatedNodeIds\":[],\"mainId\":\"18:100\",\"backId\":\"18:101\"}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "op": "note-content",
+    "code": "const createdNodeIds=[],mutatedNodeIds=[];await figma.setCurrentPageAsync(await figma.getNodeByIdAsync('2:2'));const vars=Object.fromEntries((await figma.variables.getLocalVariablesAsync()).map(v=>[v.name,v]));const styles=Object.fromEntries((await figma.getLocalTextStylesAsync()).map(s=>[s.name,s]));await Promise.all(Object.values(styles).map(s=>figma.loadFontAsync(s.fontName)));\nfunction paint(name){return figma.variables.setBoundVariableForPaint({type:'SOLID',color:(()=>{const v=Object.values(vars[name].valuesByMode)[0];return {r:v.r,g:v.g,b:v.b};})()},'color',vars[name]);}\nfunction fills(n,name){n.fills=[paint(name)];}\nfunction gap(n,v){n.setBoundVariable('itemSpacing',vars['spacing/'+v]);}\nfunction pad(n,v){for(const k of ['paddingLeft','paddingRight','paddingTop','paddingBottom'])n.setBoundVariable(k,vars['spacing/'+v]);}\nfunction radius(n){for(const k of ['topLeftRadius','topRightRadius','bottomLeftRadius','bottomRightRadius'])n.setBoundVariable(k,vars['radius/8']);}\nfunction frame(name,parent,dir='VERTICAL',width){const n=figma.createAutoLayout(dir);n.name=name;n.fills=[];if(parent)parent.appendChild(n);createdNodeIds.push(n.id);if(width){n.resize(width,1);n.layoutSizingHorizontal='FIXED';n.layoutSizingVertical='HUG';}return n;}\nfunction textNode(name,value,parent,style='Body',color='color/ink',width){const n=figma.createText();n.name=name;n.textStyleId=styles[style].id;n.characters=value;fills(n,color);parent.appendChild(n);createdNodeIds.push(n.id);if(width){n.resize(width,20);n.textAutoResize='HEIGHT';}return n;}\nasync function instance(id,name,parent,props){const c=await figma.getNodeByIdAsync(id);const i=c.createInstance();i.name=name;parent.appendChild(i);if(props)i.setProperties(props);createdNodeIds.push(i.id,...i.findAll(()=>true).map(n=>n.id));return i;}\nfunction ret(extra={}){return {createdNodeIds,mutatedNodeIds,...extra};}const main=await figma.getNodeByIdAsync('18:100');const body=frame('Текст заметки',main,'VERTICAL',800);body.paddingLeft=24;body.paddingRight=24;body.paddingTop=24;body.paddingBottom=24;fills(body,'color/surface');radius(body);textNode('Description',\"На двух перекрёстках участникам не хватало времени перейти дорогу. Проверить длительность зелёного сигнала перед следующей прогулкой.\",body,'Body','color/ink',752);return ret({descriptionNodeId:body.children[0].id});",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"createdNodeIds\":[\"18:109\",\"18:110\"],\"mutatedNodeIds\":[],\"descriptionNodeId\":\"18:110\"}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "op": "compact-list",
+    "code": "const createdNodeIds=[],mutatedNodeIds=[];await figma.setCurrentPageAsync(await figma.getNodeByIdAsync('2:2'));const vars=Object.fromEntries((await figma.variables.getLocalVariablesAsync()).map(v=>[v.name,v]));const styles=Object.fromEntries((await figma.getLocalTextStylesAsync()).map(s=>[s.name,s]));await Promise.all(Object.values(styles).map(s=>figma.loadFontAsync(s.fontName)));\nfunction paint(name){return figma.variables.setBoundVariableForPaint({type:'SOLID',color:(()=>{const v=Object.values(vars[name].valuesByMode)[0];return {r:v.r,g:v.g,b:v.b};})()},'color',vars[name]);}\nfunction fills(n,name){n.fills=[paint(name)];}\nfunction gap(n,v){n.setBoundVariable('itemSpacing',vars['spacing/'+v]);}\nfunction pad(n,v){for(const k of ['paddingLeft','paddingRight','paddingTop','paddingBottom'])n.setBoundVariable(k,vars['spacing/'+v]);}\nfunction radius(n){for(const k of ['topLeftRadius','topRightRadius','bottomLeftRadius','bottomRightRadius'])n.setBoundVariable(k,vars['radius/8']);}\nfunction frame(name,parent,dir='VERTICAL',width){const n=figma.createAutoLayout(dir);n.name=name;n.fills=[];if(parent)parent.appendChild(n);createdNodeIds.push(n.id);if(width){n.resize(width,1);n.layoutSizingHorizontal='FIXED';n.layoutSizingVertical='HUG';}return n;}\nfunction textNode(name,value,parent,style='Body',color='color/ink',width){const n=figma.createText();n.name=name;n.textStyleId=styles[style].id;n.characters=value;fills(n,color);parent.appendChild(n);createdNodeIds.push(n.id);if(width){n.resize(width,20);n.textAutoResize='HEIGHT';}return n;}\nasync function instance(id,name,parent,props){const c=await figma.getNodeByIdAsync(id);const i=c.createInstance();i.name=name;parent.appendChild(i);if(props)i.setProperties(props);createdNodeIds.push(i.id,...i.findAll(()=>true).map(n=>n.id));return i;}\nfunction ret(extra={}){return {createdNodeIds,mutatedNodeIds,...extra};}const source=await figma.getNodeByIdAsync('9:17');const compact=source.clone();compact.name='Материалы — 760 px';compact.x=2800;compact.y=840;compact.resize(760,compact.height);compact.layoutSizingVertical='HUG';const header=compact.findOne(n=>n.name==='App header');header.resize(760,header.height);header.paddingLeft=32;header.paddingRight=32;const main=compact.findOne(n=>n.name==='Main');main.resize(760,main.height);main.layoutSizingVertical='HUG';main.paddingLeft=32;main.paddingRight=32;main.paddingTop=32;main.paddingBottom=32;for(const name of ['Список материалов','Rows']){const n=compact.findOne(n=>n.name===name);n.resize(696,n.height);n.layoutSizingVertical='HUG';}const rows=compact.findOne(n=>n.name==='Rows');for(const row of rows.children){row.resize(696,row.height);row.layoutSizingVertical='HUG';}const search=compact.findOne(n=>n.name==='Поиск по названию');search.resize(696,search.height);createdNodeIds.push(compact.id,...compact.findAll(()=>true).map(n=>n.id));return ret({compactId:compact.id,rows:rows.children.map(n=>({id:n.id,name:n.name,properties:n.componentProperties})),searchId:search.id});",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"createdNodeIds\":[\"18:111\",\"18:112\",\"I18:112;9:3\",\"I18:112;9:4\",\"I18:112;9:4;3:9\",\"I18:112;9:6\",\"I18:112;9:7\",\"18:113\",\"18:114\",\"18:115\",\"18:116\",\"18:117\",\"I18:117;4:3\",\"I18:117;4:4\",\"I18:117;4:5\",\"18:118\",\"18:119\",\"18:120\",\"18:121\",\"I18:121;9:9\",\"I18:121;9:10\",\"I18:121;9:11\",\"I18:121;9:12\",\"I18:121;9:13\",\"I18:121;9:14\",\"I18:121;9:16\",\"18:122\",\"I18:122;9:9\",\"I18:122;9:10\",\"I18:122;9:11\",\"I18:122;9:12\",\"I18:122;9:13\",\"I18:122;9:14\",\"I18:122;9:15\",\"I18:122;9:16\",\"18:123\",\"I18:123;9:9\",\"I18:123;9:10\",\"I18:123;9:11\",\"I18:123;9:12\",\"I18:123;9:13\",\"I18:123;9:14\",\"I18:123;9:15\",\"I18:123;9:16\",\"18:124\",\"I18:124;9:9\",\"I18:124;9:10\",\"I18:124;9:11\",\"I18:124;9:12\",\"I18:124;9:13\",\"I18:124;9:14\",\"I18:124;9:15\",\"I18:124;9:16\",\"18:125\",\"I18:125;9:9\",\"I18:125;9:10\",\"I18:125;9:11\",\"I18:125;9:12\",\"I18:125;9:13\",\"I18:125;9:14\",\"I18:125;9:15\",\"I18:125;9:16\"],\"mutatedNodeIds\":[],\"compactId\":\"18:111\",\"rows\":[{\"id\":\"18:121\",\"name\":\"Наблюдения после вечерней прогулки\",\"properties\":{\"Author#9:1\":{\"type\":\"TEXT\",\"value\":\"Анна Морозова\"},\"Type#18:0\":{\"type\":\"TEXT\",\"value\":\"Заметка\"},\"Date#9:2\":{\"type\":\"TEXT\",\"value\":\"8 сентября 2026\"},\"Show size#18:1\":{\"type\":\"BOOLEAN\",\"value\":false},\"Size#9:3\":{\"type\":\"TEXT\",\"value\":\"\"},\"Title#9:0\":{\"type\":\"TEXT\",\"value\":\"Наблюдения после вечерней прогулки\"}}},{\"id\":\"18:122\",\"name\":\"Городские прогулки: маршруты для родителей с маленькими детьми\",\"properties\":{\"Author#9:1\":{\"type\":\"TEXT\",\"value\":\"Анна Морозова\"},\"Type#18:0\":{\"type\":\"TEXT\",\"value\":\"PDF\"},\"Date#9:2\":{\"type\":\"TEXT\",\"value\":\"7 сентября 2026\"},\"Show size#18:1\":{\"type\":\"BOOLEAN\",\"value\":true},\"Size#9:3\":{\"type\":\"TEXT\",\"value\":\"2,4 МБ\"},\"Title#9:0\":{\"type\":\"TEXT\",\"value\":\"Городские прогулки: маршруты для родителей с маленькими детьми\"}}},{\"id\":\"18:123\",\"name\":\"Как родители выбирают маршрут до школы и что заставляет их менять привычный путь\",\"properties\":{\"Author#9:1\":{\"type\":\"TEXT\",\"value\":\"Максим Орлов\"},\"Type#18:0\":{\"type\":\"TEXT\",\"value\":\"PDF\"},\"Date#9:2\":{\"type\":\"TEXT\",\"value\":\"5 сентября 2026\"},\"Show size#18:1\":{\"type\":\"BOOLEAN\",\"value\":true},\"Size#9:3\":{\"type\":\"TEXT\",\"value\":\"4,8 МБ\"},\"Title#9:0\":{\"type\":\"TEXT\",\"value\":\"Как родители выбирают маршрут до школы и что заставляет их менять привычный путь\"}}},{\"id\":\"18:124\",\"name\":\"Интервью с жителями Северного района\",\"properties\":{\"Author#9:1\":{\"type\":\"TEXT\",\"value\":\"Елена Волкова\"},\"Type#18:0\":{\"type\":\"TEXT\",\"value\":\"PDF\"},\"Date#9:2\":{\"type\":\"TEXT\",\"value\":\"3 сентября 2026\"},\"Show size#18:1\":{\"type\":\"BOOLEAN\",\"value\":true},\"Size#9:3\":{\"type\":\"TEXT\",\"value\":\"1,6 МБ\"},\"Title#9:0\":{\"type\":\"TEXT\",\"value\":\"Интервью с жителями Северного района\"}}},{\"id\":\"18:125\",\"name\":\"Доступность остановок: результаты полевого исследования\",\"properties\":{\"Author#9:1\":{\"type\":\"TEXT\",\"value\":\"Илья Соколов\"},\"Type#18:0\":{\"type\":\"TEXT\",\"value\":\"PDF\"},\"Date#9:2\":{\"type\":\"TEXT\",\"value\":\"1 сентября 2026\"},\"Show size#18:1\":{\"type\":\"BOOLEAN\",\"value\":true},\"Size#9:3\":{\"type\":\"TEXT\",\"value\":\"3,2 МБ\"},\"Title#9:0\":{\"type\":\"TEXT\",\"value\":\"Доступность остановок: результаты полевого исследования\"}}}],\"searchId\":\"18:117\"}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "op": "note-prototype",
+    "code": "const createdNodeIds=[],mutatedNodeIds=[];await figma.setCurrentPageAsync(await figma.getNodeByIdAsync('2:2'));const vars=Object.fromEntries((await figma.variables.getLocalVariablesAsync()).map(v=>[v.name,v]));const styles=Object.fromEntries((await figma.getLocalTextStylesAsync()).map(s=>[s.name,s]));await Promise.all(Object.values(styles).map(s=>figma.loadFontAsync(s.fontName)));\nfunction paint(name){return figma.variables.setBoundVariableForPaint({type:'SOLID',color:(()=>{const v=Object.values(vars[name].valuesByMode)[0];return {r:v.r,g:v.g,b:v.b};})()},'color',vars[name]);}\nfunction fills(n,name){n.fills=[paint(name)];}\nfunction gap(n,v){n.setBoundVariable('itemSpacing',vars['spacing/'+v]);}\nfunction pad(n,v){for(const k of ['paddingLeft','paddingRight','paddingTop','paddingBottom'])n.setBoundVariable(k,vars['spacing/'+v]);}\nfunction radius(n){for(const k of ['topLeftRadius','topRightRadius','bottomLeftRadius','bottomRightRadius'])n.setBoundVariable(k,vars['radius/8']);}\nfunction frame(name,parent,dir='VERTICAL',width){const n=figma.createAutoLayout(dir);n.name=name;n.fills=[];if(parent)parent.appendChild(n);createdNodeIds.push(n.id);if(width){n.resize(width,1);n.layoutSizingHorizontal='FIXED';n.layoutSizingVertical='HUG';}return n;}\nfunction textNode(name,value,parent,style='Body',color='color/ink',width){const n=figma.createText();n.name=name;n.textStyleId=styles[style].id;n.characters=value;fills(n,color);parent.appendChild(n);createdNodeIds.push(n.id);if(width){n.resize(width,20);n.textAutoResize='HEIGHT';}return n;}\nasync function instance(id,name,parent,props){const c=await figma.getNodeByIdAsync(id);const i=c.createInstance();i.name=name;parent.appendChild(i);if(props)i.setProperties(props);createdNodeIds.push(i.id,...i.findAll(()=>true).map(n=>n.id));return i;}\nfunction ret(extra={}){return {createdNodeIds,mutatedNodeIds,...extra};}const links=[];async function link(id,target,navigation='NAVIGATE'){const n=await figma.getNodeByIdAsync(id);await n.setReactionsAsync([{trigger:{type:'ON_CLICK'},actions:[{type:'NODE',destinationId:target,navigation,transition:null}]}]);mutatedNodeIds.push(n.id);links.push({id,target,navigation});}await link('18:84','18:93');await link('18:121','18:93');await link('18:122','9:18');await link('18:101','9:17');const note=await figma.getNodeByIdAsync('18:93');await link(note.findOne(n=>n.name==='Библиотека — активный раздел').id,'9:17');figma.currentPage.flowStartingPoints=[{nodeId:'9:17',name:'Полка — 1280 px'},{nodeId:'18:111',name:'Полка — компактный список 760 px'}];mutatedNodeIds.push(figma.currentPage.id);return ret({links});",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"createdNodeIds\":[],\"mutatedNodeIds\":[\"18:84\",\"18:121\",\"18:122\",\"18:101\",\"I18:94;9:4\",\"2:2\"],\"links\":[{\"id\":\"18:84\",\"target\":\"18:93\",\"navigation\":\"NAVIGATE\"},{\"id\":\"18:121\",\"target\":\"18:93\",\"navigation\":\"NAVIGATE\"},{\"id\":\"18:122\",\"target\":\"9:18\",\"navigation\":\"NAVIGATE\"},{\"id\":\"18:101\",\"target\":\"9:17\",\"navigation\":\"NAVIGATE\"},{\"id\":\"I18:94;9:4\",\"target\":\"9:17\",\"navigation\":\"NAVIGATE\"}]}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "op": "source-default-consistency",
+    "code": "const createdNodeIds=[],mutatedNodeIds=[];await figma.setCurrentPageAsync(await figma.getNodeByIdAsync('0:1'));const vars=Object.fromEntries((await figma.variables.getLocalVariablesAsync()).map(v=>[v.name,v]));const styles=Object.fromEntries((await figma.getLocalTextStylesAsync()).map(s=>[s.name,s]));await Promise.all(Object.values(styles).map(s=>figma.loadFontAsync(s.fontName)));\nfunction paint(name){return figma.variables.setBoundVariableForPaint({type:'SOLID',color:(()=>{const v=Object.values(vars[name].valuesByMode)[0];return {r:v.r,g:v.g,b:v.b};})()},'color',vars[name]);}\nfunction fills(n,name){n.fills=[paint(name)];}\nfunction gap(n,v){n.setBoundVariable('itemSpacing',vars['spacing/'+v]);}\nfunction pad(n,v){for(const k of ['paddingLeft','paddingRight','paddingTop','paddingBottom'])n.setBoundVariable(k,vars['spacing/'+v]);}\nfunction radius(n){for(const k of ['topLeftRadius','topRightRadius','bottomLeftRadius','bottomRightRadius'])n.setBoundVariable(k,vars['radius/8']);}\nfunction frame(name,parent,dir='VERTICAL',width){const n=figma.createAutoLayout(dir);n.name=name;n.fills=[];if(parent)parent.appendChild(n);createdNodeIds.push(n.id);if(width){n.resize(width,1);n.layoutSizingHorizontal='FIXED';n.layoutSizingVertical='HUG';}return n;}\nfunction textNode(name,value,parent,style='Body',color='color/ink',width){const n=figma.createText();n.name=name;n.textStyleId=styles[style].id;n.characters=value;fills(n,color);parent.appendChild(n);createdNodeIds.push(n.id);if(width){n.resize(width,20);n.textAutoResize='HEIGHT';}return n;}\nasync function instance(id,name,parent,props){const c=await figma.getNodeByIdAsync(id);const i=c.createInstance();i.name=name;parent.appendChild(i);if(props)i.setProperties(props);createdNodeIds.push(i.id,...i.findAll(()=>true).map(n=>n.id));return i;}\nfunction ret(extra={}){return {createdNodeIds,mutatedNodeIds,...extra};}const row=await figma.getNodeByIdAsync('9:8');const before=row.componentPropertyDefinitions;row.editComponentProperty('Title#9:0',{defaultValue:\"Городские прогулки: маршруты для родителей с маленькими детьми\"});mutatedNodeIds.push(row.id,...row.findAll(()=>true).map(n=>n.id));return ret({before,after:row.componentPropertyDefinitions});",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"createdNodeIds\":[],\"mutatedNodeIds\":[\"9:8\",\"9:9\",\"9:10\",\"9:11\",\"9:12\",\"9:13\",\"9:14\",\"9:15\",\"9:16\"],\"before\":{\"Title#9:0\":{\"type\":\"TEXT\",\"defaultValue\":\"Городские прогулки\"},\"Author#9:1\":{\"type\":\"TEXT\",\"defaultValue\":\"Анна Морозова\"},\"Date#9:2\":{\"type\":\"TEXT\",\"defaultValue\":\"7 сентября 2026\"},\"Size#9:3\":{\"type\":\"TEXT\",\"defaultValue\":\"2,4 МБ\"},\"Type#18:0\":{\"type\":\"TEXT\",\"defaultValue\":\"PDF\"},\"Show size#18:1\":{\"type\":\"BOOLEAN\",\"defaultValue\":true}},\"after\":{\"Title#9:0\":{\"type\":\"TEXT\",\"defaultValue\":\"Городские прогулки: маршруты для родителей с маленькими детьми\"},\"Author#9:1\":{\"type\":\"TEXT\",\"defaultValue\":\"Анна Морозова\"},\"Date#9:2\":{\"type\":\"TEXT\",\"defaultValue\":\"7 сентября 2026\"},\"Size#9:3\":{\"type\":\"TEXT\",\"defaultValue\":\"2,4 МБ\"},\"Type#18:0\":{\"type\":\"TEXT\",\"defaultValue\":\"PDF\"},\"Show size#18:1\":{\"type\":\"BOOLEAN\",\"defaultValue\":true}}}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "op": "note-return-width",
+    "code": "await figma.setCurrentPageAsync(await figma.getNodeByIdAsync('2:2'));const back=await figma.getNodeByIdAsync('18:101');await back.setReactionsAsync([{trigger:{type:'ON_CLICK'},actions:[{type:'BACK'}]}]);return {mutatedNodeIds:[back.id],reactions:back.reactions};",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"mutatedNodeIds\":[\"18:101\"],\"reactions\":[{\"action\":{\"type\":\"BACK\"},\"actions\":[{\"type\":\"BACK\"}],\"trigger\":{\"type\":\"ON_CLICK\"}}]}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "op": "snapshot-list-0",
+    "code": "await figma.setCurrentPageAsync(await figma.getNodeByIdAsync('2:2'));const root=await figma.getNodeByIdAsync('9:17');const all=[root,...root.findAll(()=>true)];return {rootId:root.id,name:root.name,width:root.width,height:root.height,total:all.length,offset:0,nodes:all.slice(0,20).map(n=>({id:n.id,parentId:n.parent.id,type:n.type,name:n.name,x:n.x,y:n.y,width:n.width,height:n.height,visible:n.visible,layout:n.layoutMode,text:n.type==='TEXT'?n.characters:undefined,font:n.type==='TEXT'?n.fontName.family:undefined,properties:n.type==='INSTANCE'?Object.fromEntries(Object.entries(n.componentProperties).map(([k,v])=>[k,v.value])):undefined,source:n.type==='INSTANCE'?n.mainComponent?.id:undefined,reactions:n.reactions}))};",
+    "result": {
+      "rootId": "9:17",
+      "name": "Материалы",
+      "width": 1280,
+      "height": 748,
+      "total": 62,
+      "offset": 0,
+      "nodes": [
+        {
+          "id": "9:17",
+          "parentId": "2:2",
+          "type": "FRAME",
+          "name": "Материалы",
+          "x": 80,
+          "y": 80,
+          "width": 1280,
+          "height": 748,
+          "visible": true,
+          "layout": "VERTICAL",
+          "reactions": []
+        },
+        {
+          "id": "9:20",
+          "parentId": "9:17",
+          "type": "INSTANCE",
+          "name": "App header",
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 76,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "properties": {},
+          "source": "9:2",
+          "reactions": []
+        },
+        {
+          "id": "I9:20;9:3",
+          "parentId": "9:20",
+          "type": "TEXT",
+          "name": "Brand",
+          "x": 48,
+          "y": 22,
+          "width": 75,
+          "height": 32,
+          "visible": true,
+          "text": "Полка",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I9:20;9:4",
+          "parentId": "9:20",
+          "type": "INSTANCE",
+          "name": "Библиотека — активный раздел",
+          "x": 139,
+          "y": 16,
+          "width": 114,
+          "height": 44,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "properties": {
+            "Label#3:2": "Библиотека"
+          },
+          "source": "3:8",
+          "reactions": []
+        },
+        {
+          "id": "I9:20;9:4;3:9",
+          "parentId": "I9:20;9:4",
+          "type": "TEXT",
+          "name": "Label",
+          "x": 16,
+          "y": 12,
+          "width": 82,
+          "height": 20,
+          "visible": true,
+          "text": "Библиотека",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I9:20;9:6",
+          "parentId": "9:20",
+          "type": "FRAME",
+          "name": "Flexible space",
+          "x": 269,
+          "y": 37.5,
+          "width": 747,
+          "height": 1,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "reactions": []
+        },
+        {
+          "id": "I9:20;9:7",
+          "parentId": "9:20",
+          "type": "TEXT",
+          "name": "Workspace",
+          "x": 1032,
+          "y": 28,
+          "width": 200,
+          "height": 20,
+          "visible": true,
+          "text": "Исследовательская команда",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "9:26",
+          "parentId": "9:17",
+          "type": "FRAME",
+          "name": "Main",
+          "x": 0,
+          "y": 76,
+          "width": 1280,
+          "height": 672,
+          "visible": true,
+          "layout": "VERTICAL",
+          "reactions": []
+        },
+        {
+          "id": "9:27",
+          "parentId": "9:26",
+          "type": "FRAME",
+          "name": "Page heading",
+          "x": 80,
+          "y": 40,
+          "width": 393,
+          "height": 60,
+          "visible": true,
+          "layout": "VERTICAL",
+          "reactions": []
+        },
+        {
+          "id": "9:28",
+          "parentId": "9:27",
+          "type": "TEXT",
+          "name": "Heading",
+          "x": 0,
+          "y": 0,
+          "width": 139,
+          "height": 32,
+          "visible": true,
+          "text": "Материалы",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "9:29",
+          "parentId": "9:27",
+          "type": "TEXT",
+          "name": "Intro",
+          "x": 0,
+          "y": 40,
+          "width": 393,
+          "height": 20,
+          "visible": true,
+          "text": "Исследования и заметки команды — всё в одном месте.",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "9:30",
+          "parentId": "9:26",
+          "type": "INSTANCE",
+          "name": "Поиск по названию",
+          "x": 80,
+          "y": 124,
+          "width": 520,
+          "height": 72,
+          "visible": true,
+          "layout": "VERTICAL",
+          "properties": {
+            "Show helper#4:3": false,
+            "Helper#4:2": "Helpful supporting text",
+            "Value#4:1": "Введите название материала",
+            "Label#4:0": "Поиск по названию"
+          },
+          "source": "4:2",
+          "reactions": [
+            {
+              "action": {
+                "type": "NODE",
+                "destinationId": "12:63",
+                "navigation": "NAVIGATE",
+                "transition": null,
+                "resetVideoPosition": false
+              },
+              "actions": [
+                {
+                  "type": "NODE",
+                  "destinationId": "12:63",
+                  "navigation": "NAVIGATE",
+                  "transition": null,
+                  "resetVideoPosition": false
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        },
+        {
+          "id": "I9:30;4:3",
+          "parentId": "9:30",
+          "type": "TEXT",
+          "name": "Label",
+          "x": 0,
+          "y": 0,
+          "width": 135,
+          "height": 20,
+          "visible": true,
+          "text": "Поиск по названию",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I9:30;4:4",
+          "parentId": "9:30",
+          "type": "FRAME",
+          "name": "Input",
+          "x": 0,
+          "y": 28,
+          "width": 520,
+          "height": 44,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "reactions": []
+        },
+        {
+          "id": "I9:30;4:5",
+          "parentId": "I9:30;4:4",
+          "type": "TEXT",
+          "name": "Value",
+          "x": 12,
+          "y": 12,
+          "width": 496,
+          "height": 20,
+          "visible": true,
+          "text": "Введите название материала",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "9:35",
+          "parentId": "9:26",
+          "type": "FRAME",
+          "name": "Список материалов",
+          "x": 80,
+          "y": 220,
+          "width": 1120,
+          "height": 412,
+          "visible": true,
+          "layout": "VERTICAL",
+          "reactions": []
+        },
+        {
+          "id": "9:36",
+          "parentId": "9:35",
+          "type": "TEXT",
+          "name": "Count",
+          "x": 0,
+          "y": 0,
+          "width": 96,
+          "height": 20,
+          "visible": true,
+          "text": "5 материалов",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "9:37",
+          "parentId": "9:35",
+          "type": "FRAME",
+          "name": "Rows",
+          "x": 0,
+          "y": 32,
+          "width": 1120,
+          "height": 380,
+          "visible": true,
+          "layout": "VERTICAL",
+          "reactions": []
+        },
+        {
+          "id": "18:84",
+          "parentId": "9:37",
+          "type": "INSTANCE",
+          "name": "Наблюдения после вечерней прогулки",
+          "x": 0,
+          "y": 0,
+          "width": 1120,
+          "height": 76,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "properties": {
+            "Author#9:1": "Анна Морозова",
+            "Type#18:0": "Заметка",
+            "Date#9:2": "8 сентября 2026",
+            "Show size#18:1": false,
+            "Size#9:3": "",
+            "Title#9:0": "Наблюдения после вечерней прогулки"
+          },
+          "source": "9:8",
+          "reactions": [
+            {
+              "action": {
+                "type": "NODE",
+                "destinationId": "18:93",
+                "navigation": "NAVIGATE",
+                "transition": null,
+                "resetVideoPosition": false
+              },
+              "actions": [
+                {
+                  "type": "NODE",
+                  "destinationId": "18:93",
+                  "navigation": "NAVIGATE",
+                  "transition": null,
+                  "resetVideoPosition": false
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        },
+        {
+          "id": "I18:84;9:9",
+          "parentId": "18:84",
+          "type": "FRAME",
+          "name": "Format badge",
+          "x": 16,
+          "y": 20,
+          "width": 80,
+          "height": 36,
+          "visible": true,
+          "layout": "VERTICAL",
+          "reactions": []
+        }
+      ]
+    }
+  },
+  {
+    "op": "snapshot-list-20",
+    "code": "await figma.setCurrentPageAsync(await figma.getNodeByIdAsync('2:2'));const root=await figma.getNodeByIdAsync('9:17');const all=[root,...root.findAll(()=>true)];return {rootId:root.id,name:root.name,width:root.width,height:root.height,total:all.length,offset:20,nodes:all.slice(20,40).map(n=>({id:n.id,parentId:n.parent.id,type:n.type,name:n.name,x:n.x,y:n.y,width:n.width,height:n.height,visible:n.visible,layout:n.layoutMode,text:n.type==='TEXT'?n.characters:undefined,font:n.type==='TEXT'?n.fontName.family:undefined,properties:n.type==='INSTANCE'?Object.fromEntries(Object.entries(n.componentProperties).map(([k,v])=>[k,v.value])):undefined,source:n.type==='INSTANCE'?n.mainComponent?.id:undefined,reactions:n.reactions}))};",
+    "result": {
+      "rootId": "9:17",
+      "name": "Материалы",
+      "width": 1280,
+      "height": 748,
+      "total": 62,
+      "offset": 20,
+      "nodes": [
+        {
+          "id": "I18:84;9:10",
+          "parentId": "I18:84;9:9",
+          "type": "TEXT",
+          "name": "Type",
+          "x": 8,
+          "y": 8,
+          "width": 59,
+          "height": 20,
+          "visible": true,
+          "text": "Заметка",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I18:84;9:11",
+          "parentId": "18:84",
+          "type": "FRAME",
+          "name": "Title and author",
+          "x": 112,
+          "y": 16,
+          "width": 794,
+          "height": 44,
+          "visible": true,
+          "layout": "VERTICAL",
+          "reactions": []
+        },
+        {
+          "id": "I18:84;9:12",
+          "parentId": "I18:84;9:11",
+          "type": "TEXT",
+          "name": "Title",
+          "x": 0,
+          "y": 0,
+          "width": 794,
+          "height": 20,
+          "visible": true,
+          "text": "Наблюдения после вечерней прогулки",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I18:84;9:13",
+          "parentId": "I18:84;9:11",
+          "type": "TEXT",
+          "name": "Author",
+          "x": 0,
+          "y": 24,
+          "width": 794,
+          "height": 20,
+          "visible": true,
+          "text": "Анна Морозова",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I18:84;9:14",
+          "parentId": "18:84",
+          "type": "TEXT",
+          "name": "Date",
+          "x": 922,
+          "y": 28,
+          "width": 152,
+          "height": 20,
+          "visible": true,
+          "text": "8 сентября 2026",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I18:84;9:16",
+          "parentId": "18:84",
+          "type": "TEXT",
+          "name": "Open indicator",
+          "x": 1090,
+          "y": 28,
+          "width": 14,
+          "height": 20,
+          "visible": true,
+          "text": "→",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "9:38",
+          "parentId": "9:37",
+          "type": "INSTANCE",
+          "name": "Городские прогулки: маршруты для родителей с маленькими детьми",
+          "x": 0,
+          "y": 76,
+          "width": 1120,
+          "height": 76,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "properties": {
+            "Author#9:1": "Анна Морозова",
+            "Type#18:0": "PDF",
+            "Date#9:2": "7 сентября 2026",
+            "Show size#18:1": true,
+            "Size#9:3": "2,4 МБ",
+            "Title#9:0": "Городские прогулки: маршруты для родителей с маленькими детьми"
+          },
+          "source": "9:8",
+          "reactions": [
+            {
+              "action": {
+                "type": "NODE",
+                "destinationId": "9:18",
+                "navigation": "NAVIGATE",
+                "transition": null,
+                "resetVideoPosition": false
+              },
+              "actions": [
+                {
+                  "type": "NODE",
+                  "destinationId": "9:18",
+                  "navigation": "NAVIGATE",
+                  "transition": null,
+                  "resetVideoPosition": false
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        },
+        {
+          "id": "I9:38;9:9",
+          "parentId": "9:38",
+          "type": "FRAME",
+          "name": "Format badge",
+          "x": 16,
+          "y": 20,
+          "width": 80,
+          "height": 36,
+          "visible": true,
+          "layout": "VERTICAL",
+          "reactions": []
+        },
+        {
+          "id": "I9:38;9:10",
+          "parentId": "I9:38;9:9",
+          "type": "TEXT",
+          "name": "Type",
+          "x": 8,
+          "y": 8,
+          "width": 28,
+          "height": 20,
+          "visible": true,
+          "text": "PDF",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I9:38;9:11",
+          "parentId": "9:38",
+          "type": "FRAME",
+          "name": "Title and author",
+          "x": 112,
+          "y": 16,
+          "width": 710,
+          "height": 44,
+          "visible": true,
+          "layout": "VERTICAL",
+          "reactions": []
+        },
+        {
+          "id": "I9:38;9:12",
+          "parentId": "I9:38;9:11",
+          "type": "TEXT",
+          "name": "Title",
+          "x": 0,
+          "y": 0,
+          "width": 710,
+          "height": 20,
+          "visible": true,
+          "text": "Городские прогулки: маршруты для родителей с маленькими детьми",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I9:38;9:13",
+          "parentId": "I9:38;9:11",
+          "type": "TEXT",
+          "name": "Author",
+          "x": 0,
+          "y": 24,
+          "width": 710,
+          "height": 20,
+          "visible": true,
+          "text": "Анна Морозова",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I9:38;9:14",
+          "parentId": "9:38",
+          "type": "TEXT",
+          "name": "Date",
+          "x": 838,
+          "y": 28,
+          "width": 152,
+          "height": 20,
+          "visible": true,
+          "text": "7 сентября 2026",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I9:38;9:15",
+          "parentId": "9:38",
+          "type": "TEXT",
+          "name": "Size",
+          "x": 1006,
+          "y": 28,
+          "width": 68,
+          "height": 20,
+          "visible": true,
+          "text": "2,4 МБ",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I9:38;9:16",
+          "parentId": "9:38",
+          "type": "TEXT",
+          "name": "Open indicator",
+          "x": 1090,
+          "y": 28,
+          "width": 14,
+          "height": 20,
+          "visible": true,
+          "text": "→",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "9:47",
+          "parentId": "9:37",
+          "type": "INSTANCE",
+          "name": "Как родители выбирают маршрут до школы и что заставляет их менять привычный путь",
+          "x": 0,
+          "y": 152,
+          "width": 1120,
+          "height": 76,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "properties": {
+            "Author#9:1": "Максим Орлов",
+            "Type#18:0": "PDF",
+            "Date#9:2": "5 сентября 2026",
+            "Show size#18:1": true,
+            "Size#9:3": "4,8 МБ",
+            "Title#9:0": "Как родители выбирают маршрут до школы и что заставляет их менять привычный путь"
+          },
+          "source": "9:8",
+          "reactions": []
+        },
+        {
+          "id": "I9:47;9:9",
+          "parentId": "9:47",
+          "type": "FRAME",
+          "name": "Format badge",
+          "x": 16,
+          "y": 20,
+          "width": 80,
+          "height": 36,
+          "visible": true,
+          "layout": "VERTICAL",
+          "reactions": []
+        },
+        {
+          "id": "I9:47;9:10",
+          "parentId": "I9:47;9:9",
+          "type": "TEXT",
+          "name": "Type",
+          "x": 8,
+          "y": 8,
+          "width": 28,
+          "height": 20,
+          "visible": true,
+          "text": "PDF",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I9:47;9:11",
+          "parentId": "9:47",
+          "type": "FRAME",
+          "name": "Title and author",
+          "x": 112,
+          "y": 16,
+          "width": 710,
+          "height": 44,
+          "visible": true,
+          "layout": "VERTICAL",
+          "reactions": []
+        },
+        {
+          "id": "I9:47;9:12",
+          "parentId": "I9:47;9:11",
+          "type": "TEXT",
+          "name": "Title",
+          "x": 0,
+          "y": 0,
+          "width": 710,
+          "height": 20,
+          "visible": true,
+          "text": "Как родители выбирают маршрут до школы и что заставляет их менять привычный путь",
+          "font": "Inter",
+          "reactions": []
+        }
+      ]
+    }
+  },
+  {
+    "op": "snapshot-list-40",
+    "code": "await figma.setCurrentPageAsync(await figma.getNodeByIdAsync('2:2'));const root=await figma.getNodeByIdAsync('9:17');const all=[root,...root.findAll(()=>true)];return {rootId:root.id,name:root.name,width:root.width,height:root.height,total:all.length,offset:40,nodes:all.slice(40,60).map(n=>({id:n.id,parentId:n.parent.id,type:n.type,name:n.name,x:n.x,y:n.y,width:n.width,height:n.height,visible:n.visible,layout:n.layoutMode,text:n.type==='TEXT'?n.characters:undefined,font:n.type==='TEXT'?n.fontName.family:undefined,properties:n.type==='INSTANCE'?Object.fromEntries(Object.entries(n.componentProperties).map(([k,v])=>[k,v.value])):undefined,source:n.type==='INSTANCE'?n.mainComponent?.id:undefined,reactions:n.reactions}))};",
+    "result": {
+      "rootId": "9:17",
+      "name": "Материалы",
+      "width": 1280,
+      "height": 748,
+      "total": 62,
+      "offset": 40,
+      "nodes": [
+        {
+          "id": "I9:47;9:13",
+          "parentId": "I9:47;9:11",
+          "type": "TEXT",
+          "name": "Author",
+          "x": 0,
+          "y": 24,
+          "width": 710,
+          "height": 20,
+          "visible": true,
+          "text": "Максим Орлов",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I9:47;9:14",
+          "parentId": "9:47",
+          "type": "TEXT",
+          "name": "Date",
+          "x": 838,
+          "y": 28,
+          "width": 152,
+          "height": 20,
+          "visible": true,
+          "text": "5 сентября 2026",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I9:47;9:15",
+          "parentId": "9:47",
+          "type": "TEXT",
+          "name": "Size",
+          "x": 1006,
+          "y": 28,
+          "width": 68,
+          "height": 20,
+          "visible": true,
+          "text": "4,8 МБ",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I9:47;9:16",
+          "parentId": "9:47",
+          "type": "TEXT",
+          "name": "Open indicator",
+          "x": 1090,
+          "y": 28,
+          "width": 14,
+          "height": 20,
+          "visible": true,
+          "text": "→",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "9:56",
+          "parentId": "9:37",
+          "type": "INSTANCE",
+          "name": "Интервью с жителями Северного района",
+          "x": 0,
+          "y": 228,
+          "width": 1120,
+          "height": 76,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "properties": {
+            "Author#9:1": "Елена Волкова",
+            "Type#18:0": "PDF",
+            "Date#9:2": "3 сентября 2026",
+            "Show size#18:1": true,
+            "Size#9:3": "1,6 МБ",
+            "Title#9:0": "Интервью с жителями Северного района"
+          },
+          "source": "9:8",
+          "reactions": []
+        },
+        {
+          "id": "I9:56;9:9",
+          "parentId": "9:56",
+          "type": "FRAME",
+          "name": "Format badge",
+          "x": 16,
+          "y": 20,
+          "width": 80,
+          "height": 36,
+          "visible": true,
+          "layout": "VERTICAL",
+          "reactions": []
+        },
+        {
+          "id": "I9:56;9:10",
+          "parentId": "I9:56;9:9",
+          "type": "TEXT",
+          "name": "Type",
+          "x": 8,
+          "y": 8,
+          "width": 28,
+          "height": 20,
+          "visible": true,
+          "text": "PDF",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I9:56;9:11",
+          "parentId": "9:56",
+          "type": "FRAME",
+          "name": "Title and author",
+          "x": 112,
+          "y": 16,
+          "width": 710,
+          "height": 44,
+          "visible": true,
+          "layout": "VERTICAL",
+          "reactions": []
+        },
+        {
+          "id": "I9:56;9:12",
+          "parentId": "I9:56;9:11",
+          "type": "TEXT",
+          "name": "Title",
+          "x": 0,
+          "y": 0,
+          "width": 710,
+          "height": 20,
+          "visible": true,
+          "text": "Интервью с жителями Северного района",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I9:56;9:13",
+          "parentId": "I9:56;9:11",
+          "type": "TEXT",
+          "name": "Author",
+          "x": 0,
+          "y": 24,
+          "width": 710,
+          "height": 20,
+          "visible": true,
+          "text": "Елена Волкова",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I9:56;9:14",
+          "parentId": "9:56",
+          "type": "TEXT",
+          "name": "Date",
+          "x": 838,
+          "y": 28,
+          "width": 152,
+          "height": 20,
+          "visible": true,
+          "text": "3 сентября 2026",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I9:56;9:15",
+          "parentId": "9:56",
+          "type": "TEXT",
+          "name": "Size",
+          "x": 1006,
+          "y": 28,
+          "width": 68,
+          "height": 20,
+          "visible": true,
+          "text": "1,6 МБ",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I9:56;9:16",
+          "parentId": "9:56",
+          "type": "TEXT",
+          "name": "Open indicator",
+          "x": 1090,
+          "y": 28,
+          "width": 14,
+          "height": 20,
+          "visible": true,
+          "text": "→",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "9:65",
+          "parentId": "9:37",
+          "type": "INSTANCE",
+          "name": "Доступность остановок: результаты полевого исследования",
+          "x": 0,
+          "y": 304,
+          "width": 1120,
+          "height": 76,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "properties": {
+            "Author#9:1": "Илья Соколов",
+            "Type#18:0": "PDF",
+            "Date#9:2": "1 сентября 2026",
+            "Show size#18:1": true,
+            "Size#9:3": "3,2 МБ",
+            "Title#9:0": "Доступность остановок: результаты полевого исследования"
+          },
+          "source": "9:8",
+          "reactions": []
+        },
+        {
+          "id": "I9:65;9:9",
+          "parentId": "9:65",
+          "type": "FRAME",
+          "name": "Format badge",
+          "x": 16,
+          "y": 20,
+          "width": 80,
+          "height": 36,
+          "visible": true,
+          "layout": "VERTICAL",
+          "reactions": []
+        },
+        {
+          "id": "I9:65;9:10",
+          "parentId": "I9:65;9:9",
+          "type": "TEXT",
+          "name": "Type",
+          "x": 8,
+          "y": 8,
+          "width": 28,
+          "height": 20,
+          "visible": true,
+          "text": "PDF",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I9:65;9:11",
+          "parentId": "9:65",
+          "type": "FRAME",
+          "name": "Title and author",
+          "x": 112,
+          "y": 16,
+          "width": 710,
+          "height": 44,
+          "visible": true,
+          "layout": "VERTICAL",
+          "reactions": []
+        },
+        {
+          "id": "I9:65;9:12",
+          "parentId": "I9:65;9:11",
+          "type": "TEXT",
+          "name": "Title",
+          "x": 0,
+          "y": 0,
+          "width": 710,
+          "height": 20,
+          "visible": true,
+          "text": "Доступность остановок: результаты полевого исследования",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I9:65;9:13",
+          "parentId": "I9:65;9:11",
+          "type": "TEXT",
+          "name": "Author",
+          "x": 0,
+          "y": 24,
+          "width": 710,
+          "height": 20,
+          "visible": true,
+          "text": "Илья Соколов",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I9:65;9:14",
+          "parentId": "9:65",
+          "type": "TEXT",
+          "name": "Date",
+          "x": 838,
+          "y": 28,
+          "width": 152,
+          "height": 20,
+          "visible": true,
+          "text": "1 сентября 2026",
+          "font": "Inter",
+          "reactions": []
+        }
+      ]
+    }
+  },
+  {
+    "op": "snapshot-list-60",
+    "code": "await figma.setCurrentPageAsync(await figma.getNodeByIdAsync('2:2'));const root=await figma.getNodeByIdAsync('9:17');const all=[root,...root.findAll(()=>true)];return {rootId:root.id,name:root.name,width:root.width,height:root.height,total:all.length,offset:60,nodes:all.slice(60,80).map(n=>({id:n.id,parentId:n.parent.id,type:n.type,name:n.name,x:n.x,y:n.y,width:n.width,height:n.height,visible:n.visible,layout:n.layoutMode,text:n.type==='TEXT'?n.characters:undefined,font:n.type==='TEXT'?n.fontName.family:undefined,properties:n.type==='INSTANCE'?Object.fromEntries(Object.entries(n.componentProperties).map(([k,v])=>[k,v.value])):undefined,source:n.type==='INSTANCE'?n.mainComponent?.id:undefined,reactions:n.reactions}))};",
+    "result": {
+      "rootId": "9:17",
+      "name": "Материалы",
+      "width": 1280,
+      "height": 748,
+      "total": 62,
+      "offset": 60,
+      "nodes": [
+        {
+          "id": "I9:65;9:15",
+          "parentId": "9:65",
+          "type": "TEXT",
+          "name": "Size",
+          "x": 1006,
+          "y": 28,
+          "width": 68,
+          "height": 20,
+          "visible": true,
+          "text": "3,2 МБ",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I9:65;9:16",
+          "parentId": "9:65",
+          "type": "TEXT",
+          "name": "Open indicator",
+          "x": 1090,
+          "y": 28,
+          "width": 14,
+          "height": 20,
+          "visible": true,
+          "text": "→",
+          "font": "Inter",
+          "reactions": []
+        }
+      ]
+    }
+  },
+  {
+    "op": "snapshot-detail-0",
+    "code": "await figma.setCurrentPageAsync(await figma.getNodeByIdAsync('2:2'));const root=await figma.getNodeByIdAsync('9:18');const all=[root,...root.findAll(()=>true)];return {rootId:root.id,name:root.name,width:root.width,height:root.height,total:all.length,offset:0,nodes:all.slice(0,20).map(n=>({id:n.id,parentId:n.parent.id,type:n.type,name:n.name,x:n.x,y:n.y,width:n.width,height:n.height,visible:n.visible,layout:n.layoutMode,text:n.type==='TEXT'?n.characters:undefined,font:n.type==='TEXT'?n.fontName.family:undefined,properties:n.type==='INSTANCE'?Object.fromEntries(Object.entries(n.componentProperties).map(([k,v])=>[k,v.value])):undefined,source:n.type==='INSTANCE'?n.mainComponent?.id:undefined,reactions:n.reactions}))};",
+    "result": {
+      "rootId": "9:18",
+      "name": "Городские прогулки: маршруты для родителей с маленькими детьми",
+      "width": 1280,
+      "height": 512,
+      "total": 26,
+      "offset": 0,
+      "nodes": [
+        {
+          "id": "9:18",
+          "parentId": "2:2",
+          "type": "FRAME",
+          "name": "Городские прогулки: маршруты для родителей с маленькими детьми",
+          "x": 1440,
+          "y": 80,
+          "width": 1280,
+          "height": 512,
+          "visible": true,
+          "layout": "VERTICAL",
+          "reactions": []
+        },
+        {
+          "id": "9:74",
+          "parentId": "9:18",
+          "type": "INSTANCE",
+          "name": "App header",
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 76,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "properties": {},
+          "source": "9:2",
+          "reactions": []
+        },
+        {
+          "id": "I9:74;9:3",
+          "parentId": "9:74",
+          "type": "TEXT",
+          "name": "Brand",
+          "x": 48,
+          "y": 22,
+          "width": 75,
+          "height": 32,
+          "visible": true,
+          "text": "Полка",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I9:74;9:4",
+          "parentId": "9:74",
+          "type": "INSTANCE",
+          "name": "Библиотека — активный раздел",
+          "x": 139,
+          "y": 16,
+          "width": 114,
+          "height": 44,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "properties": {
+            "Label#3:2": "Библиотека"
+          },
+          "source": "3:8",
+          "reactions": [
+            {
+              "action": {
+                "type": "NODE",
+                "destinationId": "9:17",
+                "navigation": "NAVIGATE",
+                "transition": null,
+                "resetVideoPosition": false
+              },
+              "actions": [
+                {
+                  "type": "NODE",
+                  "destinationId": "9:17",
+                  "navigation": "NAVIGATE",
+                  "transition": null,
+                  "resetVideoPosition": false
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        },
+        {
+          "id": "I9:74;9:4;3:9",
+          "parentId": "I9:74;9:4",
+          "type": "TEXT",
+          "name": "Label",
+          "x": 16,
+          "y": 12,
+          "width": 82,
+          "height": 20,
+          "visible": true,
+          "text": "Библиотека",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I9:74;9:6",
+          "parentId": "9:74",
+          "type": "FRAME",
+          "name": "Flexible space",
+          "x": 269,
+          "y": 37.5,
+          "width": 747,
+          "height": 1,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "reactions": []
+        },
+        {
+          "id": "I9:74;9:7",
+          "parentId": "9:74",
+          "type": "TEXT",
+          "name": "Workspace",
+          "x": 1032,
+          "y": 28,
+          "width": 200,
+          "height": 20,
+          "visible": true,
+          "text": "Исследовательская команда",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "9:80",
+          "parentId": "9:18",
+          "type": "FRAME",
+          "name": "Main",
+          "x": 0,
+          "y": 76,
+          "width": 1280,
+          "height": 436,
+          "visible": true,
+          "layout": "VERTICAL",
+          "reactions": []
+        },
+        {
+          "id": "9:81",
+          "parentId": "9:80",
+          "type": "INSTANCE",
+          "name": "Вернуться к материалам",
+          "x": 80,
+          "y": 32,
+          "width": 156,
+          "height": 44,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "properties": {
+            "Label#3:1": "← Все материалы"
+          },
+          "source": "3:6",
+          "reactions": [
+            {
+              "action": {
+                "type": "NODE",
+                "destinationId": "9:17",
+                "navigation": "NAVIGATE",
+                "transition": null,
+                "resetVideoPosition": false
+              },
+              "actions": [
+                {
+                  "type": "NODE",
+                  "destinationId": "9:17",
+                  "navigation": "NAVIGATE",
+                  "transition": null,
+                  "resetVideoPosition": false
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        },
+        {
+          "id": "I9:81;3:7",
+          "parentId": "9:81",
+          "type": "TEXT",
+          "name": "Label",
+          "x": 16,
+          "y": 12,
+          "width": 124,
+          "height": 20,
+          "visible": true,
+          "text": "← Все материалы",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "9:83",
+          "parentId": "9:80",
+          "type": "FRAME",
+          "name": "Title and actions",
+          "x": 80,
+          "y": 100,
+          "width": 1120,
+          "height": 44,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "reactions": []
+        },
+        {
+          "id": "9:84",
+          "parentId": "9:83",
+          "type": "TEXT",
+          "name": "Title",
+          "x": 0,
+          "y": 6,
+          "width": 982,
+          "height": 32,
+          "visible": true,
+          "text": "Городские прогулки: маршруты для родителей с маленькими детьми",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "9:85",
+          "parentId": "9:83",
+          "type": "INSTANCE",
+          "name": "Редактировать",
+          "x": 982,
+          "y": 0,
+          "width": 138,
+          "height": 44,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "properties": {
+            "Label#3:1": "Редактировать"
+          },
+          "source": "3:6",
+          "reactions": [
+            {
+              "action": {
+                "type": "NODE",
+                "destinationId": "9:19",
+                "navigation": "OVERLAY",
+                "transition": null,
+                "resetVideoPosition": false
+              },
+              "actions": [
+                {
+                  "type": "NODE",
+                  "destinationId": "9:19",
+                  "navigation": "OVERLAY",
+                  "transition": null,
+                  "resetVideoPosition": false
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        },
+        {
+          "id": "I9:85;3:7",
+          "parentId": "9:85",
+          "type": "TEXT",
+          "name": "Label",
+          "x": 16,
+          "y": 12,
+          "width": 106,
+          "height": 20,
+          "visible": true,
+          "text": "Редактировать",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "9:87",
+          "parentId": "9:80",
+          "type": "FRAME",
+          "name": "Metadata",
+          "x": 80,
+          "y": 168,
+          "width": 382,
+          "height": 20,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "reactions": []
+        },
+        {
+          "id": "9:88",
+          "parentId": "9:87",
+          "type": "TEXT",
+          "name": "Author",
+          "x": 0,
+          "y": 0,
+          "width": 156,
+          "height": 20,
+          "visible": true,
+          "text": "Автор: Анна Морозова",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "9:89",
+          "parentId": "9:87",
+          "type": "TEXT",
+          "name": "Updated",
+          "x": 188,
+          "y": 0,
+          "width": 194,
+          "height": 20,
+          "visible": true,
+          "text": "Обновлено 7 сентября 2026",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "10:51",
+          "parentId": "9:80",
+          "type": "FRAME",
+          "name": "Material content",
+          "x": 80,
+          "y": 212,
+          "width": 1120,
+          "height": 184,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "reactions": []
+        },
+        {
+          "id": "10:52",
+          "parentId": "10:51",
+          "type": "FRAME",
+          "name": "Описание",
+          "x": 0,
+          "y": 0,
+          "width": 696,
+          "height": 112,
+          "visible": true,
+          "layout": "VERTICAL",
+          "reactions": []
+        },
+        {
+          "id": "10:53",
+          "parentId": "10:52",
+          "type": "TEXT",
+          "name": "Description heading",
+          "x": 0,
+          "y": 0,
+          "width": 90,
+          "height": 20,
+          "visible": true,
+          "text": "О материале",
+          "font": "Inter",
+          "reactions": []
+        }
+      ]
+    }
+  },
+  {
+    "op": "snapshot-detail-20",
+    "code": "await figma.setCurrentPageAsync(await figma.getNodeByIdAsync('2:2'));const root=await figma.getNodeByIdAsync('9:18');const all=[root,...root.findAll(()=>true)];return {rootId:root.id,name:root.name,width:root.width,height:root.height,total:all.length,offset:20,nodes:all.slice(20,40).map(n=>({id:n.id,parentId:n.parent.id,type:n.type,name:n.name,x:n.x,y:n.y,width:n.width,height:n.height,visible:n.visible,layout:n.layoutMode,text:n.type==='TEXT'?n.characters:undefined,font:n.type==='TEXT'?n.fontName.family:undefined,properties:n.type==='INSTANCE'?Object.fromEntries(Object.entries(n.componentProperties).map(([k,v])=>[k,v.value])):undefined,source:n.type==='INSTANCE'?n.mainComponent?.id:undefined,reactions:n.reactions}))};",
+    "result": {
+      "rootId": "9:18",
+      "name": "Городские прогулки: маршруты для родителей с маленькими детьми",
+      "width": 1280,
+      "height": 512,
+      "total": 26,
+      "offset": 20,
+      "nodes": [
+        {
+          "id": "10:54",
+          "parentId": "10:52",
+          "type": "TEXT",
+          "name": "Description",
+          "x": 0,
+          "y": 32,
+          "width": 696,
+          "height": 80,
+          "visible": true,
+          "text": "Исследование повседневных маршрутов семей с детьми. Мы прошли восемь маршрутов вместе с родителями и отметили участки, где сложно пройти с коляской, безопасно пересечь дорогу или сделать остановку. В материале — наблюдения, фотографии и рекомендации для следующего этапа.",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "10:55",
+          "parentId": "10:51",
+          "type": "FRAME",
+          "name": "PDF attachment",
+          "x": 736,
+          "y": 0,
+          "width": 384,
+          "height": 184,
+          "visible": true,
+          "layout": "VERTICAL",
+          "reactions": []
+        },
+        {
+          "id": "10:56",
+          "parentId": "10:55",
+          "type": "TEXT",
+          "name": "Format",
+          "x": 24,
+          "y": 24,
+          "width": 86,
+          "height": 20,
+          "visible": true,
+          "text": "PDF · 2,4 МБ",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "10:57",
+          "parentId": "10:55",
+          "type": "TEXT",
+          "name": "File name",
+          "x": 24,
+          "y": 60,
+          "width": 336,
+          "height": 40,
+          "visible": true,
+          "text": "Городские прогулки: маршруты для родителей с маленькими детьми.pdf",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "10:58",
+          "parentId": "10:55",
+          "type": "INSTANCE",
+          "name": "Открыть PDF",
+          "x": 24,
+          "y": 116,
+          "width": 142,
+          "height": 44,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "properties": {
+            "Label#3:0": "Открыть PDF ↗"
+          },
+          "source": "3:4",
+          "reactions": []
+        },
+        {
+          "id": "I10:58;3:5",
+          "parentId": "10:58",
+          "type": "TEXT",
+          "name": "Label",
+          "x": 16,
+          "y": 12,
+          "width": 110,
+          "height": 20,
+          "visible": true,
+          "text": "Открыть PDF ↗",
+          "font": "Inter",
+          "reactions": []
+        }
+      ]
+    }
+  },
+  {
+    "op": "snapshot-edit-0",
+    "code": "await figma.setCurrentPageAsync(await figma.getNodeByIdAsync('2:2'));const root=await figma.getNodeByIdAsync('9:19');const all=[root,...root.findAll(()=>true)];return {rootId:root.id,name:root.name,width:root.width,height:root.height,total:all.length,offset:0,nodes:all.slice(0,20).map(n=>({id:n.id,parentId:n.parent.id,type:n.type,name:n.name,x:n.x,y:n.y,width:n.width,height:n.height,visible:n.visible,layout:n.layoutMode,text:n.type==='TEXT'?n.characters:undefined,font:n.type==='TEXT'?n.fontName.family:undefined,properties:n.type==='INSTANCE'?Object.fromEntries(Object.entries(n.componentProperties).map(([k,v])=>[k,v.value])):undefined,source:n.type==='INSTANCE'?n.mainComponent?.id:undefined,reactions:n.reactions}))};",
+    "result": {
+      "rootId": "9:19",
+      "name": "Редактировать материал",
+      "width": 520,
+      "height": 488,
+      "total": 20,
+      "offset": 0,
+      "nodes": [
+        {
+          "id": "9:19",
+          "parentId": "2:2",
+          "type": "FRAME",
+          "name": "Редактировать материал",
+          "x": 2800,
+          "y": 80,
+          "width": 520,
+          "height": 488,
+          "visible": true,
+          "layout": "VERTICAL",
+          "reactions": []
+        },
+        {
+          "id": "10:60",
+          "parentId": "9:19",
+          "type": "FRAME",
+          "name": "Dialog title bar",
+          "x": 24,
+          "y": 24,
+          "width": 472,
+          "height": 44,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "reactions": []
+        },
+        {
+          "id": "10:61",
+          "parentId": "10:60",
+          "type": "TEXT",
+          "name": "Title",
+          "x": 0,
+          "y": 6,
+          "width": 306,
+          "height": 32,
+          "visible": true,
+          "text": "Редактировать материал",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "10:62",
+          "parentId": "10:60",
+          "type": "INSTANCE",
+          "name": "Закрыть",
+          "x": 428,
+          "y": 0,
+          "width": 44,
+          "height": 44,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "properties": {
+            "Label#3:1": "×"
+          },
+          "source": "3:6",
+          "reactions": [
+            {
+              "action": {
+                "type": "CLOSE"
+              },
+              "actions": [
+                {
+                  "type": "CLOSE"
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        },
+        {
+          "id": "I10:62;3:7",
+          "parentId": "10:62",
+          "type": "TEXT",
+          "name": "Label",
+          "x": 17,
+          "y": 12,
+          "width": 10,
+          "height": 20,
+          "visible": true,
+          "text": "×",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "10:64",
+          "parentId": "9:19",
+          "type": "FRAME",
+          "name": "Edit form",
+          "x": 24,
+          "y": 92,
+          "width": 472,
+          "height": 304,
+          "visible": true,
+          "layout": "VERTICAL",
+          "reactions": []
+        },
+        {
+          "id": "10:65",
+          "parentId": "10:64",
+          "type": "INSTANCE",
+          "name": "Название",
+          "x": 0,
+          "y": 0,
+          "width": 472,
+          "height": 92,
+          "visible": true,
+          "layout": "VERTICAL",
+          "properties": {
+            "Show helper#4:3": false,
+            "Helper#4:2": "Helpful supporting text",
+            "Value#4:1": "Городские прогулки: маршруты для родителей с маленькими детьми",
+            "Label#4:0": "Название *"
+          },
+          "source": "4:2",
+          "reactions": [
+            {
+              "action": {
+                "type": "NODE",
+                "destinationId": "12:123",
+                "navigation": "SWAP",
+                "transition": null,
+                "resetVideoPosition": false
+              },
+              "actions": [
+                {
+                  "type": "NODE",
+                  "destinationId": "12:123",
+                  "navigation": "SWAP",
+                  "transition": null,
+                  "resetVideoPosition": false
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        },
+        {
+          "id": "I10:65;4:3",
+          "parentId": "10:65",
+          "type": "TEXT",
+          "name": "Label",
+          "x": 0,
+          "y": 0,
+          "width": 78,
+          "height": 20,
+          "visible": true,
+          "text": "Название *",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I10:65;4:4",
+          "parentId": "10:65",
+          "type": "FRAME",
+          "name": "Input",
+          "x": 0,
+          "y": 28,
+          "width": 472,
+          "height": 64,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "reactions": []
+        },
+        {
+          "id": "I10:65;4:5",
+          "parentId": "I10:65;4:4",
+          "type": "TEXT",
+          "name": "Value",
+          "x": 12,
+          "y": 12,
+          "width": 448,
+          "height": 40,
+          "visible": true,
+          "text": "Городские прогулки: маршруты для родителей с маленькими детьми",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "10:70",
+          "parentId": "10:64",
+          "type": "INSTANCE",
+          "name": "Описание",
+          "x": 0,
+          "y": 112,
+          "width": 472,
+          "height": 152,
+          "visible": true,
+          "layout": "VERTICAL",
+          "properties": {
+            "Show helper#4:3": false,
+            "Helper#4:2": "Helpful supporting text",
+            "Value#4:1": "Исследование повседневных маршрутов семей с детьми. Мы прошли восемь маршрутов вместе с родителями и отметили участки, где сложно пройти с коляской, безопасно пересечь дорогу или сделать остановку. В материале — наблюдения, фотографии и рекомендации для следующего этапа.",
+            "Label#4:0": "Описание"
+          },
+          "source": "4:2",
+          "reactions": []
+        },
+        {
+          "id": "I10:70;4:3",
+          "parentId": "10:70",
+          "type": "TEXT",
+          "name": "Label",
+          "x": 0,
+          "y": 0,
+          "width": 69,
+          "height": 20,
+          "visible": true,
+          "text": "Описание",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I10:70;4:4",
+          "parentId": "10:70",
+          "type": "FRAME",
+          "name": "Input",
+          "x": 0,
+          "y": 28,
+          "width": 472,
+          "height": 124,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "reactions": []
+        },
+        {
+          "id": "I10:70;4:5",
+          "parentId": "I10:70;4:4",
+          "type": "TEXT",
+          "name": "Value",
+          "x": 12,
+          "y": 12,
+          "width": 448,
+          "height": 100,
+          "visible": true,
+          "text": "Исследование повседневных маршрутов семей с детьми. Мы прошли восемь маршрутов вместе с родителями и отметили участки, где сложно пройти с коляской, безопасно пересечь дорогу или сделать остановку. В материале — наблюдения, фотографии и рекомендации для следующего этапа.",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "10:75",
+          "parentId": "10:64",
+          "type": "TEXT",
+          "name": "Required field note",
+          "x": 0,
+          "y": 284,
+          "width": 145,
+          "height": 20,
+          "visible": true,
+          "text": "* Обязательное поле",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "11:61",
+          "parentId": "9:19",
+          "type": "FRAME",
+          "name": "Dialog actions",
+          "x": 24,
+          "y": 420,
+          "width": 472,
+          "height": 44,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "reactions": []
+        },
+        {
+          "id": "11:62",
+          "parentId": "11:61",
+          "type": "INSTANCE",
+          "name": "Отменить",
+          "x": 252,
+          "y": 0,
+          "width": 101,
+          "height": 44,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "properties": {
+            "Label#3:1": "Отменить"
+          },
+          "source": "3:6",
+          "reactions": [
+            {
+              "action": {
+                "type": "CLOSE"
+              },
+              "actions": [
+                {
+                  "type": "CLOSE"
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        },
+        {
+          "id": "I11:62;3:7",
+          "parentId": "11:62",
+          "type": "TEXT",
+          "name": "Label",
+          "x": 16,
+          "y": 12,
+          "width": 69,
+          "height": 20,
+          "visible": true,
+          "text": "Отменить",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "11:64",
+          "parentId": "11:61",
+          "type": "INSTANCE",
+          "name": "Сохранить",
+          "x": 365,
+          "y": 0,
+          "width": 107,
+          "height": 44,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "properties": {
+            "Label#3:0": "Сохранить"
+          },
+          "source": "3:4",
+          "reactions": [
+            {
+              "action": {
+                "type": "NODE",
+                "destinationId": "9:18",
+                "navigation": "NAVIGATE",
+                "transition": null,
+                "resetVideoPosition": false
+              },
+              "actions": [
+                {
+                  "type": "NODE",
+                  "destinationId": "9:18",
+                  "navigation": "NAVIGATE",
+                  "transition": null,
+                  "resetVideoPosition": false
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        },
+        {
+          "id": "I11:64;3:5",
+          "parentId": "11:64",
+          "type": "TEXT",
+          "name": "Label",
+          "x": 16,
+          "y": 12,
+          "width": 75,
+          "height": 20,
+          "visible": true,
+          "text": "Сохранить",
+          "font": "Inter",
+          "reactions": []
+        }
+      ]
+    }
+  },
+  {
+    "op": "snapshot-empty-0",
+    "code": "await figma.setCurrentPageAsync(await figma.getNodeByIdAsync('2:2'));const root=await figma.getNodeByIdAsync('12:63');const all=[root,...root.findAll(()=>true)];return {rootId:root.id,name:root.name,width:root.width,height:root.height,total:all.length,offset:0,nodes:all.slice(0,20).map(n=>({id:n.id,parentId:n.parent.id,type:n.type,name:n.name,x:n.x,y:n.y,width:n.width,height:n.height,visible:n.visible,layout:n.layoutMode,text:n.type==='TEXT'?n.characters:undefined,font:n.type==='TEXT'?n.fontName.family:undefined,properties:n.type==='INSTANCE'?Object.fromEntries(Object.entries(n.componentProperties).map(([k,v])=>[k,v.value])):undefined,source:n.type==='INSTANCE'?n.mainComponent?.id:undefined,reactions:n.reactions}))};",
+    "result": {
+      "rootId": "12:63",
+      "name": "Поиск — ничего не найдено",
+      "width": 1280,
+      "height": 528,
+      "total": 20,
+      "offset": 0,
+      "nodes": [
+        {
+          "id": "12:63",
+          "parentId": "2:2",
+          "type": "FRAME",
+          "name": "Поиск — ничего не найдено",
+          "x": 80,
+          "y": 840,
+          "width": 1280,
+          "height": 528,
+          "visible": true,
+          "layout": "VERTICAL",
+          "reactions": []
+        },
+        {
+          "id": "12:64",
+          "parentId": "12:63",
+          "type": "INSTANCE",
+          "name": "App header",
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 76,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "properties": {},
+          "source": "9:2",
+          "reactions": []
+        },
+        {
+          "id": "I12:64;9:3",
+          "parentId": "12:64",
+          "type": "TEXT",
+          "name": "Brand",
+          "x": 48,
+          "y": 22,
+          "width": 75,
+          "height": 32,
+          "visible": true,
+          "text": "Полка",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I12:64;9:4",
+          "parentId": "12:64",
+          "type": "INSTANCE",
+          "name": "Библиотека — активный раздел",
+          "x": 139,
+          "y": 16,
+          "width": 114,
+          "height": 44,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "properties": {
+            "Label#3:2": "Библиотека"
+          },
+          "source": "3:8",
+          "reactions": [
+            {
+              "action": {
+                "type": "NODE",
+                "destinationId": "9:17",
+                "navigation": "NAVIGATE",
+                "transition": null,
+                "resetVideoPosition": false
+              },
+              "actions": [
+                {
+                  "type": "NODE",
+                  "destinationId": "9:17",
+                  "navigation": "NAVIGATE",
+                  "transition": null,
+                  "resetVideoPosition": false
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        },
+        {
+          "id": "I12:64;9:4;3:9",
+          "parentId": "I12:64;9:4",
+          "type": "TEXT",
+          "name": "Label",
+          "x": 16,
+          "y": 12,
+          "width": 82,
+          "height": 20,
+          "visible": true,
+          "text": "Библиотека",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I12:64;9:6",
+          "parentId": "12:64",
+          "type": "FRAME",
+          "name": "Flexible space",
+          "x": 269,
+          "y": 37.5,
+          "width": 747,
+          "height": 1,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "reactions": []
+        },
+        {
+          "id": "I12:64;9:7",
+          "parentId": "12:64",
+          "type": "TEXT",
+          "name": "Workspace",
+          "x": 1032,
+          "y": 28,
+          "width": 200,
+          "height": 20,
+          "visible": true,
+          "text": "Исследовательская команда",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "12:65",
+          "parentId": "12:63",
+          "type": "FRAME",
+          "name": "Main",
+          "x": 0,
+          "y": 76,
+          "width": 1280,
+          "height": 452,
+          "visible": true,
+          "layout": "VERTICAL",
+          "reactions": []
+        },
+        {
+          "id": "12:66",
+          "parentId": "12:65",
+          "type": "FRAME",
+          "name": "Page heading",
+          "x": 80,
+          "y": 40,
+          "width": 393,
+          "height": 60,
+          "visible": true,
+          "layout": "VERTICAL",
+          "reactions": []
+        },
+        {
+          "id": "12:67",
+          "parentId": "12:66",
+          "type": "TEXT",
+          "name": "Heading",
+          "x": 0,
+          "y": 0,
+          "width": 139,
+          "height": 32,
+          "visible": true,
+          "text": "Материалы",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "12:68",
+          "parentId": "12:66",
+          "type": "TEXT",
+          "name": "Intro",
+          "x": 0,
+          "y": 40,
+          "width": 393,
+          "height": 20,
+          "visible": true,
+          "text": "Исследования и заметки команды — всё в одном месте.",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "12:69",
+          "parentId": "12:65",
+          "type": "INSTANCE",
+          "name": "Поиск по названию",
+          "x": 80,
+          "y": 124,
+          "width": 520,
+          "height": 72,
+          "visible": true,
+          "layout": "VERTICAL",
+          "properties": {
+            "Show helper#4:3": false,
+            "Helper#4:2": "Helpful supporting text",
+            "Value#4:1": "велосипеды",
+            "Label#4:0": "Поиск по названию"
+          },
+          "source": "4:2",
+          "reactions": []
+        },
+        {
+          "id": "I12:69;4:3",
+          "parentId": "12:69",
+          "type": "TEXT",
+          "name": "Label",
+          "x": 0,
+          "y": 0,
+          "width": 135,
+          "height": 20,
+          "visible": true,
+          "text": "Поиск по названию",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I12:69;4:4",
+          "parentId": "12:69",
+          "type": "FRAME",
+          "name": "Input",
+          "x": 0,
+          "y": 28,
+          "width": 520,
+          "height": 44,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "reactions": []
+        },
+        {
+          "id": "I12:69;4:5",
+          "parentId": "I12:69;4:4",
+          "type": "TEXT",
+          "name": "Value",
+          "x": 12,
+          "y": 12,
+          "width": 496,
+          "height": 20,
+          "visible": true,
+          "text": "велосипеды",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "12:118",
+          "parentId": "12:65",
+          "type": "FRAME",
+          "name": "Empty search result",
+          "x": 80,
+          "y": 220,
+          "width": 1120,
+          "height": 192,
+          "visible": true,
+          "layout": "VERTICAL",
+          "reactions": []
+        },
+        {
+          "id": "12:119",
+          "parentId": "12:118",
+          "type": "TEXT",
+          "name": "Empty heading",
+          "x": 285,
+          "y": 32,
+          "width": 550,
+          "height": 32,
+          "visible": true,
+          "text": "По запросу «велосипеды» ничего не найдено",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "12:120",
+          "parentId": "12:118",
+          "type": "TEXT",
+          "name": "Guidance",
+          "x": 332,
+          "y": 80,
+          "width": 456,
+          "height": 20,
+          "visible": true,
+          "text": "Попробуйте другое название или вернитесь ко всем материалам.",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "12:121",
+          "parentId": "12:118",
+          "type": "INSTANCE",
+          "name": "Сбросить поиск",
+          "x": 457,
+          "y": 116,
+          "width": 206,
+          "height": 44,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "properties": {
+            "Label#3:1": "Показать все материалы"
+          },
+          "source": "3:6",
+          "reactions": [
+            {
+              "action": {
+                "type": "NODE",
+                "destinationId": "9:17",
+                "navigation": "NAVIGATE",
+                "transition": null,
+                "resetVideoPosition": false
+              },
+              "actions": [
+                {
+                  "type": "NODE",
+                  "destinationId": "9:17",
+                  "navigation": "NAVIGATE",
+                  "transition": null,
+                  "resetVideoPosition": false
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        },
+        {
+          "id": "I12:121;3:7",
+          "parentId": "12:121",
+          "type": "TEXT",
+          "name": "Label",
+          "x": 16,
+          "y": 12,
+          "width": 174,
+          "height": 20,
+          "visible": true,
+          "text": "Показать все материалы",
+          "font": "Inter",
+          "reactions": []
+        }
+      ]
+    }
+  },
+  {
+    "op": "snapshot-error-0",
+    "code": "await figma.setCurrentPageAsync(await figma.getNodeByIdAsync('2:2'));const root=await figma.getNodeByIdAsync('12:123');const all=[root,...root.findAll(()=>true)];return {rootId:root.id,name:root.name,width:root.width,height:root.height,total:all.length,offset:0,nodes:all.slice(0,20).map(n=>({id:n.id,parentId:n.parent.id,type:n.type,name:n.name,x:n.x,y:n.y,width:n.width,height:n.height,visible:n.visible,layout:n.layoutMode,text:n.type==='TEXT'?n.characters:undefined,font:n.type==='TEXT'?n.fontName.family:undefined,properties:n.type==='INSTANCE'?Object.fromEntries(Object.entries(n.componentProperties).map(([k,v])=>[k,v.value])):undefined,source:n.type==='INSTANCE'?n.mainComponent?.id:undefined,reactions:n.reactions}))};",
+    "result": {
+      "rootId": "12:123",
+      "name": "Редактировать — ошибка названия",
+      "width": 520,
+      "height": 496,
+      "total": 21,
+      "offset": 0,
+      "nodes": [
+        {
+          "id": "12:123",
+          "parentId": "2:2",
+          "type": "FRAME",
+          "name": "Редактировать — ошибка названия",
+          "x": 3400,
+          "y": 80,
+          "width": 520,
+          "height": 496,
+          "visible": true,
+          "layout": "VERTICAL",
+          "reactions": []
+        },
+        {
+          "id": "12:124",
+          "parentId": "12:123",
+          "type": "FRAME",
+          "name": "Dialog title bar",
+          "x": 24,
+          "y": 24,
+          "width": 472,
+          "height": 44,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "reactions": []
+        },
+        {
+          "id": "12:125",
+          "parentId": "12:124",
+          "type": "TEXT",
+          "name": "Title",
+          "x": 0,
+          "y": 6,
+          "width": 306,
+          "height": 32,
+          "visible": true,
+          "text": "Редактировать материал",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "12:126",
+          "parentId": "12:124",
+          "type": "INSTANCE",
+          "name": "Закрыть",
+          "x": 428,
+          "y": 0,
+          "width": 44,
+          "height": 44,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "properties": {
+            "Label#3:1": "×"
+          },
+          "source": "3:6",
+          "reactions": [
+            {
+              "action": {
+                "type": "CLOSE"
+              },
+              "actions": [
+                {
+                  "type": "CLOSE"
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        },
+        {
+          "id": "I12:126;3:7",
+          "parentId": "12:126",
+          "type": "TEXT",
+          "name": "Label",
+          "x": 17,
+          "y": 12,
+          "width": 10,
+          "height": 20,
+          "visible": true,
+          "text": "×",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "12:127",
+          "parentId": "12:123",
+          "type": "FRAME",
+          "name": "Edit form",
+          "x": 24,
+          "y": 92,
+          "width": 472,
+          "height": 312,
+          "visible": true,
+          "layout": "VERTICAL",
+          "reactions": []
+        },
+        {
+          "id": "12:128",
+          "parentId": "12:127",
+          "type": "INSTANCE",
+          "name": "Название",
+          "x": 0,
+          "y": 0,
+          "width": 472,
+          "height": 100,
+          "visible": true,
+          "layout": "VERTICAL",
+          "properties": {
+            "Show helper#4:3": true,
+            "Helper#4:2": "Введите название, чтобы сохранить материал.",
+            "Value#4:1": "",
+            "Label#4:0": "Название *"
+          },
+          "source": "4:2",
+          "reactions": [
+            {
+              "action": {
+                "type": "NODE",
+                "destinationId": "9:19",
+                "navigation": "SWAP",
+                "transition": null,
+                "resetVideoPosition": false
+              },
+              "actions": [
+                {
+                  "type": "NODE",
+                  "destinationId": "9:19",
+                  "navigation": "SWAP",
+                  "transition": null,
+                  "resetVideoPosition": false
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        },
+        {
+          "id": "I12:128;4:3",
+          "parentId": "12:128",
+          "type": "TEXT",
+          "name": "Label",
+          "x": 0,
+          "y": 0,
+          "width": 78,
+          "height": 20,
+          "visible": true,
+          "text": "Название *",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I12:128;4:4",
+          "parentId": "12:128",
+          "type": "FRAME",
+          "name": "Input",
+          "x": 0,
+          "y": 28,
+          "width": 472,
+          "height": 44,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "reactions": []
+        },
+        {
+          "id": "I12:128;4:5",
+          "parentId": "I12:128;4:4",
+          "type": "TEXT",
+          "name": "Value",
+          "x": 12,
+          "y": 12,
+          "width": 448,
+          "height": 20,
+          "visible": true,
+          "text": "",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I12:128;4:6",
+          "parentId": "12:128",
+          "type": "TEXT",
+          "name": "Helper",
+          "x": 0,
+          "y": 80,
+          "width": 472,
+          "height": 20,
+          "visible": true,
+          "text": "Введите название, чтобы сохранить материал.",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "12:129",
+          "parentId": "12:127",
+          "type": "INSTANCE",
+          "name": "Описание",
+          "x": 0,
+          "y": 120,
+          "width": 472,
+          "height": 152,
+          "visible": true,
+          "layout": "VERTICAL",
+          "properties": {
+            "Show helper#4:3": false,
+            "Helper#4:2": "Helpful supporting text",
+            "Value#4:1": "Исследование повседневных маршрутов семей с детьми. Мы прошли восемь маршрутов вместе с родителями и отметили участки, где сложно пройти с коляской, безопасно пересечь дорогу или сделать остановку. В материале — наблюдения, фотографии и рекомендации для следующего этапа.",
+            "Label#4:0": "Описание"
+          },
+          "source": "4:2",
+          "reactions": []
+        },
+        {
+          "id": "I12:129;4:3",
+          "parentId": "12:129",
+          "type": "TEXT",
+          "name": "Label",
+          "x": 0,
+          "y": 0,
+          "width": 69,
+          "height": 20,
+          "visible": true,
+          "text": "Описание",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I12:129;4:4",
+          "parentId": "12:129",
+          "type": "FRAME",
+          "name": "Input",
+          "x": 0,
+          "y": 28,
+          "width": 472,
+          "height": 124,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "reactions": []
+        },
+        {
+          "id": "I12:129;4:5",
+          "parentId": "I12:129;4:4",
+          "type": "TEXT",
+          "name": "Value",
+          "x": 12,
+          "y": 12,
+          "width": 448,
+          "height": 100,
+          "visible": true,
+          "text": "Исследование повседневных маршрутов семей с детьми. Мы прошли восемь маршрутов вместе с родителями и отметили участки, где сложно пройти с коляской, безопасно пересечь дорогу или сделать остановку. В материале — наблюдения, фотографии и рекомендации для следующего этапа.",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "12:130",
+          "parentId": "12:127",
+          "type": "TEXT",
+          "name": "Required field note",
+          "x": 0,
+          "y": 292,
+          "width": 145,
+          "height": 20,
+          "visible": true,
+          "text": "* Обязательное поле",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "12:131",
+          "parentId": "12:123",
+          "type": "FRAME",
+          "name": "Dialog actions",
+          "x": 24,
+          "y": 428,
+          "width": 472,
+          "height": 44,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "reactions": []
+        },
+        {
+          "id": "12:132",
+          "parentId": "12:131",
+          "type": "INSTANCE",
+          "name": "Отменить",
+          "x": 252,
+          "y": 0,
+          "width": 101,
+          "height": 44,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "properties": {
+            "Label#3:1": "Отменить"
+          },
+          "source": "3:6",
+          "reactions": [
+            {
+              "action": {
+                "type": "CLOSE"
+              },
+              "actions": [
+                {
+                  "type": "CLOSE"
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        },
+        {
+          "id": "I12:132;3:7",
+          "parentId": "12:132",
+          "type": "TEXT",
+          "name": "Label",
+          "x": 16,
+          "y": 12,
+          "width": 69,
+          "height": 20,
+          "visible": true,
+          "text": "Отменить",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "12:133",
+          "parentId": "12:131",
+          "type": "INSTANCE",
+          "name": "Сохранить",
+          "x": 365,
+          "y": 0,
+          "width": 107,
+          "height": 44,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "properties": {
+            "Label#3:0": "Сохранить"
+          },
+          "source": "3:4",
+          "reactions": []
+        }
+      ]
+    }
+  },
+  {
+    "op": "snapshot-error-20",
+    "code": "await figma.setCurrentPageAsync(await figma.getNodeByIdAsync('2:2'));const root=await figma.getNodeByIdAsync('12:123');const all=[root,...root.findAll(()=>true)];return {rootId:root.id,name:root.name,width:root.width,height:root.height,total:all.length,offset:20,nodes:all.slice(20,40).map(n=>({id:n.id,parentId:n.parent.id,type:n.type,name:n.name,x:n.x,y:n.y,width:n.width,height:n.height,visible:n.visible,layout:n.layoutMode,text:n.type==='TEXT'?n.characters:undefined,font:n.type==='TEXT'?n.fontName.family:undefined,properties:n.type==='INSTANCE'?Object.fromEntries(Object.entries(n.componentProperties).map(([k,v])=>[k,v.value])):undefined,source:n.type==='INSTANCE'?n.mainComponent?.id:undefined,reactions:n.reactions}))};",
+    "result": {
+      "rootId": "12:123",
+      "name": "Редактировать — ошибка названия",
+      "width": 520,
+      "height": 496,
+      "total": 21,
+      "offset": 20,
+      "nodes": [
+        {
+          "id": "I12:133;3:5",
+          "parentId": "12:133",
+          "type": "TEXT",
+          "name": "Label",
+          "x": 16,
+          "y": 12,
+          "width": 75,
+          "height": 20,
+          "visible": true,
+          "text": "Сохранить",
+          "font": "Inter",
+          "reactions": []
+        }
+      ]
+    }
+  },
+  {
+    "op": "snapshot-note-0",
+    "code": "await figma.setCurrentPageAsync(await figma.getNodeByIdAsync('2:2'));const root=await figma.getNodeByIdAsync('18:93');const all=[root,...root.findAll(()=>true)];return {rootId:root.id,name:root.name,width:root.width,height:root.height,total:all.length,offset:0,nodes:all.slice(0,20).map(n=>({id:n.id,parentId:n.parent.id,type:n.type,name:n.name,x:n.x,y:n.y,width:n.width,height:n.height,visible:n.visible,layout:n.layoutMode,text:n.type==='TEXT'?n.characters:undefined,font:n.type==='TEXT'?n.fontName.family:undefined,properties:n.type==='INSTANCE'?Object.fromEntries(Object.entries(n.componentProperties).map(([k,v])=>[k,v.value])):undefined,source:n.type==='INSTANCE'?n.mainComponent?.id:undefined,reactions:n.reactions}))};",
+    "result": {
+      "rootId": "18:93",
+      "name": "Наблюдения после вечерней прогулки",
+      "width": 1280,
+      "height": 436,
+      "total": 18,
+      "offset": 0,
+      "nodes": [
+        {
+          "id": "18:93",
+          "parentId": "2:2",
+          "type": "FRAME",
+          "name": "Наблюдения после вечерней прогулки",
+          "x": 1440,
+          "y": 840,
+          "width": 1280,
+          "height": 436,
+          "visible": true,
+          "layout": "VERTICAL",
+          "reactions": []
+        },
+        {
+          "id": "18:94",
+          "parentId": "18:93",
+          "type": "INSTANCE",
+          "name": "App header",
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 76,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "properties": {},
+          "source": "9:2",
+          "reactions": []
+        },
+        {
+          "id": "I18:94;9:3",
+          "parentId": "18:94",
+          "type": "TEXT",
+          "name": "Brand",
+          "x": 48,
+          "y": 22,
+          "width": 75,
+          "height": 32,
+          "visible": true,
+          "text": "Полка",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I18:94;9:4",
+          "parentId": "18:94",
+          "type": "INSTANCE",
+          "name": "Библиотека — активный раздел",
+          "x": 139,
+          "y": 16,
+          "width": 114,
+          "height": 44,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "properties": {
+            "Label#3:2": "Библиотека"
+          },
+          "source": "3:8",
+          "reactions": [
+            {
+              "action": {
+                "type": "NODE",
+                "destinationId": "9:17",
+                "navigation": "NAVIGATE",
+                "transition": null,
+                "resetVideoPosition": false
+              },
+              "actions": [
+                {
+                  "type": "NODE",
+                  "destinationId": "9:17",
+                  "navigation": "NAVIGATE",
+                  "transition": null,
+                  "resetVideoPosition": false
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        },
+        {
+          "id": "I18:94;9:4;3:9",
+          "parentId": "I18:94;9:4",
+          "type": "TEXT",
+          "name": "Label",
+          "x": 16,
+          "y": 12,
+          "width": 82,
+          "height": 20,
+          "visible": true,
+          "text": "Библиотека",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I18:94;9:6",
+          "parentId": "18:94",
+          "type": "FRAME",
+          "name": "Flexible space",
+          "x": 269,
+          "y": 37.5,
+          "width": 747,
+          "height": 1,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "reactions": []
+        },
+        {
+          "id": "I18:94;9:7",
+          "parentId": "18:94",
+          "type": "TEXT",
+          "name": "Workspace",
+          "x": 1032,
+          "y": 28,
+          "width": 200,
+          "height": 20,
+          "visible": true,
+          "text": "Исследовательская команда",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "18:100",
+          "parentId": "18:93",
+          "type": "FRAME",
+          "name": "Main",
+          "x": 0,
+          "y": 76,
+          "width": 1280,
+          "height": 360,
+          "visible": true,
+          "layout": "VERTICAL",
+          "reactions": []
+        },
+        {
+          "id": "18:101",
+          "parentId": "18:100",
+          "type": "INSTANCE",
+          "name": "Вернуться в библиотеку",
+          "x": 80,
+          "y": 32,
+          "width": 156,
+          "height": 44,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "properties": {
+            "Label#3:1": "← Все материалы"
+          },
+          "source": "3:6",
+          "reactions": [
+            {
+              "action": {
+                "type": "BACK"
+              },
+              "actions": [
+                {
+                  "type": "BACK"
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        },
+        {
+          "id": "I18:101;3:7",
+          "parentId": "18:101",
+          "type": "TEXT",
+          "name": "Label",
+          "x": 16,
+          "y": 12,
+          "width": 124,
+          "height": 20,
+          "visible": true,
+          "text": "← Все материалы",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "18:103",
+          "parentId": "18:100",
+          "type": "FRAME",
+          "name": "Note heading",
+          "x": 80,
+          "y": 100,
+          "width": 467,
+          "height": 64,
+          "visible": true,
+          "layout": "VERTICAL",
+          "reactions": []
+        },
+        {
+          "id": "18:104",
+          "parentId": "18:103",
+          "type": "TEXT",
+          "name": "Material type",
+          "x": 0,
+          "y": 0,
+          "width": 59,
+          "height": 20,
+          "visible": true,
+          "text": "Заметка",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "18:105",
+          "parentId": "18:103",
+          "type": "TEXT",
+          "name": "Title",
+          "x": 0,
+          "y": 32,
+          "width": 467,
+          "height": 32,
+          "visible": true,
+          "text": "Наблюдения после вечерней прогулки",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "18:106",
+          "parentId": "18:100",
+          "type": "FRAME",
+          "name": "Metadata",
+          "x": 80,
+          "y": 188,
+          "width": 383,
+          "height": 20,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "reactions": []
+        },
+        {
+          "id": "18:107",
+          "parentId": "18:106",
+          "type": "TEXT",
+          "name": "Author",
+          "x": 0,
+          "y": 0,
+          "width": 156,
+          "height": 20,
+          "visible": true,
+          "text": "Автор: Анна Морозова",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "18:108",
+          "parentId": "18:106",
+          "type": "TEXT",
+          "name": "Updated",
+          "x": 188,
+          "y": 0,
+          "width": 195,
+          "height": 20,
+          "visible": true,
+          "text": "Обновлено 8 сентября 2026",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "18:109",
+          "parentId": "18:100",
+          "type": "FRAME",
+          "name": "Текст заметки",
+          "x": 80,
+          "y": 232,
+          "width": 800,
+          "height": 88,
+          "visible": true,
+          "layout": "VERTICAL",
+          "reactions": []
+        },
+        {
+          "id": "18:110",
+          "parentId": "18:109",
+          "type": "TEXT",
+          "name": "Description",
+          "x": 24,
+          "y": 24,
+          "width": 752,
+          "height": 40,
+          "visible": true,
+          "text": "На двух перекрёстках участникам не хватало времени перейти дорогу. Проверить длительность зелёного сигнала перед следующей прогулкой.",
+          "font": "Inter",
+          "reactions": []
+        }
+      ]
+    }
+  },
+  {
+    "op": "snapshot-compact-0",
+    "code": "await figma.setCurrentPageAsync(await figma.getNodeByIdAsync('2:2'));const root=await figma.getNodeByIdAsync('18:111');const all=[root,...root.findAll(()=>true)];return {rootId:root.id,name:root.name,width:root.width,height:root.height,total:all.length,offset:0,nodes:all.slice(0,20).map(n=>({id:n.id,parentId:n.parent.id,type:n.type,name:n.name,x:n.x,y:n.y,width:n.width,height:n.height,visible:n.visible,layout:n.layoutMode,text:n.type==='TEXT'?n.characters:undefined,font:n.type==='TEXT'?n.fontName.family:undefined,properties:n.type==='INSTANCE'?Object.fromEntries(Object.entries(n.componentProperties).map(([k,v])=>[k,v.value])):undefined,source:n.type==='INSTANCE'?n.mainComponent?.id:undefined,reactions:n.reactions}))};",
+    "result": {
+      "rootId": "18:111",
+      "name": "Материалы — 760 px",
+      "width": 760,
+      "height": 832,
+      "total": 62,
+      "offset": 0,
+      "nodes": [
+        {
+          "id": "18:111",
+          "parentId": "2:2",
+          "type": "FRAME",
+          "name": "Материалы — 760 px",
+          "x": 2800,
+          "y": 840,
+          "width": 760,
+          "height": 832,
+          "visible": true,
+          "layout": "VERTICAL",
+          "reactions": []
+        },
+        {
+          "id": "18:112",
+          "parentId": "18:111",
+          "type": "INSTANCE",
+          "name": "App header",
+          "x": 0,
+          "y": 0,
+          "width": 760,
+          "height": 76,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "properties": {},
+          "source": "9:2",
+          "reactions": []
+        },
+        {
+          "id": "I18:112;9:3",
+          "parentId": "18:112",
+          "type": "TEXT",
+          "name": "Brand",
+          "x": 32,
+          "y": 22,
+          "width": 75,
+          "height": 32,
+          "visible": true,
+          "text": "Полка",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I18:112;9:4",
+          "parentId": "18:112",
+          "type": "INSTANCE",
+          "name": "Библиотека — активный раздел",
+          "x": 123,
+          "y": 16,
+          "width": 114,
+          "height": 44,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "properties": {
+            "Label#3:2": "Библиотека"
+          },
+          "source": "3:8",
+          "reactions": []
+        },
+        {
+          "id": "I18:112;9:4;3:9",
+          "parentId": "I18:112;9:4",
+          "type": "TEXT",
+          "name": "Label",
+          "x": 16,
+          "y": 12,
+          "width": 82,
+          "height": 20,
+          "visible": true,
+          "text": "Библиотека",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I18:112;9:6",
+          "parentId": "18:112",
+          "type": "FRAME",
+          "name": "Flexible space",
+          "x": 253,
+          "y": 37.5,
+          "width": 259,
+          "height": 1,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "reactions": []
+        },
+        {
+          "id": "I18:112;9:7",
+          "parentId": "18:112",
+          "type": "TEXT",
+          "name": "Workspace",
+          "x": 528,
+          "y": 28,
+          "width": 200,
+          "height": 20,
+          "visible": true,
+          "text": "Исследовательская команда",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "18:113",
+          "parentId": "18:111",
+          "type": "FRAME",
+          "name": "Main",
+          "x": 0,
+          "y": 76,
+          "width": 760,
+          "height": 756,
+          "visible": true,
+          "layout": "VERTICAL",
+          "reactions": []
+        },
+        {
+          "id": "18:114",
+          "parentId": "18:113",
+          "type": "FRAME",
+          "name": "Page heading",
+          "x": 32,
+          "y": 32,
+          "width": 393,
+          "height": 60,
+          "visible": true,
+          "layout": "VERTICAL",
+          "reactions": []
+        },
+        {
+          "id": "18:115",
+          "parentId": "18:114",
+          "type": "TEXT",
+          "name": "Heading",
+          "x": 0,
+          "y": 0,
+          "width": 139,
+          "height": 32,
+          "visible": true,
+          "text": "Материалы",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "18:116",
+          "parentId": "18:114",
+          "type": "TEXT",
+          "name": "Intro",
+          "x": 0,
+          "y": 40,
+          "width": 393,
+          "height": 20,
+          "visible": true,
+          "text": "Исследования и заметки команды — всё в одном месте.",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "18:117",
+          "parentId": "18:113",
+          "type": "INSTANCE",
+          "name": "Поиск по названию",
+          "x": 32,
+          "y": 116,
+          "width": 696,
+          "height": 72,
+          "visible": true,
+          "layout": "VERTICAL",
+          "properties": {
+            "Show helper#4:3": false,
+            "Helper#4:2": "Helpful supporting text",
+            "Value#4:1": "Введите название материала",
+            "Label#4:0": "Поиск по названию"
+          },
+          "source": "4:2",
+          "reactions": [
+            {
+              "action": {
+                "type": "NODE",
+                "destinationId": "12:63",
+                "navigation": "NAVIGATE",
+                "transition": null,
+                "resetVideoPosition": false
+              },
+              "actions": [
+                {
+                  "type": "NODE",
+                  "destinationId": "12:63",
+                  "navigation": "NAVIGATE",
+                  "transition": null,
+                  "resetVideoPosition": false
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        },
+        {
+          "id": "I18:117;4:3",
+          "parentId": "18:117",
+          "type": "TEXT",
+          "name": "Label",
+          "x": 0,
+          "y": 0,
+          "width": 135,
+          "height": 20,
+          "visible": true,
+          "text": "Поиск по названию",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I18:117;4:4",
+          "parentId": "18:117",
+          "type": "FRAME",
+          "name": "Input",
+          "x": 0,
+          "y": 28,
+          "width": 696,
+          "height": 44,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "reactions": []
+        },
+        {
+          "id": "I18:117;4:5",
+          "parentId": "I18:117;4:4",
+          "type": "TEXT",
+          "name": "Value",
+          "x": 12,
+          "y": 12,
+          "width": 672,
+          "height": 20,
+          "visible": true,
+          "text": "Введите название материала",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "18:118",
+          "parentId": "18:113",
+          "type": "FRAME",
+          "name": "Список материалов",
+          "x": 32,
+          "y": 212,
+          "width": 696,
+          "height": 512,
+          "visible": true,
+          "layout": "VERTICAL",
+          "reactions": []
+        },
+        {
+          "id": "18:119",
+          "parentId": "18:118",
+          "type": "TEXT",
+          "name": "Count",
+          "x": 0,
+          "y": 0,
+          "width": 96,
+          "height": 20,
+          "visible": true,
+          "text": "5 материалов",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "18:120",
+          "parentId": "18:118",
+          "type": "FRAME",
+          "name": "Rows",
+          "x": 0,
+          "y": 32,
+          "width": 696,
+          "height": 480,
+          "visible": true,
+          "layout": "VERTICAL",
+          "reactions": []
+        },
+        {
+          "id": "18:121",
+          "parentId": "18:120",
+          "type": "INSTANCE",
+          "name": "Наблюдения после вечерней прогулки",
+          "x": 0,
+          "y": 0,
+          "width": 696,
+          "height": 76,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "properties": {
+            "Author#9:1": "Анна Морозова",
+            "Type#18:0": "Заметка",
+            "Date#9:2": "8 сентября 2026",
+            "Show size#18:1": false,
+            "Size#9:3": "",
+            "Title#9:0": "Наблюдения после вечерней прогулки"
+          },
+          "source": "9:8",
+          "reactions": [
+            {
+              "action": {
+                "type": "NODE",
+                "destinationId": "18:93",
+                "navigation": "NAVIGATE",
+                "transition": null,
+                "resetVideoPosition": false
+              },
+              "actions": [
+                {
+                  "type": "NODE",
+                  "destinationId": "18:93",
+                  "navigation": "NAVIGATE",
+                  "transition": null,
+                  "resetVideoPosition": false
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        },
+        {
+          "id": "I18:121;9:9",
+          "parentId": "18:121",
+          "type": "FRAME",
+          "name": "Format badge",
+          "x": 16,
+          "y": 20,
+          "width": 80,
+          "height": 36,
+          "visible": true,
+          "layout": "VERTICAL",
+          "reactions": []
+        }
+      ]
+    }
+  },
+  {
+    "op": "snapshot-compact-20",
+    "code": "await figma.setCurrentPageAsync(await figma.getNodeByIdAsync('2:2'));const root=await figma.getNodeByIdAsync('18:111');const all=[root,...root.findAll(()=>true)];return {rootId:root.id,name:root.name,width:root.width,height:root.height,total:all.length,offset:20,nodes:all.slice(20,40).map(n=>({id:n.id,parentId:n.parent.id,type:n.type,name:n.name,x:n.x,y:n.y,width:n.width,height:n.height,visible:n.visible,layout:n.layoutMode,text:n.type==='TEXT'?n.characters:undefined,font:n.type==='TEXT'?n.fontName.family:undefined,properties:n.type==='INSTANCE'?Object.fromEntries(Object.entries(n.componentProperties).map(([k,v])=>[k,v.value])):undefined,source:n.type==='INSTANCE'?n.mainComponent?.id:undefined,reactions:n.reactions}))};",
+    "result": {
+      "rootId": "18:111",
+      "name": "Материалы — 760 px",
+      "width": 760,
+      "height": 832,
+      "total": 62,
+      "offset": 20,
+      "nodes": [
+        {
+          "id": "I18:121;9:10",
+          "parentId": "I18:121;9:9",
+          "type": "TEXT",
+          "name": "Type",
+          "x": 8,
+          "y": 8,
+          "width": 59,
+          "height": 20,
+          "visible": true,
+          "text": "Заметка",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I18:121;9:11",
+          "parentId": "18:121",
+          "type": "FRAME",
+          "name": "Title and author",
+          "x": 112,
+          "y": 16,
+          "width": 370,
+          "height": 44,
+          "visible": true,
+          "layout": "VERTICAL",
+          "reactions": []
+        },
+        {
+          "id": "I18:121;9:12",
+          "parentId": "I18:121;9:11",
+          "type": "TEXT",
+          "name": "Title",
+          "x": 0,
+          "y": 0,
+          "width": 370,
+          "height": 20,
+          "visible": true,
+          "text": "Наблюдения после вечерней прогулки",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I18:121;9:13",
+          "parentId": "I18:121;9:11",
+          "type": "TEXT",
+          "name": "Author",
+          "x": 0,
+          "y": 24,
+          "width": 370,
+          "height": 20,
+          "visible": true,
+          "text": "Анна Морозова",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I18:121;9:14",
+          "parentId": "18:121",
+          "type": "TEXT",
+          "name": "Date",
+          "x": 498,
+          "y": 28,
+          "width": 152,
+          "height": 20,
+          "visible": true,
+          "text": "8 сентября 2026",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I18:121;9:16",
+          "parentId": "18:121",
+          "type": "TEXT",
+          "name": "Open indicator",
+          "x": 666,
+          "y": 28,
+          "width": 14,
+          "height": 20,
+          "visible": true,
+          "text": "→",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "18:122",
+          "parentId": "18:120",
+          "type": "INSTANCE",
+          "name": "Городские прогулки: маршруты для родителей с маленькими детьми",
+          "x": 0,
+          "y": 76,
+          "width": 696,
+          "height": 96,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "properties": {
+            "Author#9:1": "Анна Морозова",
+            "Type#18:0": "PDF",
+            "Date#9:2": "7 сентября 2026",
+            "Show size#18:1": true,
+            "Size#9:3": "2,4 МБ",
+            "Title#9:0": "Городские прогулки: маршруты для родителей с маленькими детьми"
+          },
+          "source": "9:8",
+          "reactions": [
+            {
+              "action": {
+                "type": "NODE",
+                "destinationId": "9:18",
+                "navigation": "NAVIGATE",
+                "transition": null,
+                "resetVideoPosition": false
+              },
+              "actions": [
+                {
+                  "type": "NODE",
+                  "destinationId": "9:18",
+                  "navigation": "NAVIGATE",
+                  "transition": null,
+                  "resetVideoPosition": false
+                }
+              ],
+              "trigger": {
+                "type": "ON_CLICK"
+              }
+            }
+          ]
+        },
+        {
+          "id": "I18:122;9:9",
+          "parentId": "18:122",
+          "type": "FRAME",
+          "name": "Format badge",
+          "x": 16,
+          "y": 30,
+          "width": 80,
+          "height": 36,
+          "visible": true,
+          "layout": "VERTICAL",
+          "reactions": []
+        },
+        {
+          "id": "I18:122;9:10",
+          "parentId": "I18:122;9:9",
+          "type": "TEXT",
+          "name": "Type",
+          "x": 8,
+          "y": 8,
+          "width": 28,
+          "height": 20,
+          "visible": true,
+          "text": "PDF",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I18:122;9:11",
+          "parentId": "18:122",
+          "type": "FRAME",
+          "name": "Title and author",
+          "x": 112,
+          "y": 16,
+          "width": 286,
+          "height": 64,
+          "visible": true,
+          "layout": "VERTICAL",
+          "reactions": []
+        },
+        {
+          "id": "I18:122;9:12",
+          "parentId": "I18:122;9:11",
+          "type": "TEXT",
+          "name": "Title",
+          "x": 0,
+          "y": 0,
+          "width": 286,
+          "height": 40,
+          "visible": true,
+          "text": "Городские прогулки: маршруты для родителей с маленькими детьми",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I18:122;9:13",
+          "parentId": "I18:122;9:11",
+          "type": "TEXT",
+          "name": "Author",
+          "x": 0,
+          "y": 44,
+          "width": 286,
+          "height": 20,
+          "visible": true,
+          "text": "Анна Морозова",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I18:122;9:14",
+          "parentId": "18:122",
+          "type": "TEXT",
+          "name": "Date",
+          "x": 414,
+          "y": 38,
+          "width": 152,
+          "height": 20,
+          "visible": true,
+          "text": "7 сентября 2026",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I18:122;9:15",
+          "parentId": "18:122",
+          "type": "TEXT",
+          "name": "Size",
+          "x": 582,
+          "y": 38,
+          "width": 68,
+          "height": 20,
+          "visible": true,
+          "text": "2,4 МБ",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I18:122;9:16",
+          "parentId": "18:122",
+          "type": "TEXT",
+          "name": "Open indicator",
+          "x": 666,
+          "y": 38,
+          "width": 14,
+          "height": 20,
+          "visible": true,
+          "text": "→",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "18:123",
+          "parentId": "18:120",
+          "type": "INSTANCE",
+          "name": "Как родители выбирают маршрут до школы и что заставляет их менять привычный путь",
+          "x": 0,
+          "y": 172,
+          "width": 696,
+          "height": 116,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "properties": {
+            "Author#9:1": "Максим Орлов",
+            "Type#18:0": "PDF",
+            "Date#9:2": "5 сентября 2026",
+            "Show size#18:1": true,
+            "Size#9:3": "4,8 МБ",
+            "Title#9:0": "Как родители выбирают маршрут до школы и что заставляет их менять привычный путь"
+          },
+          "source": "9:8",
+          "reactions": []
+        },
+        {
+          "id": "I18:123;9:9",
+          "parentId": "18:123",
+          "type": "FRAME",
+          "name": "Format badge",
+          "x": 16,
+          "y": 40,
+          "width": 80,
+          "height": 36,
+          "visible": true,
+          "layout": "VERTICAL",
+          "reactions": []
+        },
+        {
+          "id": "I18:123;9:10",
+          "parentId": "I18:123;9:9",
+          "type": "TEXT",
+          "name": "Type",
+          "x": 8,
+          "y": 8,
+          "width": 28,
+          "height": 20,
+          "visible": true,
+          "text": "PDF",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I18:123;9:11",
+          "parentId": "18:123",
+          "type": "FRAME",
+          "name": "Title and author",
+          "x": 112,
+          "y": 16,
+          "width": 286,
+          "height": 84,
+          "visible": true,
+          "layout": "VERTICAL",
+          "reactions": []
+        },
+        {
+          "id": "I18:123;9:12",
+          "parentId": "I18:123;9:11",
+          "type": "TEXT",
+          "name": "Title",
+          "x": 0,
+          "y": 0,
+          "width": 286,
+          "height": 60,
+          "visible": true,
+          "text": "Как родители выбирают маршрут до школы и что заставляет их менять привычный путь",
+          "font": "Inter",
+          "reactions": []
+        }
+      ]
+    }
+  },
+  {
+    "op": "snapshot-compact-40",
+    "code": "await figma.setCurrentPageAsync(await figma.getNodeByIdAsync('2:2'));const root=await figma.getNodeByIdAsync('18:111');const all=[root,...root.findAll(()=>true)];return {rootId:root.id,name:root.name,width:root.width,height:root.height,total:all.length,offset:40,nodes:all.slice(40,60).map(n=>({id:n.id,parentId:n.parent.id,type:n.type,name:n.name,x:n.x,y:n.y,width:n.width,height:n.height,visible:n.visible,layout:n.layoutMode,text:n.type==='TEXT'?n.characters:undefined,font:n.type==='TEXT'?n.fontName.family:undefined,properties:n.type==='INSTANCE'?Object.fromEntries(Object.entries(n.componentProperties).map(([k,v])=>[k,v.value])):undefined,source:n.type==='INSTANCE'?n.mainComponent?.id:undefined,reactions:n.reactions}))};",
+    "result": {
+      "rootId": "18:111",
+      "name": "Материалы — 760 px",
+      "width": 760,
+      "height": 832,
+      "total": 62,
+      "offset": 40,
+      "nodes": [
+        {
+          "id": "I18:123;9:13",
+          "parentId": "I18:123;9:11",
+          "type": "TEXT",
+          "name": "Author",
+          "x": 0,
+          "y": 64,
+          "width": 286,
+          "height": 20,
+          "visible": true,
+          "text": "Максим Орлов",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I18:123;9:14",
+          "parentId": "18:123",
+          "type": "TEXT",
+          "name": "Date",
+          "x": 414,
+          "y": 48,
+          "width": 152,
+          "height": 20,
+          "visible": true,
+          "text": "5 сентября 2026",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I18:123;9:15",
+          "parentId": "18:123",
+          "type": "TEXT",
+          "name": "Size",
+          "x": 582,
+          "y": 48,
+          "width": 68,
+          "height": 20,
+          "visible": true,
+          "text": "4,8 МБ",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I18:123;9:16",
+          "parentId": "18:123",
+          "type": "TEXT",
+          "name": "Open indicator",
+          "x": 666,
+          "y": 48,
+          "width": 14,
+          "height": 20,
+          "visible": true,
+          "text": "→",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "18:124",
+          "parentId": "18:120",
+          "type": "INSTANCE",
+          "name": "Интервью с жителями Северного района",
+          "x": 0,
+          "y": 288,
+          "width": 696,
+          "height": 96,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "properties": {
+            "Author#9:1": "Елена Волкова",
+            "Type#18:0": "PDF",
+            "Date#9:2": "3 сентября 2026",
+            "Show size#18:1": true,
+            "Size#9:3": "1,6 МБ",
+            "Title#9:0": "Интервью с жителями Северного района"
+          },
+          "source": "9:8",
+          "reactions": []
+        },
+        {
+          "id": "I18:124;9:9",
+          "parentId": "18:124",
+          "type": "FRAME",
+          "name": "Format badge",
+          "x": 16,
+          "y": 30,
+          "width": 80,
+          "height": 36,
+          "visible": true,
+          "layout": "VERTICAL",
+          "reactions": []
+        },
+        {
+          "id": "I18:124;9:10",
+          "parentId": "I18:124;9:9",
+          "type": "TEXT",
+          "name": "Type",
+          "x": 8,
+          "y": 8,
+          "width": 28,
+          "height": 20,
+          "visible": true,
+          "text": "PDF",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I18:124;9:11",
+          "parentId": "18:124",
+          "type": "FRAME",
+          "name": "Title and author",
+          "x": 112,
+          "y": 16,
+          "width": 286,
+          "height": 64,
+          "visible": true,
+          "layout": "VERTICAL",
+          "reactions": []
+        },
+        {
+          "id": "I18:124;9:12",
+          "parentId": "I18:124;9:11",
+          "type": "TEXT",
+          "name": "Title",
+          "x": 0,
+          "y": 0,
+          "width": 286,
+          "height": 40,
+          "visible": true,
+          "text": "Интервью с жителями Северного района",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I18:124;9:13",
+          "parentId": "I18:124;9:11",
+          "type": "TEXT",
+          "name": "Author",
+          "x": 0,
+          "y": 44,
+          "width": 286,
+          "height": 20,
+          "visible": true,
+          "text": "Елена Волкова",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I18:124;9:14",
+          "parentId": "18:124",
+          "type": "TEXT",
+          "name": "Date",
+          "x": 414,
+          "y": 38,
+          "width": 152,
+          "height": 20,
+          "visible": true,
+          "text": "3 сентября 2026",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I18:124;9:15",
+          "parentId": "18:124",
+          "type": "TEXT",
+          "name": "Size",
+          "x": 582,
+          "y": 38,
+          "width": 68,
+          "height": 20,
+          "visible": true,
+          "text": "1,6 МБ",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I18:124;9:16",
+          "parentId": "18:124",
+          "type": "TEXT",
+          "name": "Open indicator",
+          "x": 666,
+          "y": 38,
+          "width": 14,
+          "height": 20,
+          "visible": true,
+          "text": "→",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "18:125",
+          "parentId": "18:120",
+          "type": "INSTANCE",
+          "name": "Доступность остановок: результаты полевого исследования",
+          "x": 0,
+          "y": 384,
+          "width": 696,
+          "height": 96,
+          "visible": true,
+          "layout": "HORIZONTAL",
+          "properties": {
+            "Author#9:1": "Илья Соколов",
+            "Type#18:0": "PDF",
+            "Date#9:2": "1 сентября 2026",
+            "Show size#18:1": true,
+            "Size#9:3": "3,2 МБ",
+            "Title#9:0": "Доступность остановок: результаты полевого исследования"
+          },
+          "source": "9:8",
+          "reactions": []
+        },
+        {
+          "id": "I18:125;9:9",
+          "parentId": "18:125",
+          "type": "FRAME",
+          "name": "Format badge",
+          "x": 16,
+          "y": 30,
+          "width": 80,
+          "height": 36,
+          "visible": true,
+          "layout": "VERTICAL",
+          "reactions": []
+        },
+        {
+          "id": "I18:125;9:10",
+          "parentId": "I18:125;9:9",
+          "type": "TEXT",
+          "name": "Type",
+          "x": 8,
+          "y": 8,
+          "width": 28,
+          "height": 20,
+          "visible": true,
+          "text": "PDF",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I18:125;9:11",
+          "parentId": "18:125",
+          "type": "FRAME",
+          "name": "Title and author",
+          "x": 112,
+          "y": 16,
+          "width": 286,
+          "height": 64,
+          "visible": true,
+          "layout": "VERTICAL",
+          "reactions": []
+        },
+        {
+          "id": "I18:125;9:12",
+          "parentId": "I18:125;9:11",
+          "type": "TEXT",
+          "name": "Title",
+          "x": 0,
+          "y": 0,
+          "width": 286,
+          "height": 40,
+          "visible": true,
+          "text": "Доступность остановок: результаты полевого исследования",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I18:125;9:13",
+          "parentId": "I18:125;9:11",
+          "type": "TEXT",
+          "name": "Author",
+          "x": 0,
+          "y": 44,
+          "width": 286,
+          "height": 20,
+          "visible": true,
+          "text": "Илья Соколов",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I18:125;9:14",
+          "parentId": "18:125",
+          "type": "TEXT",
+          "name": "Date",
+          "x": 414,
+          "y": 38,
+          "width": 152,
+          "height": 20,
+          "visible": true,
+          "text": "1 сентября 2026",
+          "font": "Inter",
+          "reactions": []
+        }
+      ]
+    }
+  },
+  {
+    "op": "snapshot-compact-60",
+    "code": "await figma.setCurrentPageAsync(await figma.getNodeByIdAsync('2:2'));const root=await figma.getNodeByIdAsync('18:111');const all=[root,...root.findAll(()=>true)];return {rootId:root.id,name:root.name,width:root.width,height:root.height,total:all.length,offset:60,nodes:all.slice(60,80).map(n=>({id:n.id,parentId:n.parent.id,type:n.type,name:n.name,x:n.x,y:n.y,width:n.width,height:n.height,visible:n.visible,layout:n.layoutMode,text:n.type==='TEXT'?n.characters:undefined,font:n.type==='TEXT'?n.fontName.family:undefined,properties:n.type==='INSTANCE'?Object.fromEntries(Object.entries(n.componentProperties).map(([k,v])=>[k,v.value])):undefined,source:n.type==='INSTANCE'?n.mainComponent?.id:undefined,reactions:n.reactions}))};",
+    "result": {
+      "rootId": "18:111",
+      "name": "Материалы — 760 px",
+      "width": 760,
+      "height": 832,
+      "total": 62,
+      "offset": 60,
+      "nodes": [
+        {
+          "id": "I18:125;9:15",
+          "parentId": "18:125",
+          "type": "TEXT",
+          "name": "Size",
+          "x": 582,
+          "y": 38,
+          "width": 68,
+          "height": 20,
+          "visible": true,
+          "text": "3,2 МБ",
+          "font": "Inter",
+          "reactions": []
+        },
+        {
+          "id": "I18:125;9:16",
+          "parentId": "18:125",
+          "type": "TEXT",
+          "name": "Open indicator",
+          "x": 666,
+          "y": 38,
+          "width": 14,
+          "height": 20,
+          "visible": true,
+          "text": "→",
+          "font": "Inter",
+          "reactions": []
+        }
+      ]
+    }
+  },
+  {
+    "op": "evidence-corrections",
+    "results": [
+      "Combined before-inventory inner JSON parse failed at 19818; replaced final export strategy with 20-node parsed chunks.",
+      "Local final error.png missing after initial screenshot download batch; explicitly re-exported and verified local image."
+    ],
+    "errorDownload": {
+      "chunk_id": "7df416",
+      "wall_time_seconds": 1.4046579000000001,
+      "exit_code": 0,
+      "original_token_count": 0,
+      "output": ""
+    }
+  }
+]

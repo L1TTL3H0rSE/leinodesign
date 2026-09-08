@@ -1,0 +1,25 @@
+{
+  "captured_utc": "2026-09-08T00:35:10.264243+00:00",
+  "files": {
+    "B\\revision\\after.json": "10154337553dde70b75257e14f878fd8dd4305c777590de6cca6e0f405b6334d",
+    "B\\revision\\before-detail.png": "8cb89a3f25615f5c06032d9ce217d46b4f7490ae3921e3f4ad0d071d4ae72d64",
+    "B\\revision\\before-empty.png": "09785481653caa944d720c38d6632bd4fb31fc0968d262e865eb75a44d37430b",
+    "B\\revision\\before-error.png": "10fe8adb052e6c87ccdc4ebf973fd8d7d0314d3542fd14d30a2269081bc80904",
+    "B\\revision\\before-list.png": "a9481fa5300b50ecccb98851b9c38de5c041e2286a45ef34b112c0e3f29e7e5a",
+    "B\\revision\\before-modal.png": "4d2c7af9e611c0713f7085330704779619682c282672c193eddfd83d6372ed55",
+    "B\\revision\\before.json": "8692d674d985f7af48d26c9f5132a923acdc3b17bf53c6e9f77cf84b404213c4",
+    "B\\revision\\compact.png": "cac3c9d9eaa24f8b371f891af32b1b065563cf8e0322b4e61c55fed868adcb6a",
+    "B\\revision\\completion.json": "6a8d21b40d9b22348e75a21397f937756415ac862402efccbd8bb74aad015365",
+    "B\\revision\\detail.png": "f78d15e5f6048f7021825a73570060e7b188071f15c923d9e7ae3c17a79e75b6",
+    "B\\revision\\empty.png": "c0c4112c656ea2b88afa92adca9663208d5be3441da29b34be2de20f3de2cc22",
+    "B\\revision\\error.png": "10fe8adb052e6c87ccdc4ebf973fd8d7d0314d3542fd14d30a2269081bc80904",
+    "B\\revision\\initial-hashes-after.json": "660c071ac284366366af3786c30d336c883337eb7940e1f16a35edfc74b8b0dd",
+    "B\\revision\\initial-hashes-before.json": "660c071ac284366366af3786c30d336c883337eb7940e1f16a35edfc74b8b0dd",
+    "B\\revision\\list.png": "3190ef6b4c45801c1b6c402b8db3a4ff0224f0e333b3280d46731873b08ede21",
+    "B\\revision\\modal.png": "1866ff3486539f1a322af85b828e9782e7b0a15766e22c927bc21a74ba7158a6",
+    "B\\revision\\note.png": "4f632e20997f7495d609d1494f5b58187d5f93ae906917fa3281215feade877e",
+    "B\\revision\\operations.json": "f6f88e68967d351ec9df18f528635473ac6a35af36a85fe8b4c86f5a7988de7c",
+    "B\\revision\\report.md": "febcfb434713b67403650df6d0b212c14b1bea64384b0c5630401bc361bd9e95",
+    "B\\revision\\screenshots.json": "9009f5543d84521ec5b40fd83d69ab11e9a369f07895dbe240e3bdae47f7fe78"
+  }
+}

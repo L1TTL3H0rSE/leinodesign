@@ -1,0 +1,18 @@
+{
+  "originalPdfTitleCorrect": true,
+  "detailTitleCorrect": true,
+  "editTitleCorrect": true,
+  "otherTitlesUnchanged": true,
+  "noteTextCorrect": true,
+  "noteNoPdfOrDownload": true,
+  "noteNoSize": true,
+  "navRenamed": true,
+  "fontInterOnly": true,
+  "compact760": true,
+  "pdfDescriptionUnchanged": true,
+  "geometryOverflow": [],
+  "frozenInitialHashCheck": {
+    "checked": 18,
+    "changed": 0
+  }
+}
