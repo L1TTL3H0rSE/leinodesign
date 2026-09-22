@@ -1,0 +1,85 @@
+{
+  "format": 1,
+  "recorded": "2026-09-22",
+  "source_project": "dmitry-skills",
+  "basis": "Local source documents; Figma not read during extraction. Hashes cover original bytes, including line endings.",
+  "target_base": "d3f3535e2dacf4f2bd5a6063c900e8d0a58d550d",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "7fcc3e851847fd266628fff2bdbe2c5c41f728574b918b6839de316a8a2ba8f3"
+    },
+    {
+      "path": "skills/figma-service-migration/SKILL.md",
+      "sha256": "465a3ccacd5622159272006947c57877eab46f2e24ae9f5c68b7d11de891de26"
+    },
+    {
+      "path": "skills/figma-service-migration/references/author-references.md",
+      "sha256": "5d6cfc512481ab00ff53a7595788d46a21dd92deb905da83057edf726b976cda"
+    },
+    {
+      "path": "skills/figma-service-migration/references/workflow.md",
+      "sha256": "f22820164aaa2345faa5bfc859623fe2d7fb3891dbb666baa3392742c9a14800"
+    },
+    {
+      "path": "skills/figma-service-migration/references/table-reuse.md",
+      "sha256": "c54557dab4a8e5e7276121ec0da8946dd3d762dbc0a7f29d537b30fb4a4fe532"
+    },
+    {
+      "path": "skills/figma-service-migration/references/modal-reuse.md",
+      "sha256": "54d7a3f6b4f3ffc501cdbb1db5ff7901b200042ea682e04da81a5281ac44af2c"
+    },
+    {
+      "path": "skills/figma-service-migration/references/service-ui-kit.md",
+      "sha256": "94f71b5af12ce9417af293ec62a1ef79c6974a18a30ff6dbe58ab1ee75d9b239"
+    },
+    {
+      "path": "skills/figma-service-migration/references/interaction-review.md",
+      "sha256": "188b0761a665b6f5bc97f610b330d31582538691dba02ae0ff0f8fb18fa7d74f"
+    },
+    {
+      "path": "skills/figma-service-migration/references/product-memory.md",
+      "sha256": "18ec64f7f8c49e843b6826a9e53e4644927986cd655f0e9fa0c75f167e295bba"
+    },
+    {
+      "path": "skills/figma-service-migration/references/delegation.md",
+      "sha256": "8e663a356678cee43e0f5bf566bbd6f5d4f33f6af2b968742ceffab63472a4c1"
+    },
+    {
+      "path": "service/WORK.md",
+      "sha256": "9806588f8f0256c6d43ece1ae7f8e06d7653b11ce942196472c0cf8b59097371"
+    },
+    {
+      "path": "service/INDEX.md",
+      "sha256": "dde02cd57437cb30d9c763aef0229a55ac202923ff66d7ec2d4ca9f2ac3b29e3"
+    },
+    {
+      "path": "service/model.md",
+      "sha256": "880ae24d660d45a2e610ed7d39fb57df08dd0a08d230a0c38e72a5cf4d806441"
+    },
+    {
+      "path": "service/ui-kit.md",
+      "sha256": "91753c4299bec63563d54456194ea80f3949fdeedd603a00f0dd9e86cde07d93"
+    },
+    {
+      "path": "validation/README.md",
+      "sha256": "6a1d674393d5fb5288c146e0404f4bd2ab7e78e8419435ba1ac4c18f2da187f9"
+    },
+    {
+      "path": "validation/runs/2026-09-16-admin-modals-fix/REPORT.md",
+      "sha256": "83dac12de86bb76d8b1faf1f987de2b52f29574a56afb980adfc361e6b77e15f"
+    },
+    {
+      "path": "research/independent-workflow-review-2026-09-15.md",
+      "sha256": "18b2aaf585878bc4785698d6acc18334c5ddc21a6f6f3b204d4bbcc1f36c41e4"
+    },
+    {
+      "path": "research/ant-carbon-2026-09-10/REPORT.md",
+      "sha256": "092c25857ed42d39ec7a3f2c025f7922eefff206944f1055af4ba466c3a8819e"
+    },
+    {
+      "path": "audits/leinodesign-2026-09-10/REPORT.md",
+      "sha256": "14527e90051ff2fabc1d7d19ac35ee015b88dcb92c4f0a39b046802db18db5b8"
+    }
+  ]
+}
